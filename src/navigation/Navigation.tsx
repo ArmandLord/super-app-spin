@@ -2,16 +2,19 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack';
 import React, { useEffect } from 'react';
+import {CustomNavBar} from '../index'
 import { Image } from 'react-native';
 import {HomeScreen} from '../Screens/Home/HomeScreen';
 import BalanceScreen from '../Screens/BalanceScreen';
 import LoyaltyScreen from '../Screens/LoyaltyScreen';
-import MovementsScreen from '../Screens/MovementsScreen';
+import MovementsScreen from '../Screens/Movements/MovementsScreen';
 import MovementsTicketScreen from '../Screens/MovementsTicketScreen';
 import PointsTicketScreen from '../Screens/PointsTicketScreen';
 import SelectAliadeScreen from '../Screens/SelectAliadeScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
+import useTheme from '../hooks/useTheme';
+
 
 export type RootStackParamList = {
     Home: undefined,
@@ -25,28 +28,31 @@ const HomeStack = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute<HomeScreenRouteProps>();
 
-  useEffect(() => {
-    if (route.params?.init)
-      navigation.reset({
-        index: 0,
-        routes: [{name: 'Home'}],
-      });
-  }, [route.params?.init]);
+  // useEffect(() => {
+  //   if (route.params?.init)
+  //     navigation.reset({
+  //       index: 0,
+  //       routes: [{name: 'Home'}],
+  //     });
+  // }, [route.params?.init]);
 
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Beneficios" component={HomeScreen} />
       <Stack.Screen name="Cartera" component={LoyaltyScreen} />
-      <Stack.Screen name="Cuenta" component={LoyaltyScreen} />
+      <Stack.Screen name="Cuenta" component={MovementsScreen} />
     </Stack.Navigator>
   );
 };
 
 const Navigation = () => {
+  const { colors } = useTheme()
+
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
-      <Tab.Screen
+    <Tab.Navigator tabBar={(props) => 
+    <CustomNavBar {...props} focusedColor={colors.content_primary}  blurColor={colors.content_tertiary}/>}>
+    <Tab.Screen
         name="Home"
         component={HomeStack}
       />
@@ -57,12 +63,12 @@ const Navigation = () => {
       <Tab.Screen
         name="Cartera"
         component={LoyaltyScreen}
-        
+
       />
       <Tab.Screen
         name="Cuenta"
-        component={LoyaltyScreen}
-        
+        component={MovementsScreen}
+
       />
     </Tab.Navigator>
   );

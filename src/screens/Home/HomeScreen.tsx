@@ -1,6 +1,6 @@
 import React from 'react';
 import { View,Image } from 'react-native';
-import {Text} from '../..';
+import {Text} from '../../index';
 import MobilePNG from '../../assets/mobile.png';
 import { styles } from './home.style';
 
@@ -11,5 +11,5 @@ export const HomeScreen = () => {
       <Text variant='headline-large'>Pantalla home</Text>
     </View>
     
-    );
-};
+    )
+}
