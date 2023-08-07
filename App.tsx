@@ -7,12 +7,11 @@ import ThemeProvider from './src/theme/ThemeProvider';
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-
-    <NavigationContainer >
-      {/* <Context> */}
+      <NavigationContainer >
+        {/* <Context> */}
         <AppNavigator />
-      {/* </Context> */}
-    </NavigationContainer>
+        {/* </Context> */}
+      </NavigationContainer>
     </ThemeProvider>
 
   );
