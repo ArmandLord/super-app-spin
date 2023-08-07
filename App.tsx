@@ -1,16 +1,15 @@
-import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {SafeAreaView} from 'react-native';
-import ThemeProvider from './src/theme/ThemeProvider';
-import {Button} from './src';
+import 'react-native-gesture-handler';
+import AppNavigator from './src/navigation/Navigation';
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <ThemeProvider>
-      <SafeAreaView>
-        <Button text="Hola ironhackers" onPress={() => console.log('spin')} />
-      </SafeAreaView>
-    </ThemeProvider>
+    <NavigationContainer >
+      {/* <Context> */}
+        <AppNavigator />
+      {/* </Context> */}
+    </NavigationContainer>
   );
 };
 
