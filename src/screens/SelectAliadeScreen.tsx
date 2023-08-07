@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native-reanimated/lib/typescript/Animated";
+import { View,Image } from 'react-native';
 function SelectAliadeScreen() {
     return (<View></View>)
 }

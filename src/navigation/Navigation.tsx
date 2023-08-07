@@ -3,7 +3,7 @@ import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import { Image } from 'react-native';
-import HomeScreen from '../Screens/HomeScreen';
+import {HomeScreen} from '../Screens/Home/HomeScreen';
 import BalanceScreen from '../Screens/BalanceScreen';
 import LoyaltyScreen from '../Screens/LoyaltyScreen';
 import MovementsScreen from '../Screens/MovementsScreen';
@@ -14,8 +14,10 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 export type RootStackParamList = {
-  Home: {init: boolean};
-};
+    Home: undefined,
+    Beneficios:undefined,
+    Cartera:undefined,
+    Cuenta:undefined};
 
 type HomeScreenRouteProps = RouteProp<RootStackParamList, 'Home'>;
 
@@ -35,8 +37,8 @@ const HomeStack = () => {
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Beneficios" component={HomeScreen} />
-      <Stack.Screen name="Cartera" component={HomeScreen} />
-      <Stack.Screen name="Cuenta" component={HomeScreen} />
+      <Stack.Screen name="Cartera" component={LoyaltyScreen} />
+      <Stack.Screen name="Cuenta" component={LoyaltyScreen} />
     </Stack.Navigator>
   );
 };
@@ -54,12 +56,12 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Cartera"
-        component={HomeScreen}
+        component={LoyaltyScreen}
         
       />
       <Tab.Screen
         name="Cuenta"
-        component={HomeScreen}
+        component={LoyaltyScreen}
         
       />
     </Tab.Navigator>
