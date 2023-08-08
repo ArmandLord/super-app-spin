@@ -10,6 +10,7 @@ const TITLE_GROUP_ITEMS_YESTERDAY_TEST_ID = 'title-group-items-yesterday-test-id
 const TITLE_GROUP_ITEMS_LAST_WEEK_TEST_ID = 'title-group-items-last-week-test-id';
 const TITLE_GROUP_ITEMS_LAST_MONTH_TEST_ID = 'title-group-items-last-month-test-id';
 
+
 describe('Screen Home', () => {
     
     describe('Renders', () => {

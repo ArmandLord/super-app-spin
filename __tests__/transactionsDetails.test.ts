@@ -4,6 +4,7 @@ import {it, describe} from '@jest/globals';
 const TITLE_TEST_ID = 'title-test-id';
 const ICON_ALLIED_BRAND_TEST_ID = 'icon-allied-brand-test-id';
 
+
 describe('Screen Details Transaction', () => {
     // Vista de detalles del movimiento
     //     Botón de retorno
