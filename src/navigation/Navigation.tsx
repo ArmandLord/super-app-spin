@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-import useTheme from '../hooks/useTheme';
+import useTheme from '../../femsaComponents/hooks/useTheme';
 import { HomeScreen } from '../screens/Home/HomeScreen';
 import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
 

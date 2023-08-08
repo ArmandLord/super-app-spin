@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
-import StackedCardGrid from "../../../femsaComponents/GridView/StackedCardGrid";
+import StackedCardGrid from "../../../femsaComponents/components/GridView/StackedCardGrid";
 import { StackedCardProps } from "../../types/LoyaltyTypes";
 import { styles } from "../../styles/LoyaltyScreen.style";
 import { SafeAreaView } from "react-native-safe-area-context";
