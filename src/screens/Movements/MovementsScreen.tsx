@@ -16,7 +16,6 @@ const Movements = () => {
         { key: 'earned', title: 'Ganados' },
         { key: 'used', title: 'Usados' },
     ]);
-    
     const renderScene = SceneMap({
         all: AllMovementsList,
         earned: AllMovementsList,

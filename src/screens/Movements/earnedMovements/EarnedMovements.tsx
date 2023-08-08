@@ -1,10 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios, { AxiosResponse } from "axios";
-import { useMovementsContext } from '../context/SuperAppContext';
+import { useMovementsContext } from '../../../context/SuperAppContext';
 
-
-
-const useMovements = () => {
+const EarnedMovements = () => {
     const { state, dispatch } = useMovementsContext();
 
     const controller = new AbortController();
@@ -21,8 +19,13 @@ const useMovements = () => {
             axios
                 .get(`http://localhost:3001/history/${page}`)
                 .then((response: AxiosResponse) => {
-                    console.log(response.data.data);
-                    setMovements([...movements, ...response.data.data]);
+                    const earnedMovements = response.data.data.flatMap((period: any) =>
+                        period.data.flatMap((item: any) =>
+                            item.data.filter((movement: any) => movement.operation === "earned")
+                        )
+                    );
+
+                    setMovements([...movements, ...earnedMovements]);
                     setPage(page + 1);
                 })
                 .catch((err) => {
@@ -46,4 +49,4 @@ const useMovements = () => {
     return { movements, loading, moreData, getMovements, handleCategorySelect };
 }
 
-export default useMovements;
+export default EarnedMovements;
