@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     scrollView: {
         height: '100%',
-        paddingHorizontal: 24,
+        paddingVertical: 20,
+        backgroundColor: 'white',
     },
     containerStyle: {
         height: 250,

@@ -1,9 +1,10 @@
 import React from "react";
 import { Image, View } from "react-native";
 
-import { LoyaltyCardTypes } from "../../types/LoyaltyCardTypes";
-import { styles } from "../../styles/LoyaltyCard.style";
-import Text from "../../../femsaComponents/components/Text/Text";
+import { LoyaltyCardTypes } from "../../../types/LoyaltyCardTypes";
+
+import Text from "../../../../femsaComponents/components/Text/Text";
+import { styles } from "../../../styles/LoyaltyStyles/LoyaltyCard.style";
 
 
 const LoyaltyCard: React.FC<LoyaltyCardTypes> = ({ title, subTitle, url }) => {

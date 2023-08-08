@@ -4,7 +4,8 @@ import BaseCard from './BaseCard';
 import useThemedStyles from '../../../hooks/useThemedStyles';
 import type { BaseCardProps, ContentStackedProps } from '../types';
 import Text from '../../../components/Text/Text';
-import type { ThemeContextType } from '../../../../src/theme/types';
+import { ThemeContextType } from '../../../theme/types';
+
 
 interface TextContentProps {
   title?: string;
