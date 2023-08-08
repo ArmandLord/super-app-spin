@@ -6,15 +6,16 @@ import { styles } from "../../styles/LoyaltyScreen.style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import NavBar from "../../components/NavBar/NavBar";
 import LoyaltyCard from "../../components/LoyaltyCard/LoyaltyCard";
+import { ScrollView } from "react-native-gesture-handler";
 
 const historial = require('../../assets/Loyalty/Historial.png');
 const changePoints = require('../../assets/Loyalty/ChangePoints.png')
 
 function LoyaltyScreen() {
 
-    const points = '../../assets/Loyalty/Points.png';
-    const products = '../../assets/Loyalty/Products.png';
-    const buy = '../../assets/Loyalty/Buy.png';
+    const points = require("../../assets/Loyalty/Points.png");
+    const products = require('../../assets/Loyalty/Products.png');
+    const buy = require('../../assets/Loyalty/Buy.png');
 
     const data: StackedCardProps[] = [
         {
@@ -30,10 +31,13 @@ function LoyaltyScreen() {
     ];
 
     return (
-        <SafeAreaView style={styles.container}>
-            <NavBar variant={'default'} title="Beneficios" />
-            <StackedCardGrid data={data} titlesSize="small" containerStyle={styles.containerStyle} itemsStyle={styles.itemsStyle} numberOfColumns={2} />
-            <LoyaltyCard title={'Acomula productos'} subTitle={'Llévate tus favoritos de regalo al juntar tus sellos'} url={points} />
+        <SafeAreaView >
+            <ScrollView style={styles.scrollView}>
+                <StackedCardGrid data={data} titlesSize="default" containerStyle={styles.containerStyle} itemsStyle={styles.itemsStyle} numberOfColumns={2} />
+                <LoyaltyCard title={'Acomula productos'} subTitle={'Llévate tus favoritos de regalo al juntar tus sellos'} url={points} />
+                <LoyaltyCard title={'Gana más puntos'} subTitle={'Muy pronto podrás ganar más puntos en el total de tu compra'} url={products} />
+                <LoyaltyCard title={'Suma al comprar'} subTitle={'Muy pronto podrás acumular compras y llevarte productos de regalo'} url={buy} />
+            </ScrollView>
         </SafeAreaView>)
 }
 

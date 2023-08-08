@@ -1,12 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
+    scrollView: {
+        height: '100%',
+        paddingHorizontal: 24,
     },
     containerStyle: {
-        height: 100,
+        height: 250,
     },
     itemsStyle: {
         height: 100,

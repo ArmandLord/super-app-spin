@@ -2,13 +2,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
-import { HomeScreen } from '../screens/Home/HomeScreen';
-import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
 
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 import useTheme from '../hooks/useTheme';
+import { HomeScreen } from '../screens/Home/HomeScreen';
+import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
 
 
 export type RootStackParamList = {
