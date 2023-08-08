@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import ThemeContext from '../theme/ThemeContext';
 
+
 /**
  * useTheme is a custom hook that returns the ThemeContext object
  * @returns The themeContext is being returned.

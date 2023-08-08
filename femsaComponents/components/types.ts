@@ -4,9 +4,10 @@ import type {
   TextStyle,
   ImageStyle,
   ColorValue,
+  ImageRequireSource,
 } from 'react-native';
 import type { BaseButtonProps } from './Button/types';
-import type { IconName } from '../../femsaComponents/atoms/Icon/Icon';
+import type { IconName } from './atoms/Icon/Icon';
 
 export enum TextVariant {
   'title-one-regular',

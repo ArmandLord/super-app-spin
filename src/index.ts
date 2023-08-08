@@ -54,3 +54,7 @@ export {default as ThemeProvider} from '../femsaComponents/theme/ThemeProvider';
 export {default as useTheme} from '../femsaComponents/hooks/useTheme';
 export {default as useThemedStyles} from '../femsaComponents/hooks/useThemedStyles';
 export {default as CustomNavBar} from'../femsaComponents/components/CustomNavBar/CustomNavBar';
+
+//components new
+export {default as ListItem} from './components/DataDisplay/ListItem';
+export {default as useMovements} from './hooks/useMovements';

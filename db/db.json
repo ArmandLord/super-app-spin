@@ -1,38 +1,175 @@
 {
   "history": [
     {
-      "entity": "Oxxo Gas",
-      "date": "Sun Aug 06 2023",
-      "points": 100,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 1
+      "id": 1,
+      "data": [
+        {
+          "title": "Hoy",
+          "data": [
+            {
+              "entity": "Enviaste Puntos",
+              "date": "Lun 07 Ago 2023",
+              "points": 150,
+              "operation": "earned",
+              "transactionNo": "9ef78c12-3b9d-45e2-8b81-f29c0d32",
+              "id": 5
+            },
+            {
+              "entity": "Volaris",
+              "date": "Lun 07 Ago 2023",
+              "points": 500,
+              "operation": "earned",
+              "transactionNo": "9ef78c12-3b9d-45e2-8b81-f29c0d32",
+              "id": 6
+            },
+            {
+              "entity": "OXXO",
+              "date": "Lun 07 Ago 2023",
+              "points": 300,
+              "operation": "earned",
+              "transactionNo": "9ef78c12-3b9d-45e2-8b81-f29c0d32",
+              "id": 7
+            },
+            {
+              "entity": "OXXO Gas",
+              "date": "Lun 07 Ago 2023",
+              "expiryDate": "Vie 07 Sep 2023",
+              "points": 200,
+              "operation": "earned",
+              "transactionNo": "9ef78c12-3b9d-45e2-8b81-f29c0d32",
+              "giftCode": "53421980193056789",
+              "id": 8
+            }
+          ]
+        },
+        {
+          "title": "Ayer",
+          "data": [
+            {
+              "entity": "OXXO Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 75,
+              "operation": "earned",
+              "transactionNo": "7a5b493f-1d40-4f98-88a1-e417f2c3",
+              "id": 9
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 06 Ago 2023",
+              "points": 200,
+              "operation": "earned",
+              "transactionNo": "7a5b493f-1d40-4f98-88a1-e417f2c3",
+              "id": 10
+            },
+            {
+              "entity": "Enviaste Puntos",
+              "date": "Dom 06 Ago 2023",
+              "points": 800,
+              "operation": "earned",
+              "transactionNo": "7a5b493f-1d40-4f98-88a1-e417f2c3",
+              "id": 11
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 06 Ago 2023",
+              "expiryDate": "Vie 06 Sep 2023",
+              "points": 150,
+              "operation": "earned",
+              "transactionNo": "7a5b493f-1d40-4f98-88a1-e417f2c3",
+              "giftCode": "61283945067892314",
+              "id": 12
+            }
+          ]
+        }
+      ]
     },
     {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 2
+      "id": 2,
+      "data": [
+        {
+          "title": "Semana anterior",
+          "data": [
+            {
+              "entity": "Volaris",
+              "date": "Sáb 29 Jul 2023",
+              "points": 120,
+              "operation": "earned",
+              "transactionNo": "4cde356b-6a57-4999-b27f-9f5e87a8",
+              "id": 13
+            },
+            {
+              "entity": "OXXO Gas",
+              "date": "Sáb 29 Jul 2023",
+              "points": 350,
+              "operation": "earned",
+              "transactionNo": "4cde356b-6a57-4999-b27f-9f5e87a8",
+              "id": 14
+            },
+            {
+              "entity": "Enviaste Puntos",
+              "date": "Sáb 29 Jul 2023",
+              "points": 500,
+              "operation": "earned",
+              "transactionNo": "4cde356b-6a57-4999-b27f-9f5e87a8",
+              "id": 15
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Sáb 29 Jul 2023",
+              "expiryDate": "Vie 29 Ago 2023",
+              "points": 250,
+              "operation": "earned",
+              "transactionNo": "4cde356b-6a57-4999-b27f-9f5e87a8",
+              "giftCode": "98765432101234567",
+              "id": 16
+            }
+          ]
+        }
+      ]
     },
     {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 3
-    },
-    {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "expiryDate": "Fri Sep 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "giftCode": "42738499092812000",
-      "id": 4
+      "id": 3,
+      "data": [
+        {
+          "title": "Mes anterior",
+          "data": [
+            {
+              "entity": "OXXO",
+              "date": "Mar 04 Jul 2023",
+              "points": 300,
+              "operation": "earned",
+              "transactionNo": "1b940dae-f1a4-476c-a0a1-85b7f36a",
+              "id": 17
+            },
+            {
+              "entity": "Volaris",
+              "date": "Mar 04 Jul 2023",
+              "points": 600,
+              "operation": "earned",
+              "transactionNo": "1b940dae-f1a4-476c-a0a1-85b7f36a",
+              "id": 18
+            },
+            {
+              "entity": "Enviaste Puntos",
+              "date": "Mar 04 Jul 2023",
+              "points": 450,
+              "operation": "earned",
+              "transactionNo": "1b940dae-f1a4-476c-a0a1-85b7f36a",
+              "id": 19
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Mar 04 Jul 2023",
+              "expiryDate": "Dom 04 Ago 2023",
+              "points": 800,
+              "operation": "earned",
+              "transactionNo": "1b940dae-f1a4-476c-a0a1-85b7f36a",
+              "giftCode": "76543210987654321",
+              "id": 20
+            }
+          ]
+        }
+      ]
     }
   ]
 }

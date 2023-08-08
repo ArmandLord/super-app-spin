@@ -2,7 +2,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
-
+import {CustomNavBar} from '../index'
+import { Image } from 'react-native';
+import BalanceScreen from '../Screens/BalanceScreen';
+import MovementsScreen from '../screens/Movements/MovementsScreen';
+import MovementsTicketScreen from '../Screens/MovementsTicketScreen';
+import PointsTicketScreen from '../Screens/PointsTicketScreen';
+import SelectAliadeScreen from '../Screens/SelectAliadeScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
