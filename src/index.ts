@@ -53,4 +53,6 @@ export {default as ThemeProvider} from './theme/ThemeProvider';
 // Hooks
 export {default as useTheme} from './hooks/useTheme';
 export {default as useThemedStyles} from './hooks/useThemedStyles';
+
+//components new
 export {default as CustomNavBar} from'./components/CustomNavBar/CustomNavBar';

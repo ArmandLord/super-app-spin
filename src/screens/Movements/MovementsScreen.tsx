@@ -21,7 +21,7 @@ function MovementsScreen() {
   const [routes] = useState([{ key: "all", title: "Todos" }]);
 
   const renderScene = SceneMap({
-    all: AllTab, // Asocia la clave 'all' con el componente AllTab
+    all: AllTab, 
   });
 
   return (
