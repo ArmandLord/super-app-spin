@@ -1,10 +1,9 @@
 import React from "react";
 import { Image } from "react-native";
-import StackedCardGrid from "../../components/GridView/StackedCardGrid";
+import StackedCardGrid from "../../../femsaComponents/GridView/StackedCardGrid";
 import { StackedCardProps } from "../../types/LoyaltyTypes";
 import { styles } from "../../styles/LoyaltyScreen.style";
 import { SafeAreaView } from "react-native-safe-area-context";
-import NavBar from "../../components/NavBar/NavBar";
 import LoyaltyCard from "../../components/LoyaltyCard/LoyaltyCard";
 import { ScrollView } from "react-native-gesture-handler";
 
