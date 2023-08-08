@@ -1,88 +1,51 @@
-import React, {
-  ReactNode,
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-} from 'react';
+import React, { createContext, useReducer, useContext, Dispatch } from 'react';
+import { Movement } from '../types/movements';
 
-import { SizesType } from '../styles/types';
+interface MovementsState {
+  history: Movement[];
+}
 
 type Action =
-  | {type: 'SET_SizesType_LIST'; payload: SizesType[]}
-  | {type: 'SET_SELECTED_SizesType'; payload: SizesType | null};
+  | { type: 'ADD_MOVEMENT'; payload: Movement }
+  | { type: 'UPDATE_MOVEMENT'; payload: { id: number; completed: boolean } }
+  | { type: 'DELETE_MOVEMENT'; payload: number };
 
-type State = {
-  SizesTypeList: SizesType[];
-  mySizesTypes: SizesType[];
-  selectedSizesType: SizesType | null;
-};
+type MovementsDispatch = Dispatch<Action>;
 
-type SizesTypeDetails = {
-  name: string;
-  id: number;
-  url: string;
-};
-
-type SizesTypeContextType = {
-    state: State;
-    dispatch: React.Dispatch<Action>;
-    fetchSizesTypeImage: (SizesType: SizesTypeDetails) => Promise<string>;
-    selectSizesType: (SizesType: SizesType) => void;
-  };
-  
-
-const SizesTypeContext = createContext<SizesTypeContextType>({
-  state: {SizesTypeList: [], selectedSizesType: null, mySizesTypes: []},
-  dispatch: () => null,
-  fetchSizesTypeImage: async () => '',
-  selectSizesType: () => {},
+const MovementsContext = createContext<{ state: MovementsState; dispatch: MovementsDispatch }>({
+  state: { history: [] },
+  dispatch: () => {},
 });
 
-const SizesTypeReducer = (state: State, action: Action): State => {
+const movementsReducer = (state: MovementsState, action: Action): MovementsState => {
   switch (action.type) {
-    case 'SET_SizesType_LIST':
-      return {...state, SizesTypeList: action.payload};
-    case 'SET_SELECTED_SizesType':
-      return {...state, selectedSizesType: action.payload};
+    case 'ADD_MOVEMENT':
+      return { ...state, history: [...state.history, action.payload] };
+    case 'UPDATE_MOVEMENT':
+      return {
+        ...state,
+        history: state.history.map((movement) =>
+          movement.id === action.payload.id ? { ...movement, completed: action.payload.completed } : movement
+        ),
+      };
+    case 'DELETE_MOVEMENT':
+      return {
+        ...state,
+        history: state.history.filter((movement) => movement.id !== action.payload),
+      };
     default:
       return state;
   }
 };
 
-export const SizesTypeProvider: React.FC<{children: ReactNode}> = ({
-  children,
-}) => {
-  const [state, dispatch] = useReducer(SizesTypeReducer, {
-    SizesTypeList: [],
-    mySizesTypes: [],
-    selectedSizesType: null,
-  });
-
-
-  const fetchSizesTypeImage = async (
-    SizesType: SizesTypeDetails,
-  ): Promise<string> => {
-    const response = await fetch(SizesType.url);
-    const data = await response.json();
-    return data.sprites.front_default;
-  };
-
- 
-  
-  const selectSizesType = (SizesType: SizesType) => {
-    dispatch({
-      payload: SizesType,
-      type: 'SET_SELECTED_SizesType',
-    });
-  };
+const MovementsProvider = ({ children }: any) => {
+  const [state, dispatch] = useReducer(movementsReducer, { history: [] });
 
   return (
-    <SizesTypeContext.Provider
-      value={{state, dispatch, fetchSizesTypeImage,selectSizesType}}>
-      {children}
-    </SizesTypeContext.Provider>
+    <MovementsContext.Provider value={{ state, dispatch }}>{children}</MovementsContext.Provider>
   );
 };
 
-export const useSizesTypeContext = () => useContext(SizesTypeContext);
+const useMovementsContext = () => useContext(MovementsContext);
+
+export { MovementsProvider, useMovementsContext };

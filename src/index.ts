@@ -56,3 +56,5 @@ export {default as useThemedStyles} from './hooks/useThemedStyles';
 
 //components new
 export {default as CustomNavBar} from'./components/CustomNavBar/CustomNavBar';
+export {default as ListItem} from './components/DataDisplay/ListItem';
+export {default as useMovements} from './hooks/useMovements';

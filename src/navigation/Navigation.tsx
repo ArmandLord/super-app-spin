@@ -4,10 +4,10 @@ import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack
 import React, { useEffect } from 'react';
 import {CustomNavBar} from '../index'
 import { Image } from 'react-native';
-import {HomeScreen} from '../Screens/Home/HomeScreen';
+import {HomeScreen} from '../screens/Home/HomeScreen';
 import BalanceScreen from '../Screens/BalanceScreen';
-import LoyaltyScreen from '../Screens/LoyaltyScreen';
-import MovementsScreen from '../Screens/Movements/MovementsScreen';
+import LoyaltyScreen from '../screens/LoyaltyScreen';
+import MovementsScreen from '../screens/Movements/MovementsScreen';
 import MovementsTicketScreen from '../Screens/MovementsTicketScreen';
 import PointsTicketScreen from '../Screens/PointsTicketScreen';
 import SelectAliadeScreen from '../Screens/SelectAliadeScreen';
