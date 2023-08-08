@@ -1,16 +1,26 @@
-
-
-import React from "react";
-import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
+import Transactions from "../screens/Transactions";
+import TransactionsDetails from "../screens/TransactionsDetails";
 import TabsNavigator from "./TabsNavigator";
-import TransactionsNavigation from "./TransactionsNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+
+const Stack = createStackNavigator();
 
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <TransactionsNavigation/>
+      <Stack.Navigator>
+          <Stack.Screen 
+          name="Tabs" 
+          component={TabsNavigator} 
+          options={{
+            headerShown: false,
+          }}/>
+          <Stack.Screen name="Transactions" component={Transactions} />
+          <Stack.Screen name="TransactionsDetails" component={TransactionsDetails} />
+      </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
 export default AppNavigator;
