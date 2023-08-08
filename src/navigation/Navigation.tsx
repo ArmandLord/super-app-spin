@@ -1,25 +1,26 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
-import { StackNavigationProp, createStackNavigator } from '@react-navigation/stack';
+import {StackNavigationProp, createStackNavigator} from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import {CustomNavBar} from '../index'
 import { Image } from 'react-native';
+import {HomeScreen} from '../Screens/Home/HomeScreen';
 import BalanceScreen from '../Screens/BalanceScreen';
-import MovementsScreen from '../screens/Movements/MovementsScreen';
+import LoyaltyScreen from '../Screens/LoyaltyScreen/LoyaltyScreen';
+import MovementsScreen from '../Screens/Movements/MovementsScreen';
 import MovementsTicketScreen from '../Screens/MovementsTicketScreen';
 import PointsTicketScreen from '../Screens/PointsTicketScreen';
 import SelectAliadeScreen from '../Screens/SelectAliadeScreen';
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 import useTheme from '../../femsaComponents/hooks/useTheme';
-import { HomeScreen } from '../screens/Home/HomeScreen';
-import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
 
 
 export type RootStackParamList = {
-  Home: { init: boolean };
-};
+    Home: undefined,
+    Beneficios:undefined,
+    Cartera:undefined,
+    Cuenta:undefined};
 
 type HomeScreenRouteProps = RouteProp<RootStackParamList, 'Home'>;
 
@@ -27,20 +28,20 @@ const HomeStack = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute<HomeScreenRouteProps>();
 
-  useEffect(() => {
-    if (route.params?.init)
-      navigation.reset({
-        index: 0,
-        routes: [{ name: 'Home' }],
-      });
-  }, [route.params?.init]);
+  // useEffect(() => {
+  //   if (route.params?.init)
+  //     navigation.reset({
+  //       index: 0,
+  //       routes: [{name: 'Home'}],
+  //     });
+  // }, [route.params?.init]);
 
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Beneficios" component={LoyaltyScreen} />
-      <Stack.Screen name="Cartera" component={HomeScreen} />
-      <Stack.Screen name="Cuenta" component={HomeScreen} />
+      <Stack.Screen name="Beneficios" component={HomeScreen} />
+      <Stack.Screen name="Cartera" component={LoyaltyScreen} />
+      <Stack.Screen name="Cuenta" component={MovementsScreen} />
     </Stack.Navigator>
   );
 };
@@ -49,23 +50,24 @@ const Navigation = () => {
   const { colors } = useTheme()
 
   return (
-    <Tab.Navigator screenOptions={{ headerShown: false }}>
-      <Tab.Screen
+    <Tab.Navigator tabBar={(props) => 
+    <CustomNavBar {...props} focusedColor={colors.content_primary}  blurColor={colors.content_tertiary}/>}>
+    <Tab.Screen
         name="Home"
         component={HomeStack}
       />
       <Tab.Screen
         name="Beneficios"
-        component={LoyaltyScreen}
+        component={HomeScreen}
       />
       <Tab.Screen
         name="Cartera"
-        component={HomeScreen}
+        component={LoyaltyScreen}
 
       />
       <Tab.Screen
         name="Cuenta"
-        component={HomeScreen}
+        component={MovementsScreen}
 
       />
     </Tab.Navigator>

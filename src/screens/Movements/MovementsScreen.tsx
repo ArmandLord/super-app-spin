@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Animated, View, useWindowDimensions } from 'react-native';
 import { styles } from './movements.style';
-import useTheme from '../../hooks/useTheme';
-import TabBar from '../../components/TabBar/TabBar';
+import useTheme from '../../../femsaComponents/hooks/useTheme';
+import TabBar from '../../../femsaComponents/components/TabBar/TabBar';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import AllMovementsList from './allmovements/AllMovementsList';
 

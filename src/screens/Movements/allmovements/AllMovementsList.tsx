@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { ActivityIndicator, SectionList, View } from 'react-native';
 import { style } from './allmovents.style';
 import axios, { AxiosResponse } from 'axios';
-import Text from '../../../components/Text/Text';
+import Text from '../../../../femsaComponents/components/Text/Text';
 import ListItem from '../../../components/DataDisplay/ListItem';
 import useMovements from '../../../hooks/useMovements';
-import Spinner from '../../../components/atoms/Spinner/Spinner';
+import Spinner from '../../../../femsaComponents/components/atoms/Spinner/Spinner';
 
 const AllMovementsList = () => {
 
