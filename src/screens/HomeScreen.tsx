@@ -10,8 +10,12 @@ import medal from '../assets/svg/medal.png';
 import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
 import iconPoints from '../assets/svg/icon.png';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+  
+  const {navigate} = useNavigation();
+
   const points = "10,657";
   const pointsValue = "156.00";
   const imageWidth = 100;
@@ -72,6 +76,7 @@ const HomeScreen = () => {
           <ContentStackedCard
             title="Consulta tu historial"
             titleSize="default"
+            onPress={() => navigate('Transactions')}
             icon={
               <Image
                 source={historytask}
