@@ -9,6 +9,7 @@ import AcomulatedPoints from "../../components/LoyaltyScreenComponents/Acomulate
 import Banner from "../../../femsaComponents/components/molecules/Banner";
 import BannerCarousel from "../../../femsaComponents/components/molecules/BannerCarousel";
 import { useNavigation } from "@react-navigation/native";
+import { useMovementsContext } from "../../context/SuperAppContext";
 
 const historial = require('../../assets/Loyalty/Historial.png');
 const changePoints = require('../../assets/Loyalty/ChangePoints.png')
@@ -19,16 +20,24 @@ function LoyaltyScreen() {
     const products = require('../../assets/Loyalty/Products.png');
     const buy = require('../../assets/Loyalty/Buy.png');
     const navigation = useNavigation()
+    const { dispatch } = useMovementsContext()
+
     const data: StackedCardProps[] = [
         {
             title: 'Consulta tu historial',
             icon: <Image source={historial} />,
-            onPress: () => navigation.navigate('Movimientos')
+            onPress: () => {
+                navigation.navigate('Movimientos')
+                dispatch({ type: 'SHOW_TAB', payload: false })
+            }
         },
         {
             title: 'Cambiá tus puntos',
             icon: <Image source={changePoints} />,
-            onPress: () => console.log('hello word')
+            onPress: () => {
+                navigation.navigate('Exchange')
+                dispatch({ type: 'SHOW_TAB', payload: false })
+            }
         },
     ];
 
