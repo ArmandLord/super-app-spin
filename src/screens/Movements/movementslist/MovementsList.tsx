@@ -38,7 +38,7 @@ const MovementsList = ({ movements, getData, loading, moreData }: MovementsListP
                 supportText={item.date}
                 infoLabel={`${item.operation == 'earned' ? '+ ' : '- '}${item.points}`}
                 icon={getIconForEntity(item.entity)}
-                onPress={() => navigation.navigate('Detalles', { movement: item })} />}
+                onPress={() => navigation.navigate('Detalle del Movimiento', { movement: item })} />}
             sections={movements}
             stickySectionHeadersEnabled={false}
             renderSectionHeader={({ section: { title } }) => (

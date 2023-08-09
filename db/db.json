@@ -8,15 +8,15 @@
           "data": [
             {
               "entity": "Oxxo",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
               "id": 1
             },
             {
-              "entity": "Recuperacion de Puntos",
-              "date": "Sun Aug 01 2023",
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -24,7 +24,7 @@
             },
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -32,8 +32,8 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -47,15 +47,15 @@
           "data": [
             {
               "entity": "Oxxo",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
               "id": 1
             },
             {
-              "entity": "Recuperacion de Puntos",
-              "date": "Sun Aug 01 2023",
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -63,7 +63,7 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -71,8 +71,8 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -91,15 +91,15 @@
           "data": [
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
-              "operation": "used",
+              "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
               "id": 1
             },
             {
-              "entity": "Recuperacion de Puntos",
-              "date": "Sun Aug 01 2023",
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -107,16 +107,16 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
               "id": 3
             },
             {
-              "entity": "Recuperacion de Puntos",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -135,7 +135,7 @@
           "data": [
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -143,7 +143,7 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -151,7 +151,7 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -159,8 +159,8 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -180,8 +180,8 @@
           "title": "Hoy",
           "data": [
             {
-              "entity": "Recuperacion de Puntos",
-              "date": "Sun Aug 01 2023",
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -189,7 +189,7 @@
             },
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -202,7 +202,7 @@
           "data": [
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -210,7 +210,7 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -218,8 +218,8 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -238,7 +238,7 @@
           "data": [
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "earned",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -250,8 +250,7 @@
     },
     {
       "id": 3,
-      "data": [
-      ]
+      "data": []
     }
   ],
   "used": [
@@ -263,7 +262,7 @@
           "data": [
             {
               "entity": "Oxxo",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -271,8 +270,8 @@
             },
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
-              "expiryDate": "Fri Sep 01 2023",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
               "points": 1000,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -286,7 +285,7 @@
           "data": [
             {
               "entity": "Volaris",
-              "date": "Sun Aug 01 2023",
+              "date": "Dom 01 Ago 2023",
               "points": 1000,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -304,7 +303,7 @@
           "data": [
             {
               "entity": "Oxxo Gas",
-              "date": "Sun Aug 06 2023",
+              "date": "Dom 06 Ago 2023",
               "points": 100,
               "operation": "used",
               "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",

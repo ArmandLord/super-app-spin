@@ -14,6 +14,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useMovementsContext } from '../context/SuperAppContext';
+import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
 
 
 
@@ -75,6 +76,16 @@ const Navigation = () => {
                 dispatch({ type: 'SHOW_TAB', payload: true })
               }} />
             ),
+          }} />
+           <Stack.Screen name="Detalle del Movimiento" component={DetailssScreen}
+          options={{
+            headerLeft: (props) => (
+              <BackButton onPress={() => {
+                navigation.navigate('Movimientos');
+                dispatch({ type: 'SHOW_TAB', payload: false })
+              }} />
+            ),
+            headerTitleAlign: 'left'
           }} />
       </Stack.Navigator>
     );
