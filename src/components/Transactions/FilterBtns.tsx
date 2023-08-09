@@ -5,23 +5,38 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const WIDTH = Dimensions.get('screen').width;
 
-const FilterBtns = () => {
+const FilterBtns = (props) => {
 
   const [currentItem, setCurrentItem] = useState(0);
+
+  const handleBtn = (index: number = 0) => {
+    if (index !== currentItem) {
+        setCurrentItem(index)
+        if (index === 0) {
+            props.allCallback();
+        }
+        if (index === 1) {
+            props.gotCallback();
+        }
+        if (index === 2) {
+            props.usedCallback();
+        }
+    }
+  }
   
   return (
     <View style={styles.container}>
-        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(0)}>
+        <TouchableOpacity activeOpacity={1} onPress={() => handleBtn(0)}>
             <View style={styles.tab}>
                 <Text style={[styles.tabText, currentItem === 0 && styles.tabTextActive]}>Todos</Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(1)}>
+        <TouchableOpacity activeOpacity={1} onPress={() => handleBtn(1)}>
             <View style={styles.tab}>
                 <Text style={[styles.tabText, currentItem === 1 && styles.tabTextActive]}>Ganados</Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(2)}>
+        <TouchableOpacity activeOpacity={1} onPress={() => handleBtn(2)}>
             <View style={styles.tab}>
                 <Text style={[styles.tabText, currentItem === 2 && styles.tabTextActive]}>Usados</Text>
             </View>
