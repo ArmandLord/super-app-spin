@@ -13,7 +13,6 @@ const Transactions = () => {
   useEffect(() => {
     axios.get('http://localhost:3001/history')
     .then(res => {
-        console.log('res.data --> ', res.data);
         
         setItems(res.data);
     })

@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import TransactionsScreen from "../screens/TransactionsScreen";
-import TransactionsDetails from "../screens/TransactionDetails";
+import TransactionsDetailsScreen from "../screens/TransactionsDetailsScreen";
 import TabsNavigator from "./TabsNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 
@@ -18,13 +18,13 @@ const AppNavigator = () => {
           }}
         />
         <Stack.Screen 
-          name="Transactions" 
+          name="TransactionsScreen" 
           component={TransactionsScreen} options={{
           title: 'Movimientos',
         }} />
         <Stack.Screen
-          name="TransactionsDetails"
-          component={TransactionsDetails}
+          name="TransactionsDetailsScreen"
+          component={TransactionsDetailsScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

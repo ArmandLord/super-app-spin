@@ -4,7 +4,6 @@ import TextInput from '../atoms/TextInput';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const WIDTH = Dimensions.get('screen').width;
-console.log('WIDTH --> ', WIDTH);
 
 const FilterBtns = () => {
 

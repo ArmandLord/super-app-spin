@@ -76,7 +76,7 @@ const HomeScreen = () => {
           <ContentStackedCard
             title="Consulta tu historial"
             titleSize="default"
-            onPress={() => navigate('Transactions')}
+            onPress={() => navigate('TransactionsScreen')}
             icon={
               <Image
                 source={historytask}
