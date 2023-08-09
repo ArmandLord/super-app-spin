@@ -4,6 +4,7 @@ import TransactionsDetailsScreen from "../screens/TransactionsDetailsScreen";
 import TabsNavigator from "./TabsNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { Image } from "react-native";
+import options from "./options";
 
 const Stack = createStackNavigator();
 
@@ -19,26 +20,17 @@ const AppNavigator = () => {
           }}
         />
         <Stack.Screen 
+          options={{
+            ...options,
+            title: 'Movimientos'
+          }}
           name="TransactionsScreen" 
-          component={TransactionsScreen} options={{
-          title: '',
-          headerBackTitleStyle: {
-            color: '#05053D',
-            fontSize: 18,
-            paddingLeft: 19,
-            fontWeight: '500',
-          },
-          headerLeftContainerStyle: {
-            paddingLeft: 26,
-          },
-          headerBackTitle: 'Movimientos',
-          headerStyle: {
-            height: 116
-          },
-          headerShadowVisible: false,
-          headerBackImage: () => <Image source={require('../assets/Angle_left.png')} />
-        }} />
+          component={TransactionsScreen} />
         <Stack.Screen
+          options={{
+            ...options,
+            title: 'Detalles del movimiento',
+          }}
           name="TransactionsDetailsScreen"
           component={TransactionsDetailsScreen}
         />
