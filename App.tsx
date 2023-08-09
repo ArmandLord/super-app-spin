@@ -3,16 +3,17 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import AppNavigator from './src/navigation/Navigation';
 import ThemeProvider from './femsaComponents/theme/ThemeProvider';
+import { MovementsProvider } from './src/context/SuperAppContext';
 
 const App: React.FC = () => {
   return (
     <ThemeProvider>
-      <NavigationContainer >
-        {/* <Context> */}
-        <AppNavigator />
-        {/* </Context> */}
-      </NavigationContainer>
-    </ThemeProvider>
+      <MovementsProvider>
+        <NavigationContainer >
+          <AppNavigator />
+        </NavigationContainer>
+      </MovementsProvider>
+    </ThemeProvider >
 
   );
 };
