@@ -7,7 +7,12 @@ import { useNavigation } from "@react-navigation/native";
 
 const ItemList = ({entity, date, points, id}: TItem) => {
 
-  const Image1 = require('../../assets/Transactions/graphic.png');
+  const imgDoniatota = require('../../assets/Movimientos/doniatota.png');
+  const imgOxxo = require('../../assets/Movimientos/oxxo.png');
+  const imgOxxogas = require('../../assets/Movimientos/oxxogas.png');
+  const imgPuntos = require('../../assets/Movimientos/puntos.png');
+  const imgSpin = require('../../assets/Movimientos/spin.png');
+  const imgVolaris = require('../../assets/Movimientos/volaris.png');
 
   const daysNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
 
@@ -18,10 +23,29 @@ const ItemList = ({entity, date, points, id}: TItem) => {
     return `${daysNames[IDate.getDay()]} ${IDate.getDate()}`;
   }
 
+  const setImage = () => {
+    switch (entity) {
+      case 'Recuperación de tus puntos':
+        return imgSpin;
+      case 'OXXO':
+        return imgOxxo;
+      case 'Enviaste puntos':
+        return imgPuntos;
+      case 'OXXO Gas':
+        return imgOxxogas;
+      case 'Doña tota':
+        return imgDoniatota;
+      case 'Volaris':
+        return imgVolaris;
+      default:
+        return null;
+    }
+  }
+
   return (
     <TouchableOpacity activeOpacity={0.5} onPress={() => navigate('TransactionsDetailsScreen', {transactionId: id})}>
       <View style={styles.container}>
-        <Image source={Image1} style={styles.thumbnail}/>
+        <Image source={setImage()} style={styles.thumbnail}/>
         <View style={styles.info}>
           <Text>{entity}</Text>
           <Text>{setDate(date)}</Text>
@@ -50,6 +74,7 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     marginRight: 12,
+    borderRadius: 20,
   },
   info: {
     flex: 1,
