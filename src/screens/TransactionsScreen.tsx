@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet, Text, View, SectionList } from "react-native";
 import ItemList from "../components/Transactions/ItemList";
-import { Items } from "../types/transactions";
+import { GroupsTItem, TItem, TItems } from "../types/transactions";
 import Button from "../components/Button/Button";
 import FilterBtns from "../components/Transactions/FilterBtns";
 
 const Transactions = () => {
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<GroupsTItem>([]);
 
   const monthsNames = [
     'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
@@ -29,8 +29,7 @@ const Transactions = () => {
     });
   }, []);
 
-  const setGroupItems = (items:Items) => {
-    let newItems = {};
+  const setGroupItems = (items:TItems) => {
 
     const now = new Date();
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -46,7 +45,7 @@ const Transactions = () => {
     const twoMonthsAgo = new Date(today);
     twoMonthsAgo.setMonth(twoMonthsAgo.getMonth() - 2);
 
-    const groupedDates = [
+    const groupedDates: GroupsTItem = [
       {
         title: 'Hoy',
         data: [],
@@ -69,7 +68,7 @@ const Transactions = () => {
       }
     ];
 
-    items.map((item) => {
+    items.map((item: TItem) => {
       const currentDate = new Date(item.date);
     
       if (currentDate.toDateString() === today.toDateString()) {

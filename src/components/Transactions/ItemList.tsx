@@ -1,11 +1,11 @@
 import React from "react";
-import { Item } from "../../types/transactions";
+import { TItem } from "../../types/transactions";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 
-const ItemList = ({entity, date, points, id}: Item) => {
+const ItemList = ({entity, date, points, id}: TItem) => {
 
   const Image1 = require('../../assets/Transactions/graphic.png');
 
