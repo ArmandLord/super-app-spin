@@ -3,7 +3,7 @@ export default {
     headerTitleAlign: 'left',
     headerBackTitleVisible: false,
     headerLeftContainerStyle: {
-      paddingLeft: 26,
+      paddingLeft: 16,
     },
     headerStyle: {
       height: 116

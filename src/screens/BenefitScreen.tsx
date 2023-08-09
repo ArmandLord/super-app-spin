@@ -11,6 +11,7 @@ import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
 import iconPoints from '../assets/svg/icon.png';
 import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const BenefitScreen = () => {
   
@@ -108,7 +109,9 @@ const BenefitScreen = () => {
             <Text style={styles.propDescription}>
               Muy pronto podrás sumar tus compras y ganar productos de regalo
             </Text>
-            <Image source={prop} style={styles.propImage} />
+            <TouchableOpacity onPress={() => navigate('TicketScreen')}>
+              <Image source={prop} style={styles.propImage} />
+            </TouchableOpacity>
           </View>
         </View>
         <View style={styles.sectionContainer}>
