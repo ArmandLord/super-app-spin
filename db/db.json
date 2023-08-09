@@ -1,6 +1,6 @@
 {
 	"history": [{
-			"entity": "Volaris",
+			"entity": "OXXO",
 			"date": "2023-08-09T08:00:00Z",
 			"expiryDate": "2023-09-09T08:00:00Z",
 			"points": 1200,
@@ -10,7 +10,7 @@
 			"id": 1
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Enviaste puntos",
 			"date": "2023-08-09T10:30:00Z",
 			"expiryDate": "2023-09-09T10:30:00Z",
 			"points": -1900,
@@ -20,7 +20,7 @@
 			"id": 2
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Recuperación de tus puntos",
 			"date": "2023-08-09T14:15:00Z",
 			"expiryDate": "2023-09-09T14:15:00Z",
 			"points": -1800,
@@ -30,7 +30,7 @@
 			"id": 3
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "OXXO Gas",
 			"date": "2023-08-09T16:45:00Z",
 			"expiryDate": "2023-09-09T16:45:00Z",
 			"points": 1600,
@@ -50,7 +50,7 @@
 			"id": 5
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Doña tota",
 			"date": "2023-08-08T09:30:00Z",
 			"expiryDate": "2023-09-08T09:30:00Z",
 			"points": 1500,
@@ -60,7 +60,7 @@
 			"id": 6
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Enviaste puntos",
 			"date": "2023-08-08T12:00:00Z",
 			"expiryDate": "2023-09-08T12:00:00Z",
 			"points": 1300,
@@ -80,7 +80,7 @@
 			"id": 8
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "OXXO",
 			"date": "2023-08-08T18:30:00Z",
 			"expiryDate": "2023-09-08T18:30:00Z",
 			"points": -1200,
@@ -90,7 +90,7 @@
 			"id": 9
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Doña tota",
 			"date": "2023-08-08T21:00:00Z",
 			"expiryDate": "2023-09-08T21:00:00Z",
 			"points": -1100,
@@ -100,9 +100,9 @@
 			"id": 10
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Recuperación de tus puntos",
 			"date": "2023-08-02T11:00:00Z",
-			"expiryDate": "2023-08-02T11:00:00Z",
+			"expiryDate": "2023-09-02T11:00:00Z",
 			"points": -1000,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -110,9 +110,9 @@
 			"id": 11
 		},
 		{
-			"entity": "Volaris",
+			"entity": "OXXO Gas",
 			"date": "2023-08-03T14:30:00Z",
-			"expiryDate": "2023-08-03T14:30:00Z",
+			"expiryDate": "2023-09-03T14:30:00Z",
 			"points": -900,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -122,7 +122,7 @@
 		{
 			"entity": "Volaris",
 			"date": "2023-08-04T17:15:00Z",
-			"expiryDate": "2023-08-04T17:15:00Z",
+			"expiryDate": "2023-09-04T17:15:00Z",
 			"points": -800,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -130,9 +130,9 @@
 			"id": 13
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "OXXO",
 			"date": "2023-08-05T20:45:00Z",
-			"expiryDate": "2023-08-05T20:45:00Z",
+			"expiryDate": "2023-09-05T20:45:00Z",
 			"points": -700,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -140,9 +140,9 @@
 			"id": 14
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Doña tota",
 			"date": "2023-08-06T23:00:00Z",
-			"expiryDate": "2023-08-06T23:00:00Z",
+			"expiryDate": "2023-09-06T23:00:00Z",
 			"points": 600,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -150,9 +150,9 @@
 			"id": 15
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Enviaste puntos",
 			"date": "2023-07-10T10:30:00Z",
-			"expiryDate": "2023-07-10T10:30:00Z",
+			"expiryDate": "2023-08-10T10:30:00Z",
 			"points": 1700,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -160,9 +160,9 @@
 			"id": 16
 		},
 		{
-			"entity": "Volaris",
+			"entity": "OXXO Gas",
 			"date": "2023-07-15T13:00:00Z",
-			"expiryDate": "2023-07-15T13:00:00Z",
+			"expiryDate": "2023-08-15T13:00:00Z",
 			"points": -400,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -170,9 +170,9 @@
 			"id": 17
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Recuperación de tus puntos",
 			"date": "2023-07-20T16:45:00Z",
-			"expiryDate": "2023-07-20T16:45:00Z",
+			"expiryDate": "2023-08-20T16:45:00Z",
 			"points": -300,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -180,9 +180,9 @@
 			"id": 18
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Volaris",
 			"date": "2023-07-25T19:30:00Z",
-			"expiryDate": "2023-07-25T19:30:00Z",
+			"expiryDate": "2023-08-25T19:30:00Z",
 			"points": 1800,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -190,9 +190,9 @@
 			"id": 19
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Enviaste puntos",
 			"date": "2023-07-30T22:00:00Z",
-			"expiryDate": "2023-07-30T22:00:00Z",
+			"expiryDate": "2023-08-30T22:00:00Z",
 			"points": 1900,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -200,9 +200,9 @@
 			"id": 20
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Doña tota",
 			"date": "2023-06-05T08:45:00Z",
-			"expiryDate": "2023-06-05T08:45:00Z",
+			"expiryDate": "2023-07-05T08:45:00Z",
 			"points": 2000,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -210,9 +210,9 @@
 			"id": 21
 		},
 		{
-			"entity": "Volaris",
+			"entity": "OXXO Gas",
 			"date": "2023-06-10T11:15:00Z",
-			"expiryDate": "2023-06-10T11:15:00Z",
+			"expiryDate": "2023-07-10T11:15:00Z",
 			"points": 100,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -220,9 +220,9 @@
 			"id": 22
 		},
 		{
-			"entity": "Oxxo Gas",
+			"entity": "Volaris",
 			"date": "2023-06-15T14:00:00Z",
-			"expiryDate": "2023-06-15T14:00:00Z",
+			"expiryDate": "2023-07-15T14:00:00Z",
 			"points": 200,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -230,9 +230,9 @@
 			"id": 23
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Recuperación de tus puntos",
 			"date": "2023-06-20T17:30:00Z",
-			"expiryDate": "2023-06-20T17:30:00Z",
+			"expiryDate": "2023-07-20T17:30:00Z",
 			"points": -500,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
@@ -240,9 +240,9 @@
 			"id": 24
 		},
 		{
-			"entity": "Volaris",
+			"entity": "Doña tota",
 			"date": "2023-06-20T17:30:00Z",
-			"expiryDate": "2023-06-20T17:30:00Z",
+			"expiryDate": "2023-07-20T17:30:00Z",
 			"points": 400,
 			"operation": "earned",
 			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
