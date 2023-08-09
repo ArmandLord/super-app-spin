@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FlatList, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 import ItemList from "../components/Transactions/ItemList";
 import { Items } from "../types/transactions";
 import Button from "../components/Button/Button";
+import FilterBtns from "../components/Transactions/FilterBtns";
 
 const Transactions = () => {
 
@@ -12,7 +13,6 @@ const Transactions = () => {
   useEffect(() => {
     axios.get('http://localhost:3001/history')
     .then(res => {
-        console.log('res.data --> ', res.data);
         
         setItems(res.data);
     })
@@ -23,14 +23,22 @@ const Transactions = () => {
 
 
   return (
-    <View>
+    <View style={styles.container}>
+      <FilterBtns />
       <FlatList
         data={items}
         renderItem={({item}) => (<ItemList entity={item.entity} id={item.id} date={item.date} points={item.points} />)}
-        keyExtractor={item => item.id}
+        keyExtractor={item => String(item.id)}
       />
     </View>
   );
 }
 
 export default Transactions;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#ffffff',
+    }
+});
