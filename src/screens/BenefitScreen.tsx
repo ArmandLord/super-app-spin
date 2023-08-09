@@ -90,7 +90,7 @@ const BenefitScreen = () => {
           <ContentStackedCard
             title="Cambia tus puntos"
             titleSize="default"
-            onPress={() => console.log('Card pressed')}
+            onPress={() => navigate('PointsScreen')}
             icon={
               <Image
                 source={premiastar}
