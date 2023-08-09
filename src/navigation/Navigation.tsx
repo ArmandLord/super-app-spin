@@ -9,16 +9,21 @@ import MovementsScreen from '../screens/Movements/MovementsScreen';
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 import useTheme from '../../femsaComponents/hooks/useTheme';
+import { Movement } from '../models/Movement';
+
 
 
 
 
 export type RootStackParamList = {
-  Home: undefined,
-  Beneficios: undefined,
-  Cartera: undefined,
-  Cuenta: undefined
-};
+    Home: undefined,
+    Beneficios:undefined,
+    Cartera:undefined,
+    Cuenta:undefined,
+    Movimientos:undefined,
+  Detalles: {movement:Movement};
+
+  };
 
 type HomeScreenRouteProps = RouteProp<RootStackParamList, 'Home'>;
 
@@ -26,20 +31,14 @@ const HomeStack = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
   const route = useRoute<HomeScreenRouteProps>();
 
-  // useEffect(() => {
-  //   if (route.params?.init)
-  //     navigation.reset({
-  //       index: 0,
-  //       routes: [{name: 'Home'}],
-  //     });
-  // }, [route.params?.init]);
-
+  
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="Beneficios" component={LoyaltyScreen} />
-      <Stack.Screen name="Cartera" component={HomeScreen} />
-      <Stack.Screen name="movments" component={MovementsScreen} />
+      <Stack.Screen name="Beneficios" component={HomeScreen} />
+      <Stack.Screen name="Cartera" component={LoyaltyScreen} />
+      <Stack.Screen name="Cuenta" component={MovementsScreen} />
+      <Stack.Screen name="Movimientos" component={MovementsScreen} />
     </Stack.Navigator>
   );
 };
@@ -60,7 +59,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Cartera"
-        component={HomeScreen}
+        component={HomeStack}
 
       />
       <Tab.Screen

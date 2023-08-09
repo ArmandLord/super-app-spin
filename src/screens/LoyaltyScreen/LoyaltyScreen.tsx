@@ -23,7 +23,7 @@ function LoyaltyScreen() {
         {
             title: 'Consulta tu historial',
             icon: <Image source={historial} />,
-            onPress: () => navigation.navigate('movments')
+            onPress: () => navigation.navigate('Movimientos')
         },
         {
             title: 'Cambiá tus puntos',

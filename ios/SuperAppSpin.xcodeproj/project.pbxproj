@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5C1562B9250C98049FF5AB12 /* libPods-SuperAppSpin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42355E542A80B544EBDCE219 /* libPods-SuperAppSpin.a */; };
-		787A22F09C47243C873ED5E1 /* libPods-SuperAppSpin-SuperAppSpinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA938CF1DF7FE5ED85946B8 /* libPods-SuperAppSpin-SuperAppSpinTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9690868CEA7436AF7FE9F0A6 /* libPods-SuperAppSpin-SuperAppSpinTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5065E243382D620845E97DF /* libPods-SuperAppSpin-SuperAppSpinTests.a */; };
+		D7544D2B9AA4671FEBAB1F71 /* libPods-SuperAppSpin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EF1E6D6FB32D6C92E1DA51 /* libPods-SuperAppSpin.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,20 +30,20 @@
 		00E356EE1AD99517003FC87E /* SuperAppSpinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperAppSpinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SuperAppSpinTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuperAppSpinTests.m; sourceTree = "<group>"; };
+		1313E43D911D83F90DC5DB18 /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SuperAppSpin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperAppSpin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SuperAppSpin/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SuperAppSpin/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SuperAppSpin/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SuperAppSpin/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SuperAppSpin/main.m; sourceTree = "<group>"; };
-		2EA938CF1DF7FE5ED85946B8 /* libPods-SuperAppSpin-SuperAppSpinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperAppSpin-SuperAppSpinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E1F4379AD8B9E9F21C4ACFE /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig"; sourceTree = "<group>"; };
-		42355E542A80B544EBDCE219 /* libPods-SuperAppSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperAppSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		561448DA1D62D16EB3172462 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig"; sourceTree = "<group>"; };
-		5B37D2E7E2F72BDC054CA8DE /* Pods-SuperAppSpin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin.debug.xcconfig"; sourceTree = "<group>"; };
+		13D80C4A9962BE7B9C2EEFB7 /* Pods-SuperAppSpin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin.release.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SuperAppSpin/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C2E112907245FD1AA60C056A /* Pods-SuperAppSpin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin.release.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin.release.xcconfig"; sourceTree = "<group>"; };
+		89169413E06EF66F229AD1B3 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3EF1E6D6FB32D6C92E1DA51 /* libPods-SuperAppSpin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperAppSpin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C0FAF9318D5E932471806D /* Pods-SuperAppSpin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperAppSpin.debug.xcconfig"; path = "Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F5065E243382D620845E97DF /* libPods-SuperAppSpin-SuperAppSpinTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SuperAppSpin-SuperAppSpinTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787A22F09C47243C873ED5E1 /* libPods-SuperAppSpin-SuperAppSpinTests.a in Frameworks */,
+				9690868CEA7436AF7FE9F0A6 /* libPods-SuperAppSpin-SuperAppSpinTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C1562B9250C98049FF5AB12 /* libPods-SuperAppSpin.a in Frameworks */,
+				D7544D2B9AA4671FEBAB1F71 /* libPods-SuperAppSpin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				42355E542A80B544EBDCE219 /* libPods-SuperAppSpin.a */,
-				2EA938CF1DF7FE5ED85946B8 /* libPods-SuperAppSpin-SuperAppSpinTests.a */,
+				D3EF1E6D6FB32D6C92E1DA51 /* libPods-SuperAppSpin.a */,
+				F5065E243382D620845E97DF /* libPods-SuperAppSpin-SuperAppSpinTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5B37D2E7E2F72BDC054CA8DE /* Pods-SuperAppSpin.debug.xcconfig */,
-				C2E112907245FD1AA60C056A /* Pods-SuperAppSpin.release.xcconfig */,
-				3E1F4379AD8B9E9F21C4ACFE /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */,
-				561448DA1D62D16EB3172462 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */,
+				D8C0FAF9318D5E932471806D /* Pods-SuperAppSpin.debug.xcconfig */,
+				13D80C4A9962BE7B9C2EEFB7 /* Pods-SuperAppSpin.release.xcconfig */,
+				1313E43D911D83F90DC5DB18 /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */,
+				89169413E06EF66F229AD1B3 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "SuperAppSpinTests" */;
 			buildPhases = (
-				020BAA03CFCDD7AA58875BD8 /* [CP] Check Pods Manifest.lock */,
+				46A43EF4D73CE1F8C35EE99F /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				3632F267E2319D675095E1A3 /* [CP] Embed Pods Frameworks */,
-				8D41437C89A50A56ED1418D4 /* [CP] Copy Pods Resources */,
+				701FE6FDE19ABA0936C9ECE6 /* [CP] Embed Pods Frameworks */,
+				538426C730E09EDCB7928447 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SuperAppSpin" */;
 			buildPhases = (
-				9B53B9F02B56B39D241B211A /* [CP] Check Pods Manifest.lock */,
+				58759B8C6A8AC7388804E870 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				F52FC87AFB3397E5B7E39AC4 /* [CP] Embed Pods Frameworks */,
-				2D02A69A6F0919F26D7126A1 /* [CP] Copy Pods Resources */,
+				06384F47F23EB7143C546161 /* [CP] Embed Pods Frameworks */,
+				3AB742137E9F9261EB77B941 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +266,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		020BAA03CFCDD7AA58875BD8 /* [CP] Check Pods Manifest.lock */ = {
+		06384F47F23EB7143C546161 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AB742137E9F9261EB77B941 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46A43EF4D73CE1F8C35EE99F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,41 +322,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2D02A69A6F0919F26D7126A1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3632F267E2319D675095E1A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8D41437C89A50A56ED1418D4 /* [CP] Copy Pods Resources */ = {
+		538426C730E09EDCB7928447 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -339,7 +339,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B53B9F02B56B39D241B211A /* [CP] Check Pods Manifest.lock */ = {
+		58759B8C6A8AC7388804E870 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,21 +361,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F52FC87AFB3397E5B7E39AC4 /* [CP] Embed Pods Frameworks */ = {
+		701FE6FDE19ABA0936C9ECE6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin/Pods-SuperAppSpin-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperAppSpin-SuperAppSpinTests/Pods-SuperAppSpin-SuperAppSpinTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -430,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E1F4379AD8B9E9F21C4ACFE /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */;
+			baseConfigurationReference = 1313E43D911D83F90DC5DB18 /* Pods-SuperAppSpin-SuperAppSpinTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -457,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 561448DA1D62D16EB3172462 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */;
+			baseConfigurationReference = 89169413E06EF66F229AD1B3 /* Pods-SuperAppSpin-SuperAppSpinTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -481,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B37D2E7E2F72BDC054CA8DE /* Pods-SuperAppSpin.debug.xcconfig */;
+			baseConfigurationReference = D8C0FAF9318D5E932471806D /* Pods-SuperAppSpin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -508,7 +508,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2E112907245FD1AA60C056A /* Pods-SuperAppSpin.release.xcconfig */;
+			baseConfigurationReference = 13D80C4A9962BE7B9C2EEFB7 /* Pods-SuperAppSpin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
