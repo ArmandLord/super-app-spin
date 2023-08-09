@@ -9,7 +9,9 @@ import { useNavigation } from '@react-navigation/native';
 import { RootStackParamList } from '../../../navigation/Navigation';
 import { StackNavigationProp } from '@react-navigation/stack';
 
-type Props = StackNavigationProp<RootStackParamList, 'Movimientos'>
+
+
+type Props = StackNavigationProp<RootStackParamList, 'Movimientos'>;
 
 const MovementsList = ({ movements, getData, loading, moreData }: MovementsListProps) => {
  
