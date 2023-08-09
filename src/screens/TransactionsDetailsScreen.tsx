@@ -26,7 +26,6 @@ const TransactionsDetailsScreen = (props) => {
   }, []);
 
   useEffect(() => {
-    console.log(data);
     setTransaction(data[0]);
   }, [data])
   
