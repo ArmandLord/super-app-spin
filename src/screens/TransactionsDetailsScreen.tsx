@@ -26,16 +26,19 @@ const TransactionsDetailsScreen = (props) => {
   }, []);
 
   useEffect(() => {
-    setTransaction(data[0]);
+    if (data[0]) {
+      setTransaction(data[0]);
+    }
   }, [data])
   
   return (
     <View style={styles.container}>
-      <Card>
+      <Card style={styles.card}>
         <Text style={styles.entity}>{transaction.entity}</Text>
         <View style={styles.labelContent}>
           <Text>En esta compra ganaste:</Text>
         </View>
+        <Text style={styles.points}>{transaction.points}</Text>
       </Card>
     </View>
   );
@@ -48,6 +51,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     flex: 1,
     paddingHorizontal: 16,
+  },
+  card: {
+    borderRadius: 8,
+    minHeight: 180,
   },
   entity: {
     fontSize: 20,
@@ -67,5 +74,11 @@ const styles = StyleSheet.create({
   labelText: {
     fontSize: 16,
     fontWeight: '400',
-  }
+  },
+  points: {
+    textAlign: 'center',
+    fontSize: 40,
+    fontWeight: '500',
+    color: '#05053D'
+  },
 })
