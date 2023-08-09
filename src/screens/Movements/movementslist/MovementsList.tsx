@@ -24,7 +24,7 @@ const MovementsList = ({ movements, getData, loading, moreData }: MovementsListP
             case 'Oxxo':
                 return require('../../../assets/movimientos/oxxo.png'); 
             default:
-                return require('../../../assets/movimientos/oxxo.png'); 
+                return require('../../../assets/movimientos/spin.png'); 
         }
     };
     

@@ -58,11 +58,11 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Beneficios"
-        component={HomeScreen}
+        component={LoyaltyScreen}
       />
       <Tab.Screen
         name="Cartera"
-        component={LoyaltyScreen}
+        component={HomeStack}
 
       />
       <Tab.Screen
