@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Dimensions, Platform, StyleSheet, Text, View } from 'react-native';
 import TextInput from '../atoms/TextInput';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -8,26 +8,26 @@ console.log('WIDTH --> ', WIDTH);
 
 const FilterBtns = () => {
 
-  
+  const [currentItem, setCurrentItem] = useState(0);
   
   return (
     <View style={styles.container}>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(0)}>
             <View style={styles.tab}>
-                <Text style={[styles.tabText, styles.tabTextActive]}>Todos</Text>
+                <Text style={[styles.tabText, currentItem === 0 && styles.tabTextActive]}>Todos</Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(1)}>
             <View style={styles.tab}>
-                <Text style={[styles.tabText]}>Ganados</Text>
+                <Text style={[styles.tabText, currentItem === 1 && styles.tabTextActive]}>Ganados</Text>
             </View>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity activeOpacity={1} onPress={() => setCurrentItem(2)}>
             <View style={styles.tab}>
-                <Text style={[styles.tabText]}>Usados</Text>
+                <Text style={[styles.tabText, currentItem === 2 && styles.tabTextActive]}>Usados</Text>
             </View>
         </TouchableOpacity>
-        <View style={styles.pointer} />
+        <View style={[styles.pointer, {left: (WIDTH/3)*currentItem}]} />
     </View>
   )
 };
