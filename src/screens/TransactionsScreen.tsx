@@ -29,6 +29,7 @@ const Transactions = () => {
         data={items}
         renderItem={({item}) => (<ItemList entity={item.entity} id={item.id} date={item.date} points={item.points} />)}
         keyExtractor={item => String(item.id)}
+        initialNumToRender={10}
       />
     </View>
   );
