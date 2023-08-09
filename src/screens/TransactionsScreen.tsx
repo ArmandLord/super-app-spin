@@ -15,19 +15,21 @@ const Transactions = () => {
   ];
 
   useEffect(() => {
-    axios.get('http://localhost:3001/history')
+    getItems();
+  }, []);
+
+  const getItems = (where: string = '') => {
+    axios.get(`http://localhost:3001/history?${where}`)
     .then(res => {
         
-      console.log('res.data --> ', res.data);
         const data = setGroupItems(res.data);
-        console.log('data --> ', data);
         
         setItems(data);
     })
     .catch(err => {
         console.log(err);
     });
-  }, []);
+  }
 
   const setGroupItems = (items:TItems) => {
 
@@ -89,7 +91,11 @@ const Transactions = () => {
 
   return (
     <View style={styles.container}>
-      <FilterBtns />
+      <FilterBtns
+      allCallback={() => getItems()}
+      gotCallback={() => getItems('points_gte=1')}
+      usedCallback={() => getItems('points_lte=0')}
+      />
       <SectionList
         sections={items}
         renderItem={({item}) => (<ItemList entity={item.entity} id={item.id} date={item.date} points={item.points} />)}
