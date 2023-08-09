@@ -1,14 +1,16 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { FlatList, StyleSheet, Text, View, SectionList } from "react-native";
+import {StyleSheet, Text, View, SectionList } from "react-native";
 import ItemList from "../components/Transactions/ItemList";
 import { GroupsTItem, TItem, TItems } from "../types/transactions";
 import Button from "../components/Button/Button";
 import FilterBtns from "../components/Transactions/FilterBtns";
+import useFetch from "../hooks/useFetch";
 
 const Transactions = () => {
 
   const [items, setItems] = useState<GroupsTItem>([]);
+  const {data, fetchList} = useFetch();
 
   const monthsNames = [
     'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
@@ -18,17 +20,13 @@ const Transactions = () => {
     getItems();
   }, []);
 
-  const getItems = (where: string = '') => {
-    axios.get(`http://localhost:3001/history?${where}`)
-    .then(res => {
-        
-        const data = setGroupItems(res.data);
-        
-        setItems(data);
-    })
-    .catch(err => {
-        console.log(err);
-    });
+  useEffect(() => {
+   const groupItems = setGroupItems(data);
+   setItems(groupItems);
+  }, [data])
+
+  const getItems = (params: string = '') => {
+    fetchList(params);
   }
 
   const setGroupItems = (items:TItems) => {
@@ -93,8 +91,8 @@ const Transactions = () => {
     <View style={styles.container}>
       <FilterBtns
       allCallback={() => getItems()}
-      gotCallback={() => getItems('points_gte=1')}
-      usedCallback={() => getItems('points_lte=0')}
+      gotCallback={() => getItems('?points_gte=1')}
+      usedCallback={() => getItems('?points_lte=0')}
       />
       <SectionList
         sections={items}
