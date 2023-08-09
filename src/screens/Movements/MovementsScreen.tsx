@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
-import { Animated, View, useWindowDimensions } from 'react-native';
+import { Animated,Dimensions, View, useWindowDimensions } from 'react-native';
 import { styles } from './movements.style';
 import useTheme from '../../../femsaComponents/hooks/useTheme';
 import TabBar from '../../../femsaComponents/components/TabBar/TabBar';
 import { SceneMap, TabView } from 'react-native-tab-view';
 import AllMovementsList from './allmovements/AllMovementsList';
+import EarnedMovements from './earnedMovements/EarnedMovements';
+import UsedMovements from './usedmovements/UsedMovements';
 
 const Movements = () => {
     const layout = useWindowDimensions();
@@ -18,10 +20,11 @@ const Movements = () => {
     ]);
     const renderScene = SceneMap({
         all: AllMovementsList,
-        earned: AllMovementsList,
-        used: AllMovementsList,
+        earned: EarnedMovements,
+        used: UsedMovements,
     });
 
+    const SCREEN_WIDTH = Dimensions.get('window').width
 
     return (
         <View style={[styles.container, { backgroundColor: colors.surface_primary }]}>
@@ -29,7 +32,7 @@ const Movements = () => {
                 navigationState={{ index, routes }}
                 renderScene={renderScene}
                 onIndexChange={setIndex}
-                renderTabBar={(props) => <TabBar {...props} indicatorContainerStyle={{ marginHorizontal: 10 }} indicatorStyle={{ width: 100 }} />}
+                renderTabBar={(props) => <TabBar {...props} indicatorStyle={{ width: SCREEN_WIDTH / 3.73 }} indicatorContainerStyle={{left: 12, right: 12, width: 'auto'}} />}
                 initialLayout={{ width: layout.width }}
             />
         </View>
