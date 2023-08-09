@@ -10,7 +10,7 @@ import useFetch from "../hooks/useFetch";
 const Transactions = () => {
 
   const [items, setItems] = useState<GroupsTItem>([]);
-  const {data, fetchList} = useFetch();
+  const {data, fetchData} = useFetch();
 
   const monthsNames = [
     'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
@@ -26,7 +26,7 @@ const Transactions = () => {
   }, [data])
 
   const getItems = (params: string = '') => {
-    fetchList(params);
+    fetchData(params);
   }
 
   const setGroupItems = (items:TItems) => {

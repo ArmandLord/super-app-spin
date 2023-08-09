@@ -23,20 +23,12 @@ const useFetch = () => {
     }
   };
 
-  const fetchList = (params: string) => {
-    fetchData(params);
-  };
-
-  const fetchSingleRecord = (url: string) => {
-    fetchData(url);
-  };
 
   return {
     data,
     loading,
     error,
-    fetchList,
-    fetchSingleRecord,
+    fetchData,
   };
 };
 
