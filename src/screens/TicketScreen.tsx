@@ -3,14 +3,21 @@ import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 const partnetDefault = {
-    entity: 'Volaris'
+    entity: 'Volaris',
+    fiftCertificate: '42738499092812000',
 }
 
 const TicketScreen = () => {
   const imgVolaris = require('../assets/Movimientos/volaris.png');
   const copyIcon = require('../assets/copy-icon.png');
+
+  const copyToClipboard = () => {
+    Clipboard.setString(partnetDefault.fiftCertificate);
+  };
+
   return (
     <>
     <View style={styles.overlayer} />
@@ -18,11 +25,11 @@ const TicketScreen = () => {
         <View style={styles.container}>
           <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
           <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
-          <TouchableOpacity activeOpacity={0.5} onPress={() => {}}>
+          <TouchableOpacity activeOpacity={0.5} onPress={copyToClipboard}>
               <Pill styleContent={styles.pill}>
               <View>
                   <Text style={styles.textGiftCertificate}>Certificado de regalo</Text>
-                  <Text style={styles.numberGiftCertificate}>42738499092812000</Text>
+                  <Text style={styles.numberGiftCertificate}>{partnetDefault.fiftCertificate}</Text>
               </View>
               <View style={styles.copyIconContent}>
                   <Image source={copyIcon} style={styles.copyIcon} />

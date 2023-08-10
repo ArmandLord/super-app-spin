@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
         height: 78,
         alignSelf: 'center',
         borderRadius: 78 / 2,
+        backgroundColor: 'white',
         ...Platform.select({
             ios: {
                 shadowColor: '#000',
