@@ -11,7 +11,6 @@ import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
 import iconPoints from '../assets/svg/icon.png';
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const BenefitScreen = () => {
   

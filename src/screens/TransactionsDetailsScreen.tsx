@@ -4,6 +4,8 @@ import useFetch from "../hooks/useFetch";
 import Card from "../components/Card/Card";
 import { TItem } from "../types/transactions";
 import Chip from "../components/atoms/Chip";
+import TransactionCard from "../components/Card/components/TransactionCard";
+import Pill from "../components/Pill";
 
 const defaultTransaction = {
   entity: '',
@@ -40,19 +42,19 @@ const TransactionsDetailsScreen = (props) => {
 
   const setImage = () => {
     switch (transaction.entity) {
-      case 'Recuperación de tus puntos':
+    case 'Recuperación de tus puntos':
         return imgSpin;
-      case 'OXXO':
+    case 'OXXO':
         return imgOxxo;
-      case 'Enviaste puntos':
+    case 'Enviaste puntos':
         return imgPuntos;
-      case 'OXXO Gas':
+    case 'OXXO Gas':
         return imgOxxogas;
-      case 'Doña tota':
+    case 'Doña tota':
         return imgDoniatota;
-      case 'Volaris':
+    case 'Volaris':
         return imgVolaris;
-      default:
+    default:
         return null;
     }
   }
@@ -69,19 +71,16 @@ const TransactionsDetailsScreen = (props) => {
   
   return (
     <View style={styles.container}>
-      <Card style={styles.card}>
-        <View style={styles.partnerContent}>
-          <Image source={setImage()} style={styles.partner} />
-        </View>
-        <Text style={styles.entity}>{transaction.entity}</Text>
-        <View style={styles.labelContent}>
-          <Text>En esta compra {transaction.points > 0 ? 'ganaste' : 'usaste'}:</Text>
-        </View>
+      <TransactionCard title={transaction.entity} image={setImage()}>
+        <Pill>
+          <Text style={styles.pillText}>En esta compra {transaction.points > 0 ? 'ganaste' : 'usaste'}:</Text>
+        </Pill>
+        
         <View style={styles.pointsContent}>
           <Text style={styles.pointsSymbol}>{transaction.points > 0 ? '+' : '-'}</Text>
           <Text style={styles.points}>{Math.abs(transaction.points)}</Text>
         </View>
-      </Card>
+      </TransactionCard>
 
       <View style={styles.infoContent}>
         <View style={styles.info}>
@@ -116,55 +115,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
   },
-  card: {
-    borderRadius: 8,
-    minHeight: 180,
-    marginTop: 78/2 + 16,
-    paddingBottom: 10,
-  },
-  partnerContent: {
-    width: 78,
-    height: 78,
-    alignSelf: 'center',
-    borderRadius: 78/2,
-    ...Platform.select({
-      ios: {
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.12,
-        shadowRadius: 4,
-      },
-      android: {
-        elevation: 4,
-      },
-    }),
-    borderWidth: 3,
-    borderColor: 'white',
-    marginTop: -78/2
-  },
-  partner: {
-    width: 72,
-    height: 72,
-    borderRadius: 72/2,
-  },
-  entity: {
-    marginTop: 8,
-    fontSize: 20,
-    fontWeight: '500',
-    alignSelf: 'center',
-    marginBottom: 8,
-  },
-  labelContent: {
-    marginTop: 8,
-    backgroundColor: '#F5F5F7',
-    padding: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 280,
-    alignSelf: 'center',
-    borderRadius: 16,
-  },
-  labelText: {
+  pillText: {
     fontSize: 16,
     fontWeight: '400',
   },
