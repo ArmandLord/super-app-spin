@@ -9,6 +9,8 @@ import GridView from '../components/GridView/GridView';
 import { setFormatMoney, setLegibleDate } from '../utils';
 import TransactionView from '../components/Transactions/TransactionView';
 import Hr from '../components/Hr';
+import Button from '../components/Button/Button';
+import SecondaryButton from '../components/Button/components/SecondaryButton';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -69,6 +71,13 @@ const TicketScreen = () => {
           <Hr/>
           <TransactionView transactionNo={partnetDefault.transactionNo}/>
           <Hr/>
+
+          <View style={styles.useBtn}>
+            <Button text="Usar certificado de regalo" onPress={() => {}} />
+          </View>
+          <View style={styles.saveBtn}>
+            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} />
+          </View>
         </View>
       </ScrollView>
     </>
@@ -148,5 +157,11 @@ const styles = StyleSheet.create({
     },
     table: {
         marginTop: 14
+    },
+    useBtn: {
+        marginTop: 16
+    },
+    saveBtn: {
+        marginTop: 12
     },
 });
