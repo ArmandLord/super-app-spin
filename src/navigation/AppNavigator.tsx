@@ -5,6 +5,8 @@ import TabsNavigator from "./TabsNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import TicketScreen from "../screens/TicketScreen";
 import options from "./options";
+import PointsScreen from "../screens/PointsScreen";
+import BalanceScreen from "../screens/BalanceScreen";
 
 const Stack = createStackNavigator();
 
@@ -19,13 +21,30 @@ const AppNavigator = () => {
             headerShown: false,
           }}
         />
-        <Stack.Screen 
+        <Stack.Screen
           options={{
             ...options,
-            title: 'Movimientos'
+            title: 'Movimientos',
           }}
-          name="TransactionsScreen" 
-          component={TransactionsScreen} />
+          name="TransactionsScreen"
+          component={TransactionsScreen}
+        />
+        <Stack.Screen
+          options={{
+            ...options,
+            title: 'Cambia tus puntos',
+          }}
+          name="PointsScreen"
+          component={PointsScreen}
+        />
+        <Stack.Screen
+          options={{
+            ...options,
+            title: 'Cambia tus puntos',
+          }}
+          name="BalanceScreen"
+          component={BalanceScreen}
+        />
         <Stack.Screen
           options={{
             ...options,
