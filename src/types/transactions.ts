@@ -3,8 +3,8 @@ export type TItem = {
     date: string,
     expiryDate?: string,
     points: number,
-    operation: string,
-    transactionNo: string,
+    operation?: string,
+    transactionNo?: string,
     giftCode?: string,
     id: number,
 };

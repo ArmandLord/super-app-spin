@@ -5,7 +5,6 @@ import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Clipboard from '@react-native-clipboard/clipboard';
 import HyperlinkButton from '../components/Button/components/HyperlinkButton';
-import GridView from '../components/GridView/GridView';
 import { setFormatMoney, setLegibleDate } from '../utils';
 import TransactionView from '../components/Transactions/TransactionView';
 import Hr from '../components/Hr';
@@ -26,17 +25,6 @@ const TicketScreen = () => {
   const copyToClipboard = () => {
     Clipboard.setString(partnetDefault.fiftCertificate);
   };
-
-  const items = [
-    <Text style={[styles.col, styles.label]}>Puntos cambiados:</Text>,
-    <Text style={[styles.col, styles.value]}>{partnetDefault.points}</Text>,
-    <Text style={[styles.col, styles.label]}>Valen:</Text>,
-    <Text style={[styles.col, styles.value]}>{setFormatMoney(100)}</Text>,
-    <Text style={[styles.col, styles.label]}>Fecha:</Text>,
-    <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>,
-    <Text style={[styles.col, styles.label]}>Válido desde el:</Text>,
-    <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
-  ];
 
   return (
     <>
@@ -65,7 +53,22 @@ const TicketScreen = () => {
           styleText={styles.hyperlinkBtnText} />
 
           <View style={styles.table}>
-            <GridView data={items} />
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Puntos cambiados:</Text>
+              <Text style={[styles.col, styles.value]}>{partnetDefault.points}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Valen:</Text>
+              <Text style={[styles.col, styles.value]}>{setFormatMoney(100)}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Fecha:</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Válido desde el:</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+            </View>
           </View>
 
           <Hr/>
@@ -140,6 +143,10 @@ const styles = StyleSheet.create({
         color: '#1723D3',
         fontSize: 14,
         fontWeight: '600',
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     col: {
         marginBottom: 8,
