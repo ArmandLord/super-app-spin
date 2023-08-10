@@ -4,6 +4,7 @@ import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Clipboard from '@react-native-clipboard/clipboard';
+import HyperlinkButton from '../components/Button/components/HyperlinkButton';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -21,7 +22,7 @@ const TicketScreen = () => {
   return (
     <>
       <View style={styles.overlayer} />
-      <ScrollView style={styles.scrollView}>
+      <ScrollView>
         <View style={styles.container}>
           <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
             <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
@@ -37,6 +38,12 @@ const TicketScreen = () => {
               </Pill>
             </TouchableOpacity>
           </TransactionCard>
+
+          <HyperlinkButton
+          text="¿Cómo usar mi certificado de regalo?"
+          onPress={() => {}}
+          style={styles.hyperlinkBtn}
+          styleText={styles.hyperlinkBtnText} />
         </View>
       </ScrollView>
     </>
@@ -46,9 +53,6 @@ const TicketScreen = () => {
 export default TicketScreen;
 
 const styles = StyleSheet.create({
-    scrollView: {
-        // flex: 1,
-    },
     container: {
         paddingHorizontal: 16,
         flex: 1,
@@ -95,4 +99,12 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: '600',
     },
+    hyperlinkBtn: {
+        marginTop: 5,
+    },
+    hyperlinkBtnText: {
+        color: '#1723D3',
+        fontSize: 14,
+        fontWeight: '600',
+    }
 });
