@@ -15,6 +15,13 @@ import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useMovementsContext } from '../context/SuperAppContext';
 import BalanceScreen from '../screens/Balance/BalanceScreen';
+import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
+import AccountDetails from '../screens/account/accountScreen';
+
+
+
+
+
 
 export type RootStackParamList = {
   Home: undefined,
@@ -80,7 +87,7 @@ const Navigation = () => {
             title: 'Cambia tus puntos',
             headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
           }} />
-          <Stack.Screen name="Balance" component={BalanceScreen}
+        <Stack.Screen name="Balance" component={BalanceScreen}
           options={{
             headerLeft: (props) => (
               <BackButton onPress={() => {
@@ -91,6 +98,16 @@ const Navigation = () => {
             headerTitleAlign: 'left',
             title: 'Cambia tus puntos',
             headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }} />
+        <Stack.Screen name="Detalle del Movimiento" component={DetailssScreen}
+          options={{
+            headerLeft: (props) => (
+              <BackButton onPress={() => {
+                navigation.navigate('Movimientos');
+                dispatch({ type: 'SHOW_TAB', payload: false })
+              }} />
+            ),
+            headerTitleAlign: 'left'
           }} />
       </Stack.Navigator>
     );
@@ -123,11 +140,12 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Cuenta"
-        component={MovementsScreen}
         options={{
           headerTitleAlign: 'left',
           headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
         }}
+        component={AccountDetails}
+
       />
     </Tab.Navigator>
   );
