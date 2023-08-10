@@ -109,9 +109,7 @@ const BenefitScreen = () => {
             <Text style={styles.propDescription}>
               Muy pronto podrás sumar tus compras y ganar productos de regalo
             </Text>
-            <TouchableOpacity onPress={() => navigate('TicketScreen')}>
-              <Image source={prop} style={styles.propImage} />
-            </TouchableOpacity>
+            <Image source={prop} style={styles.propImage} />
           </View>
         </View>
         <View style={styles.sectionContainer}>
