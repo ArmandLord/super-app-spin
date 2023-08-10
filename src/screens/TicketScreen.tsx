@@ -3,35 +3,86 @@ import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Clipboard from '@react-native-clipboard/clipboard';
+import HyperlinkButton from '../components/Button/components/HyperlinkButton';
+import { setFormatMoney, setLegibleDate } from '../utils';
+import TransactionView from '../components/Transactions/TransactionView';
+import Hr from '../components/Hr';
+import Button from '../components/Button/Button';
+import SecondaryButton from '../components/Button/components/SecondaryButton';
 
 const partnetDefault = {
-    entity: 'Volaris'
+    entity: 'Volaris',
+    fiftCertificate: '42738499092812000',
+    points: 10,
+    transactionNo: '5dced89c-2b6e-4a1c-a715-c19b0a51',
 }
 
 const TicketScreen = () => {
   const imgVolaris = require('../assets/Movimientos/volaris.png');
   const copyIcon = require('../assets/copy-icon.png');
+
+  const copyToClipboard = () => {
+    Clipboard.setString(partnetDefault.fiftCertificate);
+  };
+
   return (
     <>
-    <View style={styles.overlayer} />
-    <ScrollView style={styles.scrollView}>
+      <View style={styles.overlayer} />
+      <ScrollView>
         <View style={styles.container}>
           <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
-          <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
-          <TouchableOpacity activeOpacity={0.5} onPress={() => {}}>
+            <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
+            <TouchableOpacity activeOpacity={0.5} onPress={copyToClipboard}>
               <Pill styleContent={styles.pill}>
-              <View>
+                <View>
                   <Text style={styles.textGiftCertificate}>Certificado de regalo</Text>
-                  <Text style={styles.numberGiftCertificate}>42738499092812000</Text>
-              </View>
-              <View style={styles.copyIconContent}>
+                  <Text style={styles.numberGiftCertificate}>{partnetDefault.fiftCertificate}</Text>
+                </View>
+                <View style={styles.copyIconContent}>
                   <Image source={copyIcon} style={styles.copyIcon} />
-              </View>
+                </View>
               </Pill>
-          </TouchableOpacity>
+            </TouchableOpacity>
           </TransactionCard>
+
+          <HyperlinkButton
+          text="¿Cómo usar mi certificado de regalo?"
+          onPress={() => {}}
+          style={styles.hyperlinkBtn}
+          styleText={styles.hyperlinkBtnText} />
+
+          <View style={styles.table}>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Puntos cambiados:</Text>
+              <Text style={[styles.col, styles.value]}>{partnetDefault.points}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Valen:</Text>
+              <Text style={[styles.col, styles.value]}>{setFormatMoney(100)}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Fecha:</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+            </View>
+            <View style={styles.row}>
+              <Text style={[styles.col, styles.label]}>Válido desde el:</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+            </View>
+          </View>
+
+          <Hr/>
+          <TransactionView transactionNo={partnetDefault.transactionNo}/>
+          <Hr/>
+
+          <View style={styles.useBtn}>
+            <Button text="Usar certificado de regalo" onPress={() => {}} />
+          </View>
+          <View style={styles.saveBtn}>
+            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} />
+          </View>
         </View>
-    </ScrollView>
+      </ScrollView>
     </>
   )
 }
@@ -39,9 +90,6 @@ const TicketScreen = () => {
 export default TicketScreen;
 
 const styles = StyleSheet.create({
-    scrollView: {
-        // flex: 1,
-    },
     container: {
         paddingHorizontal: 16,
         flex: 1,
@@ -87,5 +135,40 @@ const styles = StyleSheet.create({
     numberGiftCertificate: {
         fontSize: 16,
         fontWeight: '600',
+    },
+    hyperlinkBtn: {
+        marginTop: 5,
+    },
+    hyperlinkBtnText: {
+        color: '#1723D3',
+        fontSize: 14,
+        fontWeight: '600',
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    col: {
+        marginBottom: 8,
+        height: 32,
+    },
+    label: {
+        fontSize: 16,
+        fontWeight: '400',
+        alignSelf: 'flex-start'
+    },
+    value: {
+        fontSize: 16,
+        fontWeight: '600',
+        alignSelf: 'flex-end'
+    },
+    table: {
+        marginTop: 14
+    },
+    useBtn: {
+        marginTop: 16
+    },
+    saveBtn: {
+        marginTop: 12
     },
 });
