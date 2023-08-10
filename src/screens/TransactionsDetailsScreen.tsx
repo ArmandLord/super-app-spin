@@ -9,6 +9,7 @@ import Pill from "../components/Pill";
 import { setFormatMoney } from "../utils";
 import TransactionView from "../components/Transactions/TransactionView";
 import Hr from "../components/Hr";
+import GridView from "../components/GridView/GridView";
 
 const defaultTransaction = {
   entity: '',
@@ -71,6 +72,15 @@ const TransactionsDetailsScreen = (props) => {
     }
     return '';
   }
+
+  const items = [
+    <Text style={[styles.col, styles.label]}>Monto total:</Text>,
+    <Text style={[styles.col, styles.value]}>{setAmount(transaction.points)}</Text>,
+    <Text style={[styles.col, styles.label]}>Fecha:</Text>,
+    <Text style={[styles.col, styles.value]}>{setDate(transaction.date)}</Text>,
+    <Text style={[styles.col, styles.label]}>Úsalo desde el:</Text>,
+    <Text style={[styles.col, styles.value]}>{setDate(transaction.expiryDate)}</Text>,
+  ];
   
   return (
     <View style={styles.container}>
@@ -85,20 +95,9 @@ const TransactionsDetailsScreen = (props) => {
         </View>
       </TransactionCard>
 
-      <View style={styles.infoContent}>
-        <View style={styles.info}>
-          <Text style={styles.label}>Monto total:</Text>
-          <Text style={styles.value}>{setAmount(transaction.points)}</Text>
-        </View>
-        <View style={styles.info}>
-          <Text style={styles.label}>Fecha:</Text>
-          <Text style={styles.value}>{setDate(transaction.date)}</Text>
-        </View>
-        <View style={styles.info}>
-          <Text style={styles.label}>Úsalo desde el:</Text>
-          <Text style={styles.value}>{setDate(transaction.expiryDate)}</Text>
-        </View>
-      </View>
+      {/* <View style={styles.table}> */}
+        <GridView data={items} containerStyle={styles.table} />
+      {/* </View> */}
 
       <Hr/>
 
@@ -135,23 +134,21 @@ const styles = StyleSheet.create({
     color: '#1723D3',
     fontWeight: '700',
   },
-  infoContent: {
-    marginTop: 25.35,
-    paddingBottom: 8,
-  },
-  info: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  col: {
     marginBottom: 8,
     height: 32,
-    alignItems: 'center',
   },
   label: {
     fontSize: 16,
     fontWeight: '400',
+    alignSelf: 'flex-start',
   },
   value: {
     fontSize: 16,
     fontWeight: '600',
+    alignSelf: 'flex-end',
+  },
+  table: {
+    marginTop: 30,
   },
 })
