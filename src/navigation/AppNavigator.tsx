@@ -13,7 +13,12 @@ const Stack = createStackNavigator();
 const AppNavigator = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+      screenOptions={{
+        cardStyle: {
+          backgroundColor: 'white',
+        }
+      }}>
         <Stack.Screen
           name="Tabs"
           component={TabsNavigator}
@@ -59,11 +64,12 @@ const AppNavigator = () => {
             title: 'Detalles del movimiento', 
             headerLeft: () => null,
             headerStyle: {
-              backgroundColor: '#087D6F'
+              ...options.headerStyle,
+              backgroundColor: '#087D6F',
             },
             headerTitleStyle: {
               color: 'white',
-            }
+            },
           }}
           name="TicketScreen"
           component={TicketScreen}

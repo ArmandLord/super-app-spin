@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -13,23 +13,25 @@ const TicketScreen = () => {
   const copyIcon = require('../assets/copy-icon.png');
   return (
     <>
-      <View style={styles.container}>
-        <View style={styles.overlayer} />
-        <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
+    <View style={styles.overlayer} />
+    <ScrollView style={styles.scrollView}>
+        <View style={styles.container}>
+          <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
           <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
           <TouchableOpacity activeOpacity={0.5} onPress={() => {}}>
-            <Pill styleContent={styles.pill}>
+              <Pill styleContent={styles.pill}>
               <View>
-                <Text style={styles.textGiftCertificate}>Certificado de regalo</Text>
-                <Text style={styles.numberGiftCertificate}>42738499092812000</Text>
+                  <Text style={styles.textGiftCertificate}>Certificado de regalo</Text>
+                  <Text style={styles.numberGiftCertificate}>42738499092812000</Text>
               </View>
               <View style={styles.copyIconContent}>
-                <Image source={copyIcon} style={styles.copyIcon} />
+                  <Image source={copyIcon} style={styles.copyIcon} />
               </View>
-            </Pill>
+              </Pill>
           </TouchableOpacity>
-        </TransactionCard>
-      </View>
+          </TransactionCard>
+        </View>
+    </ScrollView>
     </>
   )
 }
@@ -37,9 +39,13 @@ const TicketScreen = () => {
 export default TicketScreen;
 
 const styles = StyleSheet.create({
+    scrollView: {
+        // flex: 1,
+    },
     container: {
         paddingHorizontal: 16,
-        backgroundColor: '#ffffff',
+        flex: 1,
+        // backgroundColor: '#ffffff',
     },
     overlayer: {
         backgroundColor: '#087D6F',
@@ -51,12 +57,14 @@ const styles = StyleSheet.create({
         minHeight: 116,
     },
     card: {
+        marginTop: 78 / 2 + 5,
         paddingBottom: 16,
     },
     description: {
         fontSize: 14,
         fontWeight: '400',
         textAlign: 'center',
+        marginTop: 5,
     },
     pill: {
         width: '100%',
