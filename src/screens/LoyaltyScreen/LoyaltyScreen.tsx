@@ -5,7 +5,7 @@ import { styles } from "../../styles/LoyaltyStyles/LoyaltyScreen.style";
 import { ScrollView } from "react-native-gesture-handler";
 import CardGrid from "../../components/LoyaltyScreenComponents/CardGrid/CardGrid";
 import LoyaltyCard from "../../components/LoyaltyScreenComponents/LoyaltyCard/LoyaltyCard";
-import AcomulatedPoints from "../../components/LoyaltyScreenComponents/AcomulatedPoints/AcomulatedPoints";
+import AcomulatedPoints from "../../components/AcomulatedPoints/AcomulatedPoints";
 import Banner from "../../../femsaComponents/components/molecules/Banner";
 import BannerCarousel from "../../../femsaComponents/components/molecules/BannerCarousel";
 import { useNavigation } from "@react-navigation/native";
@@ -44,7 +44,7 @@ function LoyaltyScreen() {
     return (
         <ScrollView style={styles.scrollView}>
             <View style={{ paddingHorizontal: 24 }}>
-                <AcomulatedPoints points={"123"} money={"123"} />
+                <AcomulatedPoints showBadge={true} />
                 <CardGrid data={data} titlesSize="default" />
                 <LoyaltyCard title={'Acomula productos'} subTitle={'Llévate tus favoritos de regalo al juntar tus sellos'} url={points} />
                 <LoyaltyCard title={'Gana más puntos'} subTitle={'Muy pronto podrás ganar más puntos en el total de tu compra'} url={products} />

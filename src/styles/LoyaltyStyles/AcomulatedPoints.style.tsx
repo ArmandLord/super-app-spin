@@ -5,7 +5,8 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
-        paddingVertical: 20,
+        paddingTop: 10,
+        paddingBottom: 20,
     },
     leftContainer: {
         flex: 1,
@@ -31,7 +32,7 @@ export const styles = StyleSheet.create({
         height: 22,
     },
     blueContainer: {
-        flex:1,
+        flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'flex-start'
     },
@@ -47,5 +48,13 @@ export const styles = StyleSheet.create({
     image: {
         marginLeft: 10,
         marginTop: 2,
+    },
+    iconContainer: {
+        flexDirection: 'row'
+    },
+    icon: {
+        justifyContent: 'center',
+        marginLeft: 20,
+        marginTop: 5,
     }
 })

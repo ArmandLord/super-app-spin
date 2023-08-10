@@ -9,16 +9,12 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 import useTheme from '../../femsaComponents/hooks/useTheme';
 import { Movement } from '../models/Movement';
-import ExchangePoints from '../screens/ExchangePoints/ExchangePoints';
+import ExchangePoints from '../screens/ExchangePoints/ExchangePointsScreen';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useMovementsContext } from '../context/SuperAppContext';
-
-
-
-
-
+import BalanceScreen from '../screens/Balance/BalanceScreen';
 
 export type RootStackParamList = {
   Home: undefined,
@@ -56,7 +52,11 @@ const Navigation = () => {
 
     return (
       <Stack.Navigator >
-        <Stack.Screen name="Beneficios" component={LoyaltyScreen} />
+        <Stack.Screen name="Beneficios" component={LoyaltyScreen}
+          options={{
+            headerTitleAlign: 'left',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }} />
         <Stack.Screen name="Movimientos" component={MovementsScreen}
           options={{
             headerLeft: (props) => (
@@ -65,7 +65,8 @@ const Navigation = () => {
                 dispatch({ type: 'SHOW_TAB', payload: true })
               }} />
             ),
-            headerTitleAlign: 'left'
+            headerTitleAlign: 'left',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
           }} />
         <Stack.Screen name="Exchange" component={ExchangePoints}
           options={{
@@ -75,6 +76,21 @@ const Navigation = () => {
                 dispatch({ type: 'SHOW_TAB', payload: true })
               }} />
             ),
+            headerTitleAlign: 'left',
+            title: 'Cambia tus puntos',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }} />
+          <Stack.Screen name="Balance" component={BalanceScreen}
+          options={{
+            headerLeft: (props) => (
+              <BackButton onPress={() => {
+                navigation.navigate('Exchange');
+                dispatch({ type: 'SHOW_TAB', payload: true })
+              }} />
+            ),
+            headerTitleAlign: 'left',
+            title: 'Cambia tus puntos',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
           }} />
       </Stack.Navigator>
     );
@@ -85,6 +101,10 @@ const Navigation = () => {
       <Tab.Screen
         name="Home"
         component={HomeScreen}
+        options={{
+          headerTitleAlign: 'left',
+          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+        }}
       />
       <Tab.Screen
         name="Benefits"
@@ -96,11 +116,18 @@ const Navigation = () => {
       <Tab.Screen
         name="Cartera"
         component={HomeScreen}
+        options={{
+          headerTitleAlign: 'left',
+          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+        }}
       />
       <Tab.Screen
         name="Cuenta"
         component={MovementsScreen}
-
+        options={{
+          headerTitleAlign: 'left',
+          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+        }}
       />
     </Tab.Navigator>
   );
