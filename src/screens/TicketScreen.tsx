@@ -5,10 +5,16 @@ import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Clipboard from '@react-native-clipboard/clipboard';
 import HyperlinkButton from '../components/Button/components/HyperlinkButton';
+import GridView from '../components/GridView/GridView';
+import { setFormatMoney, setLegibleDate } from '../utils';
+import TransactionView from '../components/Transactions/TransactionView';
+import Hr from '../components/Hr';
 
 const partnetDefault = {
     entity: 'Volaris',
     fiftCertificate: '42738499092812000',
+    points: 10,
+    transactionNo: '5dced89c-2b6e-4a1c-a715-c19b0a51',
 }
 
 const TicketScreen = () => {
@@ -18,6 +24,17 @@ const TicketScreen = () => {
   const copyToClipboard = () => {
     Clipboard.setString(partnetDefault.fiftCertificate);
   };
+
+  const items = [
+    <Text style={[styles.col, styles.label]}>Puntos cambiados:</Text>,
+    <Text style={[styles.col, styles.value]}>{partnetDefault.points}</Text>,
+    <Text style={[styles.col, styles.label]}>Valen:</Text>,
+    <Text style={[styles.col, styles.value]}>{setFormatMoney(100)}</Text>,
+    <Text style={[styles.col, styles.label]}>Fecha:</Text>,
+    <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>,
+    <Text style={[styles.col, styles.label]}>Válido desde el:</Text>,
+    <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+  ];
 
   return (
     <>
@@ -44,6 +61,14 @@ const TicketScreen = () => {
           onPress={() => {}}
           style={styles.hyperlinkBtn}
           styleText={styles.hyperlinkBtnText} />
+
+          <View style={styles.table}>
+            <GridView data={items} />
+          </View>
+
+          <Hr/>
+          <TransactionView transactionNo={partnetDefault.transactionNo}/>
+          <Hr/>
         </View>
       </ScrollView>
     </>
@@ -106,5 +131,22 @@ const styles = StyleSheet.create({
         color: '#1723D3',
         fontSize: 14,
         fontWeight: '600',
-    }
+    },
+    col: {
+        marginBottom: 8,
+        height: 32,
+    },
+    label: {
+        fontSize: 16,
+        fontWeight: '400',
+        alignSelf: 'flex-start'
+    },
+    value: {
+        fontSize: 16,
+        fontWeight: '600',
+        alignSelf: 'flex-end'
+    },
+    table: {
+        marginTop: 14
+    },
 });

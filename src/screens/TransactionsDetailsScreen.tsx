@@ -6,6 +6,9 @@ import { TItem } from "../types/transactions";
 import Chip from "../components/atoms/Chip";
 import TransactionCard from "../components/Card/components/TransactionCard";
 import Pill from "../components/Pill";
+import { setFormatMoney } from "../utils";
+import TransactionView from "../components/Transactions/TransactionView";
+import Hr from "../components/Hr";
 
 const defaultTransaction = {
   entity: '',
@@ -59,7 +62,7 @@ const TransactionsDetailsScreen = (props) => {
     }
   }
 
-  const setAmount = (points: number) => new Intl.NumberFormat('es-MX', {style: 'currency', currency: 'MXN'}).format(points/10);
+  const setAmount = (points: number) => setFormatMoney(points/10);
 
   const setDate = (date: string | undefined) => {
     if (date) {
@@ -97,12 +100,9 @@ const TransactionsDetailsScreen = (props) => {
         </View>
       </View>
 
-      <View style={styles.hr} />
+      <Hr/>
 
-      <View style={styles.transactionNoContent}>
-        <Text style={styles.label}>Número de transacción</Text>
-        <Text style={[styles.label, styles.transactionNo]}>{transaction.transactionNo}</Text>
-      </View>
+      <TransactionView transactionNo={transaction.transactionNo}/>
     </View>
   );
 }
@@ -154,18 +154,4 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
   },
-  hr: {
-    borderBottomWidth: 1,
-    borderBottomColor: '#E6E6EC',
-    marginLeft: -16,
-    marginRight: -16,
-  },
-  transactionNo: {
-    color: '#69698B',
-  },
-  transactionNoContent: {
-    marginTop: 8,
-    minHeight: 72,
-    justifyContent: 'space-evenly',
-  }
 })
