@@ -15,6 +15,7 @@ import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useMovementsContext } from '../context/SuperAppContext';
 import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
+import AccountDetails from '../screens/account/accountScreen';
 
 
 
@@ -110,7 +111,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Cuenta"
-        component={MovementsScreen}
+        component={AccountDetails}
 
       />
     </Tab.Navigator>
