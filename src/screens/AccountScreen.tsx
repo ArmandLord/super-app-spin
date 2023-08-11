@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
+    fontFamily: 'Poppins',
     fontWeight: '500',
     marginBottom: 10,
   },
@@ -52,6 +53,7 @@ const styles = StyleSheet.create({
   },
   username: {
     fontSize: 24,
+    fontFamily: 'Poppins',
     marginRight: 10,
     fontWeight: 'bold',
   },
@@ -69,11 +71,13 @@ const styles = StyleSheet.create({
   },
   pointsText: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     color: '#006686',
     fontWeight: '700',
   },
   otherActions: {
     fontSize: 18,
+    fontFamily: 'Poppins',
     fontWeight: '600',
     marginBottom: 25,
     color: '#05053D',
@@ -90,6 +94,7 @@ const styles = StyleSheet.create({
   },
   logoutText: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     color: '#05053D',
   },
   versionContainer: {
@@ -98,6 +103,7 @@ const styles = StyleSheet.create({
   },
   version: {
     fontSize: 12,
+    fontFamily: 'Poppins',
     color: '#B4B4C5',
     textAlign: 'center',
   },

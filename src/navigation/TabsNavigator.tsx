@@ -106,6 +106,7 @@ const TabsNavigator = () => {
 const styles = StyleSheet.create({
   tabLabel: {
     fontSize: 12,
+    fontFamily: 'Poppins',
   },
 });
 

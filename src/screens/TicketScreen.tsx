@@ -79,10 +79,10 @@ const TicketScreen = () => {
           <Hr/>
 
           <View style={styles.useBtn}>
-            <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} />
+            <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} styleText={styles.styleTextBtn} />
           </View>
           <View style={styles.saveBtn}>
-            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} />
+            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} styleText={styles.styleTextBtn} />
           </View>
         </View>
       </ScrollView>
@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
     alertText: {
         color: 'white',
         fontSize: 12,
+        fontFamily: 'Poppins',
         fontWeight: '400',
         marginLeft: 12,
     },
@@ -138,6 +139,7 @@ const styles = StyleSheet.create({
     },
     description: {
         fontSize: 14,
+        fontFamily: 'Poppins',
         fontWeight: '400',
         textAlign: 'center',
         marginTop: 5,
@@ -157,11 +159,13 @@ const styles = StyleSheet.create({
     },
     textGiftCertificate: {
         fontSize: 12,
+        fontFamily: 'Poppins',
         fontWeight: '400',
         marginBottom: 4,
     },
     numberGiftCertificate: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '600',
     },
     row: {
@@ -174,11 +178,13 @@ const styles = StyleSheet.create({
     },
     label: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '400',
         alignSelf: 'flex-start'
     },
     value: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '600',
         alignSelf: 'flex-end'
     },
@@ -191,4 +197,5 @@ const styles = StyleSheet.create({
     saveBtn: {
         marginTop: 12
     },
+    styleTextBtn: {fontFamily: 'Poppins'}
 });

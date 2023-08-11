@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
   },
   pointsText: {
     fontSize: 24,
+    fontFamily: 'Poppins',
     fontWeight: 'bold',
   },
   infoIcon: {
@@ -151,10 +152,12 @@ const styles = StyleSheet.create({
   minimumValueText: {
     color: '#69698B',
     fontSize: 12,
+    fontFamily: 'Poppins',
     marginLeft: 12,
   },
   pointsInputLabel: {
     fontSize: 18,
+    fontFamily: 'Poppins',
     marginBottom: 10,
     textAlign: 'left',
   },
@@ -184,6 +187,7 @@ const styles = StyleSheet.create({
   otherInput: {
     fontSize: 18,
     marginTop: 24,
+    fontFamily: 'Poppins',
     marginBottom: 18
   },
   cardRow: {
@@ -193,6 +197,7 @@ const styles = StyleSheet.create({
   },
   otherInputAbove: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     marginBottom: 6,
   },
   buttonContainer: {
