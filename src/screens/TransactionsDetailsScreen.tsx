@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
   },
   pillText: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     fontWeight: '400',
   },
   pointsContent: {
@@ -126,11 +127,13 @@ const styles = StyleSheet.create({
   },
   points: {
     fontSize: 40,
+    fontFamily: 'Poppins',
     fontWeight: '500',
     color: '#05053D'
   },
   pointsSymbol: {
     fontSize: 24,
+    fontFamily: 'Poppins',
     color: '#1723D3',
     fontWeight: '700',
   },
@@ -140,11 +143,13 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     fontWeight: '400',
     alignSelf: 'flex-start',
   },
   value: {
     fontSize: 16,
+    fontFamily: 'Poppins',
     fontWeight: '600',
     alignSelf: 'flex-end',
   },

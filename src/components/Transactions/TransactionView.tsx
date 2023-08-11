@@ -19,10 +19,12 @@ export default TransactionView
 const styles = StyleSheet.create({
     label: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '400',
       },
       value: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '600',
       },
     transactionNo: {

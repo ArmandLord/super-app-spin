@@ -47,8 +47,8 @@ const ItemList = ({entity, date, points, id}: TItem) => {
       <View style={styles.container}>
         <Image source={setImage()} style={styles.thumbnail}/>
         <View style={styles.info}>
-          <Text>{entity}</Text>
-          <Text>{setDate(date)}</Text>
+          <Text style={styles.text}>{entity}</Text>
+          <Text style={styles.text}>{setDate(date)}</Text>
         </View>
         <Text>{points > 0 ? `+ ${points}` : `- ${Math.abs(points)}`}</Text>
       </View>
@@ -78,5 +78,8 @@ const styles = StyleSheet.create({
   },
   info: {
     flex: 1,
+  },
+  text: {
+    fontFamily: 'Poppins',
   }
 });

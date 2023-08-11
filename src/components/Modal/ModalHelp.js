@@ -55,14 +55,8 @@ const ModalHelp = () => {
                   <Text style={styles.cardTitle}>Paga con tu crédito electrónico Volaris</Text>
                   <Text style={styles.cardTText}>Paga tu tarifa base con tu crédito electrónico  Volaris. Los impuestos, productos y servicios adicionales deben pagarse con una  tarjeta de crédito o débito adicional.</Text>
                   <View style={styles.form}>
-                    <TextInput style={{
-                        borderColor: '#E6E6EC',
-                        borderWidth: 2,
-                        minWidth: '60%',
-                        borderBottomEndRadius: 0,
-                        borderTopEndRadius: 0,
-                    }} value={textInputValue} onChangeText={setTextInputValue} />
-                    <TouchableOpacity style={{maxWidth: '30%', backgroundColor: 'yellow', flex: 1, alignItems: 'stretch'}}>
+                    <TextInput style={styles.textInput} value={textInputValue} onChangeText={setTextInputValue} />
+                    <TouchableOpacity style={styles.btnActivar}>
                         <View style={styles.btnContent}>
                             <Text style={styles.btnText}>Activar</Text>
                         </View>
@@ -113,6 +107,7 @@ const styles = StyleSheet.create({
     },
     textItem: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '400',
     },
 
@@ -122,6 +117,7 @@ const styles = StyleSheet.create({
     hyperlinkBtnText: {
         color: '#1723D3',
         fontSize: 14,
+        fontFamily: 'Poppins',
         fontWeight: '600',
     },
 
@@ -148,6 +144,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
+        fontFamily: 'Poppins',
         fontWeight: 500,
     },
     buttonClose: {
@@ -170,11 +167,13 @@ const styles = StyleSheet.create({
 
     cardTitle: {
         fontSize: 16,
+        fontFamily: 'Poppins',
         fontWeight: '600',
         marginBottom: 16
     },
     cardTText: {
         fontSize: 14,
+        fontFamily: 'Poppins',
         fontWeight: '400',
     },
 
@@ -194,5 +193,15 @@ const styles = StyleSheet.create({
     },
     btnText: {
         color: 'white',
-    }
+        fontFamily: 'Poppins',
+    },
+    textInput: {
+        borderColor: '#E6E6EC',
+        borderWidth: 2,
+        minWidth: '60%',
+        borderBottomEndRadius: 0,
+        borderTopEndRadius: 0,
+        fontFamily: 'Poppins',
+    },
+    btnActivar: {maxWidth: '30%', backgroundColor: 'yellow', flex: 1, alignItems: 'stretch'}
 })

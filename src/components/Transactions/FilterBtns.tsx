@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
     },
     tabText: {
         color: '#373764',
+        fontFamily: 'Poppins'
     },
     tabTextActive: {
         fontWeight: 'bold',

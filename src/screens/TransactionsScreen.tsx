@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
       paddingHorizontal: 16,
       color: '#05053D',
       fontSize: 14,
+      fontFamily: 'Poppins',
       fontWeight: '600'
     }
 });

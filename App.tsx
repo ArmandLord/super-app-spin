@@ -8,7 +8,6 @@ import AppNavigator from './src/navigation/AppNavigator';
 const App = () => {
   return (
     <ThemeProvider>
-      {/* <Button text="Hola ironhackers" onPress={() => console.log('spin')} /> */}
       <AppNavigator />
       <Alert.Component />
     </ThemeProvider>

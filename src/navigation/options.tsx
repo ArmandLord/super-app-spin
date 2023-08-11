@@ -9,5 +9,8 @@ export default {
       height: 116
     },
     headerShadowVisible: false,
+    headerTitleStyle: {
+      fontFamily: 'Poppins'
+    },
     headerBackImage: () => <Image source={require('../assets/Angle_left.png')} />
 }

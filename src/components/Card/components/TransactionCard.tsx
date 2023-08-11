@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
     entity: {
         marginTop: 8,
         fontSize: 20,
+        fontFamily: 'Poppins',
         fontWeight: '500',
         alignSelf: 'center',
         marginBottom: 8,
