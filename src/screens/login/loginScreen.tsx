@@ -5,21 +5,37 @@ import { View, SafeAreaView, StyleSheet, Image } from 'react-native';
 import Text from '../../../femsaComponents/components/Text/Text';
 import TextInput from '../../../femsaComponents/components/atoms/TextInput';
 import Button from '../../../femsaComponents/components/Button/Button';
+import { useNavigation } from "@react-navigation/native";
 
 //Context
 import { useMovementsContext } from '../../context/SuperAppContext';
 
 
 const LoginScreen = () => {
-
+    const navigation = useNavigation()
   const { dispatch } = useMovementsContext(); 
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [isRequired, setIsRequired] = useState(true); 
+
+  
   const handleLogin = () => {
+    navigation.navigate('menu')
     dispatch({
       type: 'SET_USER',
       payload: { user: { phoneNumber: Number(phoneNumber) }, isAuth: true },
     }); 
   };
+
+  const handlePhoneNumberChange = (text) => {
+    setIsRequired(text.trim() === '');
+    if (text.startsWith("+52 ")) { // Check for the prefix
+      setPhoneNumber(text);
+    } else {
+      setPhoneNumber("+52 " + text);
+    }
+  };
+
+  
 
   return (
     <SafeAreaView style={styles.safeContainer}>
@@ -31,18 +47,20 @@ const LoginScreen = () => {
       <View style={styles.infoContainer}>
         <TextInput
             variant='numeric'
+            
             label='🇲🇽 Número de celular'
             maxLength={14}
             placeholder="🇲🇽 Número de celular"
             value={phoneNumber}
-            onChangeText={setPhoneNumber}
-          />
+            onChangeText={handlePhoneNumberChange}
+            />
           <Text style={styles.infoText}>Al continuar reconoces ser mayor de edad, así como haber leído y aceptado nuestros Términos y Condiciones y nuestro Aviso de privacidad</Text>
           <Button
             variant="primary"
             onPress={handleLogin}
             text="Comenzar"
             size="medium"
+            disabled={phoneNumber.length < 14} 
           />
       </View>
       
