@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Clipboard from '@react-native-clipboard/clipboard';
-import HyperlinkButton from '../components/Button/components/HyperlinkButton';
 import { getWidth, setFormatMoney, setLegibleDate } from '../utils';
 import TransactionView from '../components/Transactions/TransactionView';
 import Hr from '../components/Hr';
 import Button from '../components/Button/Button';
 import SecondaryButton from '../components/Button/components/SecondaryButton';
 import ModalHelp from '../components/Modal/ModalHelp';
-import Alert from '../components/atoms/Alert';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -26,15 +24,6 @@ const TicketScreen = () => {
   const checkIcon = require('../assets/check-circle.png');
 
   const [showAlertInfo, setShowAlertInfo] = useState(false);
-
-  const showAlert = () => {
-    Alert.show({
-        title: '¡Listo!',
-        details: 'Cambiaste tus puntos',
-        variant: 'info',
-        iconName: 'icon-alert-info'
-    });
-  };
 
   const copyToClipboard = () => {
     Clipboard.setString(partnetDefault.fiftCertificate);
@@ -93,7 +82,7 @@ const TicketScreen = () => {
             <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} />
           </View>
           <View style={styles.saveBtn}>
-            <SecondaryButton text="Guardar para otro momento" onPress={() => showAlert()} />
+            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} />
           </View>
         </View>
       </ScrollView>
@@ -107,7 +96,6 @@ const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 16,
         flex: 1,
-        // backgroundColor: '#ffffff',
     },
     overlayer: {
         backgroundColor: '#087D6F',
