@@ -14,7 +14,7 @@ import PointCounter from '../components/Card/components/PointCounter';
 
 const BalanceScreen = () => {
     const { navigate } = useNavigation();
-    const points = 10200;
+    const points = 9999;
     const formattedPoints = points.toLocaleString();
     const pointsValue = (points / 10).toFixed(2);
     const numericInputRef = useRef(null);
@@ -69,6 +69,11 @@ const BalanceScreen = () => {
                     onChangeText={handleInputChange}
                     placeholder="Monto en pesos"
                   />
+                  {points > 10000 && (
+                    <Text style={styles.maxValueText}>
+                      El valor máximo que puedes cambiar es $1,000.00
+                    </Text>
+                  )}
                 </View>
               ) : (
                 <TextInput
@@ -78,11 +83,6 @@ const BalanceScreen = () => {
                   placeholder="Monto en pesos"
                 />
               )}
-              <View style={styles.minValueContainer}>
-                <Text style={styles.minimumValueText}>
-                  El valor mínimo que puedes cambiar es $20.00
-                </Text>
-              </View>
               {points < 200 && (
                 <View style={styles.disclaimerContainer}>
                   <Disclaimer
@@ -173,22 +173,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   cardsContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginTop: 20,
+    marginVertical: 20,
   },
-  cardColumn: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    
-  },
-  
+  cardColumn: {},
   otherInput: {
     fontSize: 18,
-    marginTop: 24,
     fontFamily: 'Poppins',
-    marginBottom: 18
+    marginBottom: 18,
   },
   cardRow: {
     flexDirection: 'row',
@@ -203,6 +194,12 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginBottom: 20,
     marginHorizontal: 20,
+  },
+  maxValueText: {
+    color: 'red',
+    fontSize: 12,
+    fontFamily: 'Poppins',
+    marginLeft: 12,
   },
 });
 

@@ -10,14 +10,15 @@ import medal from '../assets/svg/medal.png';
 import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
 import iconPoints from '../assets/svg/icon.png';
+import PointCounter from '../components/Card/components/PointCounter';
 import { useNavigation } from '@react-navigation/native';
+import ContentBenefit from '../components/Card/components/ContentBenefit';
 
 const BenefitScreen = () => {
-  
   const {navigate} = useNavigation();
 
-  const points = "10,657";
-  const pointsValue = "156.00";
+  const points = '10,657';
+  const pointsValue = '156.00';
   const imageWidth = 100;
   const imageHeight = 100;
 
@@ -53,80 +54,53 @@ const BenefitScreen = () => {
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.subTitle}>Beneficios</Text>
         <View style={styles.sectionContainer}>
-          <Text style={styles.subTitle}>Tienes</Text>
           <View style={styles.pointsContainer}>
             <View style={styles.pointsValueBox}>
+              <Text style={styles.pointsText}>Tienes</Text>
               <Text style={styles.points}>{points} puntos</Text>
-              <View style={styles.pointsBox}>
-                <Image
-                  source={iconPoints}
-                  style={[styles.pointsImage, {width: 18, height: 18}]}
-                />
-                <Text style={styles.pointsValue}>Valen ${pointsValue}</Text>
-              </View>
+              <PointCounter value={pointsValue} />
             </View>
-            <Image
-              source={spinpremia}
-              style={[styles.pointsIcon, {width: 100, height: 100}]}
-            />
+            <Image source={spinpremia} style={styles.pointsIcon} />
           </View>
         </View>
 
         <View style={styles.cardContainer}>
-          <ContentStackedCard
-            title="Consulta tu historial"
-            titleSize="default"
-            onPress={() => navigate('TransactionsScreen')}
-            icon={
-              <Image
-                source={historytask}
-                style={[
-                  styles.cardIcon,
-                  {width: imageWidth, height: imageHeight},
-                ]}
-              />
-            }
-          />
-          <ContentStackedCard
-            title="Cambia tus puntos"
-            titleSize="default"
+          <ContentBenefit
             onPress={() => navigate('PointsScreen')}
-            icon={
-              <Image
-                source={premiastar}
-                style={[
-                  styles.cardIcon,
-                  {width: imageWidth, height: imageHeight},
-                ]}
-              />
-            }
+            imageSource={historytask}
+            title="Consulta tu historial"
+          />
+          <ContentBenefit
+            onPress={() => navigate('TicketScreen')}
+            imageSource={premiastar}
+            title="Cambia tus puntos"
           />
         </View>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Acumula productos</Text>
+          <Text style={styles.propDescription}>
+            Muy pronto podrás sumar tus compras y ganar productos de regalo
+          </Text>
           <View style={styles.propContainer}>
-            <Text style={styles.propDescription}>
-              Muy pronto podrás sumar tus compras y ganar productos de regalo
-            </Text>
             <Image source={prop} style={styles.propImage} />
           </View>
         </View>
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Gana más puntos</Text>
+          <Text style={styles.propDescription}>
+            Muy pronto podrás ganar más puntos en el total de tu compra
+          </Text>
           <View style={styles.propContainer}>
-            <Text style={styles.propDescription}>
-              Muy pronto podrás ganar más puntos en el total de tu compra
-            </Text>
             <Image source={star} style={styles.propImage} />
           </View>
         </View>
         <View style={styles.divider} />
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Suma al comprar</Text>
+          <Text style={styles.propDescription}>
+            Muy pronto podrás acumular compras y llevarte productos de regalo
+          </Text>
           <View style={styles.propContainer}>
-            <Text style={styles.propDescription}>
-              Muy pronto podrás acumular compras y llevarte productos de regalo
-            </Text>
             <Image source={medal} style={styles.propImage} />
           </View>
         </View>
@@ -171,12 +145,19 @@ const styles = StyleSheet.create({
   subTitle: {
     fontSize: 18,
     fontWeight: '600',
-    marginBottom: 10,
+    marginBottom: 28,
   },
   divider: {
     height: 1,
     backgroundColor: '#E0E0E0', 
-    marginVertical: 20,
+    marginVertical:24,
+    
+  },
+  pointsText: {
+    fontSize: 16,
+    fontWeight: '500',
+    marginVertical: 2,
+   
   },
   pointsContainer: {
     flexDirection: 'row',
@@ -187,9 +168,11 @@ const styles = StyleSheet.create({
   points: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginBottom:10
   },
   pointsIcon: {
-    alignSelf: 'center',
+  width: 120,
+  height: 120
   },
   pointsBox: {
     flexDirection: 'row',
@@ -222,7 +205,7 @@ const styles = StyleSheet.create({
   },
   propDescription: {
     fontSize: 16,
-    marginBottom: 10,
+    marginVertical: 14,
     textAlign: 'left',
   },
   propImage: {

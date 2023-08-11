@@ -22,7 +22,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ title, value }) => {
         <Text
           style={[
             styles.cardText,
-            { color: isSelected ? '#1723D3' : '#000' }, // Cambiar color del texto
+            { color: isSelected ? '#1723D3' : '#000' },
           ]}
         >
           {title}
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 8,
     marginRight: 8,
+    marginVertical: 10,
   },
   card: {
     width: 164,
