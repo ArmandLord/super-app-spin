@@ -20,8 +20,8 @@ const BenefitScreen = () => {
   const {navigate} = useNavigation();
   const {points} = useAppContext();
 
-  // const points = points;
-  const pointsValue = '156.00';
+  const formattedPoints = points.toLocaleString();
+  const pointsValue = (points/10).toLocaleString();
 
   const banners = [
     {
@@ -58,8 +58,8 @@ const BenefitScreen = () => {
           <View style={styles.pointsContainer}>
             <View style={styles.pointsValueBox}>
               <Text style={styles.pointsText}>Tienes</Text>
-              <Text style={styles.points}>{thousandsFormat(points)} puntos</Text>
-              <PointCounter value={thousandsFormat(points/10)} />
+              <Text style={styles.points}>{formattedPoints} puntos</Text>
+              <PointCounter value={pointsValue} />
             </View>
             <Image source={spinpremia} style={styles.pointsIcon} />
           </View>
@@ -72,7 +72,7 @@ const BenefitScreen = () => {
             title="Consulta tu historial"
           />
           <ContentBenefit
-            onPress={() => navigate('TicketScreen')}
+            onPress={() => navigate('PointsScreen')}
             imageSource={premiastar}
             title="Cambia tus puntos"
           />

@@ -9,7 +9,7 @@ export type AppState = {
 }
 
 const initialState: AppState = {
-  points: 900001,
+  points: 90,
   exchangePoints: () => {},
 }
 

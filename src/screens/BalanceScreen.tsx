@@ -8,17 +8,21 @@ import BaseChip from '../components/atoms/Chip/BaseChip';
 import PointsIcon from '../assets/svg/icon.png';
 import Button from '../components/Button/Button';
 import CustomCard from '../components/Card/components/CustomCard';
-
 import { useNavigation } from '@react-navigation/native';
 import PointCounter from '../components/Card/components/PointCounter';
+import { useAppContext } from '../context/AppContext';
+import { getPointsValue } from '../utils';
 
 const BalanceScreen = () => {
+  
     const { navigate } = useNavigation();
-    const points = 9999;
+    const {points} = useAppContext();
+
     const formattedPoints = points.toLocaleString();
-    const pointsValue = (points / 10).toFixed(2);
+    const pointsValue = getPointsValue(points);
     const numericInputRef = useRef(null);
-    const handleInputChange = (text) => {
+
+    const handleInputChange = (text: string) => {
         console.log('Texto ingresado:', text);
     };
 
@@ -68,6 +72,7 @@ const BalanceScreen = () => {
                     variant="numeric"
                     onChangeText={handleInputChange}
                     placeholder="Monto en pesos"
+                    placeholderTextColor="#69698B"
                   />
                   {points > 10000 && (
                     <Text style={styles.maxValueText}>
@@ -81,6 +86,7 @@ const BalanceScreen = () => {
                   variant="numeric"
                   onChangeText={handleInputChange}
                   placeholder="Monto en pesos"
+                  placeholderTextColor="#69698B"
                 />
               )}
               {points < 200 && (
