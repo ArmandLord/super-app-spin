@@ -17,11 +17,7 @@ import { useMovementsContext } from '../context/SuperAppContext';
 import BalanceScreen from '../screens/Balance/BalanceScreen';
 import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
 import AccountDetails from '../screens/account/accountScreen';
-import splashScreen from '../screens//splash/splashScreen';
-
-
-
-
+import SplashScreen from '../screens//splash/splashScreen';
 
 
 export type RootStackParamList = {
@@ -54,13 +50,12 @@ const Navigation = () => {
   const { colors } = useTheme()
   const { state, dispatch } = useMovementsContext()
   const navigation = useNavigation();
-
+  //aqui se manejan las screen de las tabs de Beneficios, si otras pantallas tambien tiene su flujo se crea una nueva stacknavigation
+  // y se le anida a las tabs
   const StackNavigation = () => {
-
-
     return (
       <Stack.Navigator  >
-          
+
         <Stack.Screen name="Beneficios" component={LoyaltyScreen}
           options={{
             headerTitleAlign: 'left',
@@ -114,57 +109,54 @@ const Navigation = () => {
       </Stack.Navigator>
     );
   };
-const LoginStackNavigation =()=>{
+  //Tab navigation, aqui se maneja las screens que estan en el menu de tab
+  const MenuNavigation = () => {
+    return (
+      <Tab.Navigator tabBar={(props) => (state.tabBar ? <CustomNavBar {...props} focusedColor={colors.content_primary} blurColor={colors.content_tertiary} /> : null)}>
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerTitleAlign: 'left',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }}
+        />
+        <Tab.Screen
+          name="Benefits"
+          options={{
+            headerShown: false
+          }}
+          component={StackNavigation}
+        />
+        <Tab.Screen
+          name="Cartera"
+          component={HomeScreen}
+          options={{
+            headerTitleAlign: 'left',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }}
+        />
+        <Tab.Screen
+          name="Cuenta"
+          options={{
+            headerTitleAlign: 'left',
+            headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
+          }}
+          component={AccountDetails}
+
+        />
+      </Tab.Navigator>)
+  }
+
+  //Navegacion principal, aqui se maneja la navegacion para SplashScreen, Login, Registro, etc, Cuando se loguea se mana a llamar al MenuNavigation que contiene 
+  // a las tabs.
   return (
     <Stack.Navigator initialRouteName='splash' >
-        <Stack.Screen name="splash" component={splashScreen}
-        options={{
-          headerLeft: (props) => (
-            <BackButton onPress={() => {
-              dispatch({ type: 'SHOW_TAB', payload: false })
-            }} />
-          ),
-        }} />
+      <Stack.Screen name="splash" component={SplashScreen}
+        options={{ headerShown: false }} />
+      <Stack.Screen name="menu" component={MenuNavigation}
+        options={{ headerShown: false }} />
     </Stack.Navigator>
-  );
-};
-
-  return (
-    
-    <Tab.Navigator tabBar={(props) => (state.tabBar ? <CustomNavBar {...props} focusedColor={colors.content_primary} blurColor={colors.content_tertiary} /> : null)}>
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          headerTitleAlign: 'left',
-          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
-        }}
-      />
-      <Tab.Screen
-        name="Benefits"
-        options={{
-          headerShown: false
-        }}
-        component={StackNavigation}
-      />
-      <Tab.Screen
-        name="Cartera"
-        component={splashScreen}
-        options={{
-          headerTitleAlign: 'left',
-          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
-        }}
-      />
-      <Tab.Screen
-        name="Cuenta"
-        options={{
-          headerTitleAlign: 'left',
-          headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
-        }}
-        component={AccountDetails}
-
-      />
-    </Tab.Navigator>
   );
 };
 
