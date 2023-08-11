@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import TransactionCard from '../components/Card/components/TransactionCard';
 import Pill from '../components/Pill';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Clipboard from '@react-native-clipboard/clipboard';
 import HyperlinkButton from '../components/Button/components/HyperlinkButton';
-import { setFormatMoney, setLegibleDate } from '../utils';
+import { getWidth, setFormatMoney, setLegibleDate } from '../utils';
 import TransactionView from '../components/Transactions/TransactionView';
 import Hr from '../components/Hr';
 import Button from '../components/Button/Button';
 import SecondaryButton from '../components/Button/components/SecondaryButton';
+import ModalHelp from '../components/Modal/ModalHelp';
+import Alert from '../components/atoms/Alert';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -21,6 +23,18 @@ const partnetDefault = {
 const TicketScreen = () => {
   const imgVolaris = require('../assets/Movimientos/volaris.png');
   const copyIcon = require('../assets/copy-icon.png');
+  const checkIcon = require('../assets/check-circle.png');
+
+  const [showAlertInfo, setShowAlertInfo] = useState(false);
+
+  const showAlert = () => {
+    Alert.show({
+        title: '¡Listo!',
+        details: 'Cambiaste tus puntos',
+        variant: 'info',
+        iconName: 'icon-alert-info'
+    });
+  };
 
   const copyToClipboard = () => {
     Clipboard.setString(partnetDefault.fiftCertificate);
@@ -29,6 +43,10 @@ const TicketScreen = () => {
   return (
     <>
       <View style={styles.overlayer} />
+      {showAlertInfo === true && <View style={styles.alertContent}>
+        <Image source={checkIcon} style={styles.alertIcon}/>
+        <Text style={styles.alertText}>¡Listo! Cambiaste tus puntos</Text>
+      </View>}
       <ScrollView>
         <View style={styles.container}>
           <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
@@ -46,11 +64,7 @@ const TicketScreen = () => {
             </TouchableOpacity>
           </TransactionCard>
 
-          <HyperlinkButton
-          text="¿Cómo usar mi certificado de regalo?"
-          onPress={() => {}}
-          style={styles.hyperlinkBtn}
-          styleText={styles.hyperlinkBtnText} />
+          <ModalHelp />
 
           <View style={styles.table}>
             <View style={styles.row}>
@@ -76,10 +90,10 @@ const TicketScreen = () => {
           <Hr/>
 
           <View style={styles.useBtn}>
-            <Button text="Usar certificado de regalo" onPress={() => {}} />
+            <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} />
           </View>
           <View style={styles.saveBtn}>
-            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} />
+            <SecondaryButton text="Guardar para otro momento" onPress={() => showAlert()} />
           </View>
         </View>
       </ScrollView>
@@ -104,6 +118,32 @@ const styles = StyleSheet.create({
         right: 0,
         minHeight: 116,
     },
+
+    alertContent: {
+        flexDirection: 'row',
+        marginHorizontal: getWidth(16),
+        paddingHorizontal: 12,
+        paddingVertical: 16,
+        backgroundColor: '#1E1E50',
+        borderRadius: 12,
+        alignItems: 'center',
+        position: 'absolute',
+        zIndex: 1,
+        flex: 1,
+        width: getWidth(328),
+        top: 0,
+    },
+    alertIcon: {
+        width: 12,
+        height: 12,
+    },
+    alertText: {
+        color: 'white',
+        fontSize: 12,
+        fontWeight: '400',
+        marginLeft: 12,
+    },
+
     card: {
         marginTop: 78 / 2 + 5,
         paddingBottom: 16,
@@ -134,14 +174,6 @@ const styles = StyleSheet.create({
     },
     numberGiftCertificate: {
         fontSize: 16,
-        fontWeight: '600',
-    },
-    hyperlinkBtn: {
-        marginTop: 5,
-    },
-    hyperlinkBtnText: {
-        color: '#1723D3',
-        fontSize: 14,
         fontWeight: '600',
     },
     row: {
