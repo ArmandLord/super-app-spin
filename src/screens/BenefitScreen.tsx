@@ -13,14 +13,15 @@ import iconPoints from '../assets/svg/icon.png';
 import PointCounter from '../components/Card/components/PointCounter';
 import { useNavigation } from '@react-navigation/native';
 import ContentBenefit from '../components/Card/components/ContentBenefit';
+import { useAppContext } from '../context/AppContext';
+import { setFormatMoney, thousandsFormat } from '../utils';
 
 const BenefitScreen = () => {
   const {navigate} = useNavigation();
+  const {points} = useAppContext();
 
-  const points = '10,657';
+  // const points = points;
   const pointsValue = '156.00';
-  const imageWidth = 100;
-  const imageHeight = 100;
 
   const banners = [
     {
@@ -57,8 +58,8 @@ const BenefitScreen = () => {
           <View style={styles.pointsContainer}>
             <View style={styles.pointsValueBox}>
               <Text style={styles.pointsText}>Tienes</Text>
-              <Text style={styles.points}>{points} puntos</Text>
-              <PointCounter value={pointsValue} />
+              <Text style={styles.points}>{thousandsFormat(points)} puntos</Text>
+              <PointCounter value={thousandsFormat(points/10)} />
             </View>
             <Image source={spinpremia} style={styles.pointsIcon} />
           </View>
