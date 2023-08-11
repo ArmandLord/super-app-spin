@@ -13,7 +13,7 @@ export default class SplashScreen extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.goToScreen('menu')
+      this.goToScreen('login')
     }, 3000, this)
   }
   render() {

@@ -6,7 +6,7 @@ import ListItem from '../../../components/DataDisplay/ListItem';
 import Text from '../../../../femsaComponents/components/Text/Text';
 import Spinner from '../../../../femsaComponents/components/atoms/Spinner/Spinner';
 import { useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from '../../../navigation/Navigation';
+import { RootStackParamList } from '../../../navigation/OnboardingNavigation';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 

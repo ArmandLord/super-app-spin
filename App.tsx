@@ -1,16 +1,20 @@
 import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'react-native-gesture-handler';
-import AppNavigator from './src/navigation/Navigation';
 import ThemeProvider from './femsaComponents/theme/ThemeProvider';
-import { MovementsProvider } from './src/context/SuperAppContext';
+import { MovementsProvider, useMovementsContext } from './src/context/SuperAppContext';
+import GeneralNavigation from './src/navigation/GeneralNavigation';
 
 const App: React.FC = () => {
+  const { state } = useMovementsContext()
+  useEffect(() => {
+    console.log('changed')
+  }, [state.isLoged])
   return (
     <ThemeProvider>
       <MovementsProvider>
         <NavigationContainer >
-          <AppNavigator />
+          <GeneralNavigation />
         </NavigationContainer>
       </MovementsProvider>
     </ThemeProvider >

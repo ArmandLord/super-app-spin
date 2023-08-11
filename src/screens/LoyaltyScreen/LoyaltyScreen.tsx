@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { BackHandler, Image, View } from "react-native";
 import { StackedCardProps } from "../../types/LoyaltyTypes";
 import { styles } from "../../styles/LoyaltyStyles/LoyaltyScreen.style";
 import { ScrollView } from "react-native-gesture-handler";
