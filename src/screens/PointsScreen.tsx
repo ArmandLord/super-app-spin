@@ -1,46 +1,47 @@
 import React from 'react';
 import { View, Text, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
-import Card from '../components/Card/Card';
+import CircularImageCard from '../components/Card/components/CircularImageCard';
 import volarisImage from '../assets/volaris.png';
+import smartImage from '../assets/smart.png';
+import vixImage from '../assets/vix.png';
 import { useNavigation } from '@react-navigation/native';
 
 const brands = [
   {
     id: 1,
-    name: "American Airlines",
-    role: "Aerolínea",
+    name: "Volaris",
+    role: "Movilidad",
     image: volarisImage
   },
   {
     id: 2,
-    name: "Delta Air Lines",
-    role: "Aerolínea",
-    image: volarisImage
+    name: "Smart Fit",
+    role: "Deportes",
+    image: smartImage
   },
   {
     id: 3,
-    name: "Volaris",
-    role: "Aerolínea",
-    image: volarisImage
+    name: "VIX",
+    role: "Entretenimiento",
+    image: vixImage
   },
-  // ... otros datos de marcas
 ];
 
 const PointsScreen = () => {
-    const {navigate} = useNavigation();
+  const { navigate } = useNavigation();
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
         <View style={styles.container}>
-          <Text>Elige la marca aliada en la que quieres usar tus puntos</Text>
+          <Text style={styles.headerText}>
+            Elige la marca aliada en la que quieres usar tus puntos
+          </Text>
           {brands.map(brand => (
-            <Card
+            <CircularImageCard
               key={brand.id}
-              variant="content-image"
               title={brand.name}
               subtitle={brand.role}
               image={brand.image}
-              // Otras props según tus necesidades
               onPress={() => navigate('BalanceScreen')}
             />
           ))}
@@ -62,6 +63,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+  },
+  headerText: {
+    fontSize: 18, // Ajusta el tamaño de fuente deseado
+    marginBottom: 15, // Añade un margen inferior para separación
   },
 });
 
