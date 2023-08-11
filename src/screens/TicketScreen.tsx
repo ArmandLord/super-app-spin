@@ -10,6 +10,7 @@ import TransactionView from '../components/Transactions/TransactionView';
 import Hr from '../components/Hr';
 import Button from '../components/Button/Button';
 import SecondaryButton from '../components/Button/components/SecondaryButton';
+import ModalHelp from '../components/Modal/ModalHelp';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -46,11 +47,7 @@ const TicketScreen = () => {
             </TouchableOpacity>
           </TransactionCard>
 
-          <HyperlinkButton
-          text="¿Cómo usar mi certificado de regalo?"
-          onPress={() => {}}
-          style={styles.hyperlinkBtn}
-          styleText={styles.hyperlinkBtnText} />
+          <ModalHelp />
 
           <View style={styles.table}>
             <View style={styles.row}>
@@ -134,14 +131,6 @@ const styles = StyleSheet.create({
     },
     numberGiftCertificate: {
         fontSize: 16,
-        fontWeight: '600',
-    },
-    hyperlinkBtn: {
-        marginTop: 5,
-    },
-    hyperlinkBtnText: {
-        color: '#1723D3',
-        fontSize: 14,
         fontWeight: '600',
     },
     row: {
