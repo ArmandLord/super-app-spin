@@ -5,6 +5,7 @@ const WIDTH = Dimensions.get('screen').width;
 const WIDTH_DESIGN = 360;
 
 export const setFormatMoney = (value: number) => new Intl.NumberFormat('es-MX', {style: 'currency', currency: 'MXN'}).format(value);
+export const thousandsFormat = (value: number) => new Intl.NumberFormat('es-MX').format(value);
 
 export const setLegibleDate = (date: string | undefined) => {
     if (date) {
