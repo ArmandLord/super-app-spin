@@ -5,7 +5,7 @@ import useTheme from '../../../../femsaComponents/hooks/useTheme';
 import Text from '../../../../femsaComponents/components/Text/Text';
 import { RouteProp } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../../navigation/Navigation';
+import { RootStackParamList } from '../../../navigation/OnboardingNavigation';
 import Card from '../../../../femsaComponents/components/Card/Card';
 
 type Props = {
