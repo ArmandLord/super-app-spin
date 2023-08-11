@@ -1,29 +1,32 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { Component, useState } from 'react';
 import { View, SafeAreaView, StyleSheet, Image } from 'react-native';
 
 
-export default class splashScreen extends Component{
+export default class SplashScreen extends Component {
 
-goToScreen(routeName){
+  
+
+  goToScreen(routeName) {
     this.props.navigation.navigate(routeName)
-}
+  }
 
-componentDidMount(){
-    setTimeout(() =>{
-        this.goToScreen('login')
-    },5000,this)
-}
-render() {
-    
+  componentDidMount() {
+    setTimeout(() => {
+      this.goToScreen('menu')
+    }, 3000, this)
+  }
+  render() {
+
     return (
-        <SafeAreaView style={styles.safeContainer}>
+      <View style={styles.safeContainer}>
         <Image source={require('../../assets/splash/Splash2x.jpg')} style={styles.backgroundImage} />
         <View style={styles.centerContainer}>
           <Image source={require('../../assets/splash/SpinPlusLogo3x.png')} style={styles.logoImage} />
         </View>
-      </SafeAreaView>
+      </View>
     );
-};
+  };
 }
 
 
