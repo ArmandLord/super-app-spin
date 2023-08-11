@@ -14,7 +14,6 @@ const AppNavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      initialRouteName="TicketScreen"
       screenOptions={{
         cardStyle: {
           backgroundColor: 'white',
