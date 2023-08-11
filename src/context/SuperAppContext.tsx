@@ -1,7 +1,7 @@
 import React, { createContext, useReducer, useContext, Dispatch } from 'react';
 import { Movement } from '../types/movements';
 import { AlliesInterface } from '../types/AlliesType';
-
+import {UserState} from '../types/types'
 
 interface MovementsState {
   history: Movement[];
@@ -13,6 +13,7 @@ interface MovementsState {
   pointsToExchange: number;
 }
 
+
 type Action =
   | { type: 'ADD_MOVEMENT'; payload: Movement }
   | { type: 'UPDATE_MOVEMENT'; payload: { id: number; completed: boolean } }
@@ -22,6 +23,8 @@ type Action =
   | { type: 'SHOW_TAB'; payload: boolean }
   | { type: 'SET_SELECTED_ALLY'; payload: AlliesInterface }
   | { type: 'SET_POINTS_TO_EXCHANGE'; payload: number}
+  | { type: 'SET_USER'; payload: UserState }
+
 
 
 
@@ -77,3 +80,4 @@ const MovementsProvider = ({ children }: any) => {
 const useMovementsContext = () => useContext(MovementsContext);
 
 export { MovementsProvider, useMovementsContext };
+

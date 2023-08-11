@@ -10,7 +10,7 @@ goToScreen(routeName){
 
 componentDidMount(){
     setTimeout(() =>{
-        this.goToScreen('Home')
+        this.goToScreen('login')
     },5000,this)
 }
 render() {
@@ -38,32 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  infoContainer: {
-    position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    height: '40%',
-    backgroundColor: '#fff',
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-    paddingHorizontal: 15,
-    paddingVertical: 25
-  },
-  infoText: {
-    fontSize: 13,
-    fontWeight: '400',
-    color: '#00000090',
-    paddingVertical: 15,
-    paddingHorizontal: 10,
-  },
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingVertical: 35,
-    paddingHorizontal: 6,
-    marginHorizontal: 15,
-  },
+  
   centerContainer: {
     flex: 1,
     alignItems: 'center',
@@ -74,10 +49,5 @@ const styles = StyleSheet.create({
     height: '80%',
     marginBottom: 10,
     resizeMode: 'contain'
-  },
-  logoText: {
-    fontSize: 45,
-    fontWeight: '600',
-    color: '#fff'
   },
 });
