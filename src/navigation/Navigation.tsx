@@ -17,6 +17,7 @@ import { useMovementsContext } from '../context/SuperAppContext';
 import BalanceScreen from '../screens/Balance/BalanceScreen';
 import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
 import AccountDetails from '../screens/account/accountScreen';
+import splashScreen from '../screens//splash/splashScreen';
 
 
 
@@ -58,7 +59,8 @@ const Navigation = () => {
 
 
     return (
-      <Stack.Navigator >
+      <Stack.Navigator  >
+          
         <Stack.Screen name="Beneficios" component={LoyaltyScreen}
           options={{
             headerTitleAlign: 'left',
@@ -112,8 +114,23 @@ const Navigation = () => {
       </Stack.Navigator>
     );
   };
+const LoginStackNavigation =()=>{
+  return (
+    <Stack.Navigator initialRouteName='splash' >
+        <Stack.Screen name="splash" component={splashScreen}
+        options={{
+          headerLeft: (props) => (
+            <BackButton onPress={() => {
+              dispatch({ type: 'SHOW_TAB', payload: false })
+            }} />
+          ),
+        }} />
+    </Stack.Navigator>
+  );
+};
 
   return (
+    
     <Tab.Navigator tabBar={(props) => (state.tabBar ? <CustomNavBar {...props} focusedColor={colors.content_primary} blurColor={colors.content_tertiary} /> : null)}>
       <Tab.Screen
         name="Home"
@@ -132,7 +149,7 @@ const Navigation = () => {
       />
       <Tab.Screen
         name="Cartera"
-        component={HomeScreen}
+        component={splashScreen}
         options={{
           headerTitleAlign: 'left',
           headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 }
