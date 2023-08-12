@@ -32,7 +32,7 @@ const AccountScreen = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#fff', // Puedes ajustar el color de fondo aquí
+    backgroundColor: '#fff',
   },
   container: {
     flex: 1,
