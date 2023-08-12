@@ -65,9 +65,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   headerText: {
-    fontSize: 18, // Ajusta el tamaño de fuente deseado
+    fontSize: 18,
     fontFamily: 'Poppins',
-    marginBottom: 15, // Añade un margen inferior para separación
+    marginBottom: 15,
   },
 });
 
