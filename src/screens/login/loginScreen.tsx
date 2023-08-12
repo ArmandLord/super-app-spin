@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { View, SafeAreaView, StyleSheet, Image } from 'react-native';
 
-//FEMSA Components
 import Text from '../../../femsaComponents/components/Text/Text';
 import TextInput from '../../../femsaComponents/components/atoms/TextInput';
 import Button from '../../../femsaComponents/components/Button/Button';
 import { useNavigation } from "@react-navigation/native";
 
-//Context
 import { useMovementsContext } from '../../context/SuperAppContext';
 
 
@@ -19,11 +17,8 @@ const LoginScreen = () => {
 
   
   const handleLogin = () => {
-    navigation.navigate('menu')
-    dispatch({
-      type: 'SET_USER',
-      payload: { user: { phoneNumber: Number(phoneNumber) }, isAuth: true },
-    }); 
+    dispatch({type:'SET_USER_LOGED', payload: true})
+
   };
 
   const handlePhoneNumberChange = (text) => {

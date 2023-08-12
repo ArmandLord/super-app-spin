@@ -1,7 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect, useState } from 'react';
-import { CustomNavBar } from '../index'
 import { HomeScreen } from '../screens/Home/HomeScreen';
 import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
 import MovementsScreen from '../screens/Movements/MovementsScreen';
@@ -17,7 +16,7 @@ import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetai
 
 import SplashScreen from '../screens/splash/splashScreen';
 import TicketScreen from '../screens/Ticket/TicketScreen';
-import Login from '../screens/Login/Login';
+import Login from '../screens/Login/loginScreen';
 
 
 export type RootStackParamList = {
@@ -42,7 +41,9 @@ const OnboardingNavigation = () => {
   return <Stack.Navigator initialRouteName='splash' >
     <Stack.Screen name="splash" component={SplashScreen}
       options={{ headerShown: false }} />
-    <Stack.Screen name="login" component={Login} />
+    <Stack.Screen name="login" component={Login} 
+          options={{ headerShown: false }} />
+        
   </Stack.Navigator>
 };
 
