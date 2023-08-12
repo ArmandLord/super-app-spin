@@ -2,7 +2,8 @@ import React from "react";
 import { TItem } from "../../types/transactions";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { useNavigation } from "@react-navigation/native";
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import {NavListBase} from '../../navigation/NavListBase';
 
 
 const ItemList = ({entity, date, points, id}: TItem) => {
@@ -16,7 +17,7 @@ const ItemList = ({entity, date, points, id}: TItem) => {
 
   const daysNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
 
-  const {navigate} = useNavigation();
+const {navigate} = useNavigation<NavigationProp<NavListBase>>();
 
   const setDate = (date: string) => {
     const IDate = new Date(date);

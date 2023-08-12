@@ -9,15 +9,14 @@ import prop from '../assets/svg/prop.png';
 import medal from '../assets/svg/medal.png';
 import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
-import iconPoints from '../assets/svg/icon.png';
 import PointCounter from '../components/Card/components/PointCounter';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import ContentBenefit from '../components/Card/components/ContentBenefit';
 import { useAppContext } from '../context/AppContext';
-import { setFormatMoney, thousandsFormat } from '../utils';
+import {NavListBase} from '../navigation/NavListBase';
 
 const BenefitScreen = () => {
-  const {navigate} = useNavigation();
+  const {navigate} = useNavigation<NavigationProp<NavListBase>>();
   const {points} = useAppContext();
 
   const formattedPoints = points.toLocaleString();
