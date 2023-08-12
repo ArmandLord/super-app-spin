@@ -67,7 +67,7 @@ const BenefitScreen = () => {
 
         <View style={styles.cardContainer}>
           <ContentBenefit
-            onPress={() => navigate('PointsScreen')}
+            onPress={() => navigate('TransactionsScreen')}
             imageSource={historytask}
             title="Consulta tu historial"
           />

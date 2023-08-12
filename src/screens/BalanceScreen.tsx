@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import Disclaimer from '../components/Disclaimer/Disclaimer';
 import AlertIcon from "../assets/Alert.png";
@@ -17,13 +17,17 @@ const BalanceScreen = () => {
   
     const { navigate } = useNavigation();
     const {points} = useAppContext();
+    const [amount, setAmount] = useState('');
 
     const formattedPoints = points.toLocaleString();
     const pointsValue = getPointsValue(points);
     const numericInputRef = useRef(null);
 
     const handleInputChange = (text: string) => {
-        console.log('Texto ingresado:', text);
+      const regex = /^[0-9]*$/;
+      if (regex.test(text)) {
+        setAmount(text);
+      }
     };
 
     return (
@@ -70,24 +74,31 @@ const BalanceScreen = () => {
                   <TextInput
                     ref={numericInputRef}
                     variant="numeric"
+                    value={amount}
                     onChangeText={handleInputChange}
                     placeholder="Monto en pesos"
                     placeholderTextColor="#69698B"
                   />
-                  {points > 10000 && (
-                    <Text style={styles.maxValueText}>
-                      El valor máximo que puedes cambiar es $1,000.00
-                    </Text>
-                  )}
                 </View>
               ) : (
                 <TextInput
                   ref={numericInputRef}
                   variant="numeric"
+                  value={amount}
                   onChangeText={handleInputChange}
                   placeholder="Monto en pesos"
                   placeholderTextColor="#69698B"
+                  editable={points >= 200}
                 />
+              )}
+              {points > 10000 && (
+                <Text style={[styles.minValueText, parseInt(amount) >= 1001 && styles.maxValueTextAlert]}>
+                  El valor máximo que puedes cambiar es $1,000.00
+                </Text>
+              ) || (
+                <Text style={styles.minValueText}>
+                  El valor mínimo que puedes cambiar es $20.00
+                </Text>
               )}
               {points < 200 && (
                 <View style={styles.disclaimerContainer}>
@@ -173,7 +184,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   disclaimerContainer: {
-    marginTop: 10,
+    marginTop: 16,
   },
   bottomText: {
     marginTop: 20,
@@ -201,7 +212,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginHorizontal: 20,
   },
-  maxValueText: {
+  minValueText: {
+    marginTop: 8,
+    color: '#69698B',
+    fontSize: 12,
+    fontFamily: 'Poppins',
+    marginLeft: 12,
+  },
+  maxValueTextAlert: {
+    marginTop: 8,
     color: 'red',
     fontSize: 12,
     fontFamily: 'Poppins',
