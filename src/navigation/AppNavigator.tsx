@@ -7,10 +7,19 @@ import TicketScreen from "../screens/TicketScreen";
 import options from "./options";
 import PointsScreen from "../screens/PointsScreen";
 import BalanceScreen from "../screens/BalanceScreen";
+import { useAppContext } from "../context/AppContext";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Stack = createStackNavigator();
 
 const AppNavigator = () => {
+
+  const {setPoints} = useAppContext();
+  AsyncStorage.getItem('points').then(points => {
+    if (points) {
+      setPoints(parseInt(points))
+    }
+  })
   return (
     <NavigationContainer>
       <Stack.Navigator

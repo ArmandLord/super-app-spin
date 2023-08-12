@@ -26,7 +26,7 @@ const BalanceScreen = (props: TypeProps) => {
   
   
   const { navigate } = useNavigation();
-  const {points, exchangePoints} = useAppContext();
+  const {points, decreasePoints} = useAppContext();
   const [amount, setAmount] = useState('');
   const [amountBtn, setAmountBtn] = useState('');
   const [loading, setLoading] = useState(false);
@@ -64,7 +64,7 @@ const BalanceScreen = (props: TypeProps) => {
       points = parseInt(amountBtn);
     }
 
-    exchangePoints(points);
+    decreasePoints(points);
 
     addData({
       entity: entity,

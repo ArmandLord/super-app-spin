@@ -10,6 +10,7 @@ import Hr from '../components/Hr';
 import Button from '../components/Button/Button';
 import SecondaryButton from '../components/Button/components/SecondaryButton';
 import ModalHelp from '../components/Modal/ModalHelp';
+import { useNavigation } from '@react-navigation/native';
 
 const partnetDefault = {
     entity: 'Volaris',
@@ -24,6 +25,7 @@ const TicketScreen = () => {
   const checkIcon = require('../assets/check-circle.png');
 
   const [showAlertInfo, setShowAlertInfo] = useState(false);
+  const {navigate} = useNavigation();
 
   const copyToClipboard = () => {
     Clipboard.setString(partnetDefault.fiftCertificate);
@@ -32,10 +34,12 @@ const TicketScreen = () => {
   return (
     <>
       <View style={styles.overlayer} />
-      {showAlertInfo === true && <View style={styles.alertContent}>
-        <Image source={checkIcon} style={styles.alertIcon}/>
-        <Text style={styles.alertText}>¡Listo! Cambiaste tus puntos</Text>
-      </View>}
+      {showAlertInfo === true && <TouchableOpacity onPress={() => setShowAlertInfo(!showAlertInfo)}>
+        <View style={styles.alertContent}>
+          <Image source={checkIcon} style={styles.alertIcon}/>
+          <Text style={styles.alertText}>¡Listo! Cambiaste tus puntos</Text>
+        </View>
+      </TouchableOpacity>}
       <ScrollView>
         <View style={styles.container}>
           <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
@@ -82,7 +86,7 @@ const TicketScreen = () => {
             <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} styleText={styles.styleTextBtn} />
           </View>
           <View style={styles.saveBtn}>
-            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} styleText={styles.styleTextBtn} />
+            <SecondaryButton text="Guardar para otro momento" onPress={() => navigate('PointsScreen')} styleText={styles.styleTextBtn} />
           </View>
         </View>
       </ScrollView>
