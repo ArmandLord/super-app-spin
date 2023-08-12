@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import Disclaimer from '../components/Disclaimer/Disclaimer';
 import AlertIcon from "../assets/Alert.png";
@@ -18,6 +18,7 @@ const BalanceScreen = () => {
     const { navigate } = useNavigation();
     const {points} = useAppContext();
     const [amount, setAmount] = useState('');
+    const [amountBtn, setAmountBtn] = useState('');
 
     const formattedPoints = points.toLocaleString();
     const pointsValue = getPointsValue(points);
@@ -29,6 +30,12 @@ const BalanceScreen = () => {
         setAmount(text);
       }
     };
+
+    useEffect(() => {
+      if (amount != '') {
+        setAmountBtn('');
+      }
+    }, [amount]);
 
     return (
         <SafeAreaView style={styles.safeArea}>
@@ -53,19 +60,19 @@ const BalanceScreen = () => {
                   <View style={styles.cardsContainer}>
                     {points > 1000 && points <= 10000 && (
                       <View style={styles.cardRow}>
-                        <CustomCard title="$50" value="500" />
-                        <CustomCard title="$100" value="1000" />
+                        <CustomCard title="$50" value="500" selected={amountBtn === '500'} onPress={() => setAmountBtn('500')} />
+                        <CustomCard title="$100" value="1000" selected={amountBtn === '1000'} onPress={() => setAmountBtn('1000')} />
                       </View>
                     )}
                     {points > 10000 && (
                       <View style={styles.cardRow}>
                         <View style={styles.cardColumn}>
-                          <CustomCard title="$50" value="500" />
-                          <CustomCard title="$200" value="2000" />
+                          <CustomCard title="$50" value="500" selected={amountBtn === '500'} onPress={() => setAmountBtn('500')} />
+                          <CustomCard title="$200" value="2000" selected={amountBtn === '2000'} onPress={() => setAmountBtn('2000')} />
                         </View>
                         <View style={styles.cardColumn}>
-                          <CustomCard title="$100" value="1000" />
-                          <CustomCard title="$500" value="5000" />
+                          <CustomCard title="$100" value="1000" selected={amountBtn === '1000'} onPress={() => setAmountBtn('1000')} />
+                          <CustomCard title="$500" value="5000" selected={amountBtn === '5000'} onPress={() => setAmountBtn('5000')} />
                         </View>
                       </View>
                     )}
