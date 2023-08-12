@@ -3,8 +3,11 @@ import { View, StyleSheet, Image, SafeAreaView } from 'react-native';
 import Text from '../components/Text/Text';
 import iconLogout from '../assets/logout.png';
 import iconAccount from '../assets/svg/account.png';
+import { useAppContext } from '../context/AppContext';
+import { getPointsValue } from '../utils';
 
 const AccountScreen = () => {
+  const {points} = useAppContext();
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
@@ -14,7 +17,7 @@ const AccountScreen = () => {
           <Image source={iconAccount} style={styles.accountIcon} />
         </View>
         <View style={styles.pointsContainer}>
-          <Text style={styles.pointsText}>1,200 puntos</Text>
+          <Text style={styles.pointsText}>{points.toLocaleString()} puntos</Text>
         </View>
         <Text style={styles.otherActions}>Otras acciones</Text>
         <View style={styles.logoutContainer}>

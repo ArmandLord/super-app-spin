@@ -9,18 +9,18 @@ import prop from '../assets/svg/prop.png';
 import medal from '../assets/svg/medal.png';
 import star from '../assets/svg/star.png';
 import premiastar from '../assets/svg/premia-star.png';
-import iconPoints from '../assets/svg/icon.png';
 import PointCounter from '../components/Card/components/PointCounter';
-import { useNavigation } from '@react-navigation/native';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import ContentBenefit from '../components/Card/components/ContentBenefit';
+import { useAppContext } from '../context/AppContext';
+import {NavListBase} from '../navigation/NavListBase';
 
 const BenefitScreen = () => {
-  const {navigate} = useNavigation();
+  const {navigate} = useNavigation<NavigationProp<NavListBase>>();
+  const {points} = useAppContext();
 
-  const points = '10,657';
-  const pointsValue = '156.00';
-  const imageWidth = 100;
-  const imageHeight = 100;
+  const formattedPoints = points.toLocaleString();
+  const pointsValue = (points/10).toLocaleString();
 
   const banners = [
     {
@@ -57,7 +57,7 @@ const BenefitScreen = () => {
           <View style={styles.pointsContainer}>
             <View style={styles.pointsValueBox}>
               <Text style={styles.pointsText}>Tienes</Text>
-              <Text style={styles.points}>{points} puntos</Text>
+              <Text style={styles.points}>{formattedPoints} puntos</Text>
               <PointCounter value={pointsValue} />
             </View>
             <Image source={spinpremia} style={styles.pointsIcon} />
@@ -66,12 +66,12 @@ const BenefitScreen = () => {
 
         <View style={styles.cardContainer}>
           <ContentBenefit
-            onPress={() => navigate('PointsScreen')}
+            onPress={() => navigate('TransactionsScreen')}
             imageSource={historytask}
             title="Consulta tu historial"
           />
           <ContentBenefit
-            onPress={() => navigate('TicketScreen')}
+            onPress={() => navigate('PointsScreen')}
             imageSource={premiastar}
             title="Cambia tus puntos"
           />

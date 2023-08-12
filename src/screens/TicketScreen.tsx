@@ -10,23 +10,60 @@ import Hr from '../components/Hr';
 import Button from '../components/Button/Button';
 import SecondaryButton from '../components/Button/components/SecondaryButton';
 import ModalHelp from '../components/Modal/ModalHelp';
+import { useNavigation } from '@react-navigation/native';
+import { TItem } from '@sas/types/transactions';
 
-const partnetDefault = {
-    entity: 'Volaris',
-    fiftCertificate: '42738499092812000',
-    points: 10,
-    transactionNo: '5dced89c-2b6e-4a1c-a715-c19b0a51',
+type TypeProps = {
+  route: {
+    params: TItem,
+  },
 }
 
-const TicketScreen = () => {
+const TicketScreen = (props: TypeProps) => {
+
+  const transaction = props.route.params;
+
+  const imgDoniatota = require('../assets/Movimientos/doniatota.png');
+  const imgOxxo = require('../assets/Movimientos/oxxo.png');
+  const imgOxxogas = require('../assets/Movimientos/oxxogas.png');
+  const imgPuntos = require('../assets/Movimientos/puntos.png');
+  const imgSpin = require('../assets/Movimientos/spin.png');
   const imgVolaris = require('../assets/Movimientos/volaris.png');
+  const imgSmart = require('../assets/smart.png');
+  const imgVix = require('../assets/vix.png');
   const copyIcon = require('../assets/copy-icon.png');
   const checkIcon = require('../assets/check-circle.png');
 
   const [showAlertInfo, setShowAlertInfo] = useState(false);
+  const {navigate} = useNavigation();
+
+  const setImage = () => {
+    switch (transaction.entity) {
+      case 'Recuperación de tus puntos':
+        return imgSpin;
+      case 'OXXO':
+        return imgOxxo;
+      case 'Enviaste puntos':
+        return imgPuntos;
+      case 'OXXO Gas':
+        return imgOxxogas;
+      case 'Doña tota':
+        return imgDoniatota;
+      case 'Volaris':
+        return imgVolaris;
+      case 'Smart Fit':
+        return imgSmart;
+      case 'VIX':
+        return imgVix;
+      default:
+        return null;
+    }
+  }
 
   const copyToClipboard = () => {
-    Clipboard.setString(partnetDefault.fiftCertificate);
+    if (transaction.giftCode) {
+      Clipboard.setString(transaction.giftCode);
+    }
   };
 
   return (
@@ -38,13 +75,13 @@ const TicketScreen = () => {
       </View>}
       <ScrollView>
         <View style={styles.container}>
-          <TransactionCard title={partnetDefault.entity} image={imgVolaris} styleContent={styles.card}>
-            <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {partnetDefault.entity}</Text>
+          <TransactionCard title={transaction.entity} image={setImage()} styleContent={styles.card}>
+            <Text style={styles.description}>Toca el ícono para copiar el certificado de regalo o escríbelo desde la app o página web de {transaction.entity}</Text>
             <TouchableOpacity activeOpacity={0.5} onPress={copyToClipboard}>
               <Pill styleContent={styles.pill}>
                 <View>
                   <Text style={styles.textGiftCertificate}>Certificado de regalo</Text>
-                  <Text style={styles.numberGiftCertificate}>{partnetDefault.fiftCertificate}</Text>
+                  <Text style={styles.numberGiftCertificate}>{transaction.giftCode}</Text>
                 </View>
                 <View style={styles.copyIconContent}>
                   <Image source={copyIcon} style={styles.copyIcon} />
@@ -58,31 +95,34 @@ const TicketScreen = () => {
           <View style={styles.table}>
             <View style={styles.row}>
               <Text style={[styles.col, styles.label]}>Puntos cambiados:</Text>
-              <Text style={[styles.col, styles.value]}>{partnetDefault.points}</Text>
+              <Text style={[styles.col, styles.value]}>{transaction.points}</Text>
             </View>
             <View style={styles.row}>
               <Text style={[styles.col, styles.label]}>Valen:</Text>
-              <Text style={[styles.col, styles.value]}>{setFormatMoney(100)}</Text>
+              <Text style={[styles.col, styles.value]}>{setFormatMoney(transaction.points/10)}</Text>
             </View>
             <View style={styles.row}>
               <Text style={[styles.col, styles.label]}>Fecha:</Text>
-              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate(transaction.date)}</Text>
             </View>
             <View style={styles.row}>
               <Text style={[styles.col, styles.label]}>Válido desde el:</Text>
-              <Text style={[styles.col, styles.value]}>{setLegibleDate('2023-08-10')}</Text>
+              <Text style={[styles.col, styles.value]}>{setLegibleDate(transaction.expiryDate)}</Text>
             </View>
           </View>
 
-          <Hr/>
-          <TransactionView transactionNo={partnetDefault.transactionNo}/>
-          <Hr/>
+          
+          {transaction.transactionNo && <>
+            <Hr/>
+              <TransactionView transactionNo={transaction.transactionNo}/>
+            <Hr/>
+          </>}
 
           <View style={styles.useBtn}>
             <Button text="Usar certificado de regalo" onPress={() => setShowAlertInfo(!showAlertInfo)} styleText={styles.styleTextBtn} />
           </View>
           <View style={styles.saveBtn}>
-            <SecondaryButton text="Guardar para otro momento" onPress={() => {}} styleText={styles.styleTextBtn} />
+            <SecondaryButton text="Guardar para otro momento" onPress={() => navigate('PointsScreen')} styleText={styles.styleTextBtn} />
           </View>
         </View>
       </ScrollView>

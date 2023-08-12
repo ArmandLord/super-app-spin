@@ -1,110 +1,182 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
 import Disclaimer from '../components/Disclaimer/Disclaimer';
-import AlertIcon from "../assets/Alert.png";
 import TextInput from '../components/atoms/TextInput';
-import InfoIcon from "../assets/info.png";
-import BaseChip from '../components/atoms/Chip/BaseChip';
-import PointsIcon from '../assets/svg/icon.png';
 import Button from '../components/Button/Button';
 import CustomCard from '../components/Card/components/CustomCard';
-
 import { useNavigation } from '@react-navigation/native';
 import PointCounter from '../components/Card/components/PointCounter';
+import { useAppContext } from '../context/AppContext';
+import useFetch from '../hooks/useFetch';
+import { generateRandomNumber, generateUniqueID } from '../utils';
 
-const BalanceScreen = () => {
-    const { navigate } = useNavigation();
-    const points = 9999;
-    const formattedPoints = points.toLocaleString();
-    const pointsValue = (points / 10).toFixed(2);
-    const numericInputRef = useRef(null);
-    const handleInputChange = (text) => {
-        console.log('Texto ingresado:', text);
+type TypeProps = {
+  brand: string,
+  route: {
+    params: {
+      brand: string
+    }
+  },
+}
+
+const BalanceScreen = (props: TypeProps) => {
+  const AlertIcon = require('../assets/Alert.png');
+  const InfoIcon = require('../assets/info.png');
+  const entity = props.route.params.brand;
+  
+  
+  const { navigate } = useNavigation();
+  const {points, decreasePoints} = useAppContext();
+  const [amount, setAmount] = useState('');
+  const [amountBtn, setAmountBtn] = useState('');
+  const [loading, setLoading] = useState(false);
+  const {addData} = useFetch();
+
+  const formattedPoints = points.toLocaleString();
+  const pointsValue = (points/10).toLocaleString();
+  const numericInputRef = useRef(null);
+
+  const handleInputChange = (text: string) => {
+    const regex = /^[0-9]*$/;
+    if (regex.test(text)) {
+      setAmount(text);
+    }
+  };
+
+  useEffect(() => {
+    if (amount != '') {
+      setAmountBtn('');
+    }
+  }, [amount]);
+
+  const handleSubmit = () => {
+    setLoading(true);
+
+    const todayISO = new Date().toISOString();
+    const nextMonth = new Date();
+    nextMonth.setMonth(nextMonth.getMonth() + 1);
+    let nextMonthISO = nextMonth.toISOString();
+
+    let points: number = 0;
+    if (amount != '') {
+      points = parseInt(amount);
+    } else {
+      points = parseInt(amountBtn);
+    }
+
+    decreasePoints(points);
+
+    const data = {
+      entity: entity,
+      date: todayISO,
+      expiryDate: nextMonthISO,
+      points: -points,
+      operation: 'earned',
+      transactionNo: generateUniqueID(),
+      giftCode: generateRandomNumber(),
     };
 
-    return (
-        <SafeAreaView style={styles.safeArea}>
-          <ScrollView contentContainerStyle={styles.scrollViewContent}>
-            <View style={styles.container}>
-              <View style={styles.pointsContainer}>
-                <View style={styles.pointsTextContainer}>
-                  <Text style={styles.pointsText}>{formattedPoints} puntos</Text>
-                  <Image
-                    source={InfoIcon}
-                    style={[styles.infoIcon, styles.infoIconMargin]}
-                  />
-                </View>
-              </View>
-              <PointCounter value={pointsValue} />
-              <View style={styles.divider} />
-              <Text style={styles.pointsInputLabel}>
-                Escribe el valor de los puntos que quieres cambiar
-              </Text>
-              {points > 1000 ? (
-                <View>
-                  <View style={styles.cardsContainer}>
-                    {points > 1000 && points <= 10000 && (
-                      <View style={styles.cardRow}>
-                        <CustomCard title="$50" value="500" />
-                        <CustomCard title="$100" value="1000" />
-                      </View>
-                    )}
-                    {points > 10000 && (
-                      <View style={styles.cardRow}>
-                        <View style={styles.cardColumn}>
-                          <CustomCard title="$50" value="500" />
-                          <CustomCard title="$200" value="2000" />
-                        </View>
-                        <View style={styles.cardColumn}>
-                          <CustomCard title="$100" value="1000" />
-                          <CustomCard title="$500" value="5000" />
-                        </View>
-                      </View>
-                    )}
-                  </View>
-                  <Text style={styles.otherInput}>Otro:</Text>
-                  <TextInput
-                    ref={numericInputRef}
-                    variant="numeric"
-                    onChangeText={handleInputChange}
-                    placeholder="Monto en pesos"
-                  />
-                  {points > 10000 && (
-                    <Text style={styles.maxValueText}>
-                      El valor máximo que puedes cambiar es $1,000.00
-                    </Text>
-                  )}
-                </View>
-              ) : (
-                <TextInput
-                  ref={numericInputRef}
-                  variant="numeric"
-                  onChangeText={handleInputChange}
-                  placeholder="Monto en pesos"
-                />
-              )}
-              {points < 200 && (
-                <View style={styles.disclaimerContainer}>
-                  <Disclaimer
-                    text="Recuerda que necesitas tener mínimo $20.00 en puntos para poder cambiarlos con la marca que elegiste"
-                    icon={AlertIcon}
-                    iconColor="#955000"
-                    backgroundColor="#FFDFBC"
-                    textColor="#05053D"
-                  />
-                </View>
-              )}
+    addData(data);
+    setTimeout(() => {
+      navigate('TicketScreen', data);
+      setLoading(false);
+    }, 1000);
+  }
+
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        <View style={styles.container}>
+          <View style={styles.pointsContainer}>
+            <View style={styles.pointsTextContainer}>
+              <Text style={styles.pointsText}>{formattedPoints} puntos</Text>
+              <Image
+                source={InfoIcon}
+                style={[styles.infoIcon, styles.infoIconMargin]}
+              />
             </View>
-          </ScrollView>
-          <View style={styles.buttonContainer}>
-            <Button
-              text="Continuar"
-              variant="primary"
-              onPress={() => navigate('TicketScreen')}
-            />
           </View>
-        </SafeAreaView>
-      );
+          <PointCounter value={pointsValue} />
+          <View style={styles.divider} />
+          <Text style={styles.pointsInputLabel}>
+            Escribe el valor de los puntos que quieres cambiar
+          </Text>
+          {points > 1000 ? (
+            <View>
+              <View style={styles.cardsContainer}>
+                {points > 1000 && points <= 10000 && (
+                  <View style={styles.cardRow}>
+                    <CustomCard title="$50" value="500" selected={amountBtn === '500'} onPress={() => setAmountBtn('500')} />
+                    <CustomCard title="$100" value="1000" selected={amountBtn === '1000'} onPress={() => setAmountBtn('1000')} />
+                  </View>
+                )}
+                {points > 10000 && (
+                  <View style={styles.cardRow}>
+                    <View style={styles.cardColumn}>
+                      <CustomCard title="$50" value="500" selected={amountBtn === '500'} onPress={() => setAmountBtn('500')} />
+                      <CustomCard title="$200" value="2000" selected={amountBtn === '2000'} onPress={() => setAmountBtn('2000')} />
+                    </View>
+                    <View style={styles.cardColumn}>
+                      <CustomCard title="$100" value="1000" selected={amountBtn === '1000'} onPress={() => setAmountBtn('1000')} />
+                      <CustomCard title="$500" value="5000" selected={amountBtn === '5000'} onPress={() => setAmountBtn('5000')} />
+                    </View>
+                  </View>
+                )}
+              </View>
+              <Text style={styles.otherInput}>Otro:</Text>
+              <TextInput
+                ref={numericInputRef}
+                variant="numeric"
+                value={amount}
+                onChangeText={handleInputChange}
+                placeholder="Monto en pesos"
+                placeholderTextColor="#69698B"
+              />
+            </View>
+          ) : (
+            <TextInput
+              ref={numericInputRef}
+              variant="numeric"
+              value={amount}
+              onChangeText={handleInputChange}
+              placeholder="Monto en pesos"
+              placeholderTextColor="#69698B"
+              editable={points >= 200}
+            />
+          )}
+          {points > 10000 && (
+            <Text style={[styles.minValueText, parseInt(amount) >= 1001 && styles.maxValueTextAlert]}>
+              El valor máximo que puedes cambiar es $1,000.00
+            </Text>
+          ) || (
+            <Text style={styles.minValueText}>
+              El valor mínimo que puedes cambiar es $20.00
+            </Text>
+          )}
+          {points < 200 && (
+            <View style={styles.disclaimerContainer}>
+              <Disclaimer
+                text="Recuerda que necesitas tener mínimo $20.00 en puntos para poder cambiarlos con la marca que elegiste"
+                icon={AlertIcon}
+                iconColor="#955000"
+                backgroundColor="#FFDFBC"
+                textColor="#05053D"
+              />
+            </View>
+          )}
+        </View>
+      </ScrollView>
+      <View style={styles.buttonContainer}>
+        <Button
+          text="Continuar"
+          variant="primary"
+          loading={loading}
+          onPress={() => handleSubmit()}
+          // disabled={parseInt(amount) > 1000}
+        />
+      </View>
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -167,7 +239,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   disclaimerContainer: {
-    marginTop: 10,
+    marginTop: 16,
   },
   bottomText: {
     marginTop: 20,
@@ -195,7 +267,15 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginHorizontal: 20,
   },
-  maxValueText: {
+  minValueText: {
+    marginTop: 8,
+    color: '#69698B',
+    fontSize: 12,
+    fontFamily: 'Poppins',
+    marginLeft: 12,
+  },
+  maxValueTextAlert: {
+    marginTop: 8,
     color: 'red',
     fontSize: 12,
     fontFamily: 'Poppins',

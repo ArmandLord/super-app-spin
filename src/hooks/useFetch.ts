@@ -23,12 +23,30 @@ const useFetch = () => {
     }
   };
 
+  const addData = async (params: TItem) => {
+    try {
+      setLoading(true);
+      // const queryString = Object.keys(params)
+      // .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`)
+      // .join('&');
+      // console.log('queryString --> ', queryString);
+      
+      const response = await instance.post('?', params);
+      setData(response.data);
+      setLoading(false);
+    } catch (error) {
+      setError('Hubo un error al cargar los datos.');
+      setLoading(false);
+    }
+  };
+
 
   return {
     data,
     loading,
     error,
     fetchData,
+    addData,
   };
 };
 

@@ -1,253 +1,494 @@
 {
-	"history": [{
-			"entity": "OXXO",
-			"date": "2023-08-09T08:00:00Z",
-			"expiryDate": "2023-09-09T08:00:00Z",
-			"points": 1200,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 1
-		},
-		{
-			"entity": "Enviaste puntos",
-			"date": "2023-08-09T10:30:00Z",
-			"expiryDate": "2023-09-09T10:30:00Z",
-			"points": -1900,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 2
-		},
-		{
-			"entity": "Recuperación de tus puntos",
-			"date": "2023-08-09T14:15:00Z",
-			"expiryDate": "2023-09-09T14:15:00Z",
-			"points": -1800,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 3
-		},
-		{
-			"entity": "OXXO Gas",
-			"date": "2023-08-09T16:45:00Z",
-			"expiryDate": "2023-09-09T16:45:00Z",
-			"points": 1600,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 4
-		},
-		{
-			"entity": "Volaris",
-			"date": "2023-08-09T20:00:00Z",
-			"expiryDate": "2023-09-09T20:00:00Z",
-			"points": -1600,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 5
-		},
-		{
-			"entity": "Doña tota",
-			"date": "2023-08-08T09:30:00Z",
-			"expiryDate": "2023-09-08T09:30:00Z",
-			"points": 1500,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 6
-		},
-		{
-			"entity": "Enviaste puntos",
-			"date": "2023-08-08T12:00:00Z",
-			"expiryDate": "2023-09-08T12:00:00Z",
-			"points": 1300,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 7
-		},
-		{
-			"entity": "Volaris",
-			"date": "2023-08-08T15:45:00Z",
-			"expiryDate": "2023-09-08T15:45:00Z",
-			"points": 1100,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 8
-		},
-		{
-			"entity": "OXXO",
-			"date": "2023-08-08T18:30:00Z",
-			"expiryDate": "2023-09-08T18:30:00Z",
-			"points": -1200,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 9
-		},
-		{
-			"entity": "Doña tota",
-			"date": "2023-08-08T21:00:00Z",
-			"expiryDate": "2023-09-08T21:00:00Z",
-			"points": -1100,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 10
-		},
-		{
-			"entity": "Recuperación de tus puntos",
-			"date": "2023-08-02T11:00:00Z",
-			"expiryDate": "2023-09-02T11:00:00Z",
-			"points": -1000,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 11
-		},
-		{
-			"entity": "OXXO Gas",
-			"date": "2023-08-03T14:30:00Z",
-			"expiryDate": "2023-09-03T14:30:00Z",
-			"points": -900,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 12
-		},
-		{
-			"entity": "Volaris",
-			"date": "2023-08-04T17:15:00Z",
-			"expiryDate": "2023-09-04T17:15:00Z",
-			"points": -800,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 13
-		},
-		{
-			"entity": "OXXO",
-			"date": "2023-08-05T20:45:00Z",
-			"expiryDate": "2023-09-05T20:45:00Z",
-			"points": -700,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 14
-		},
-		{
-			"entity": "Doña tota",
-			"date": "2023-08-06T23:00:00Z",
-			"expiryDate": "2023-09-06T23:00:00Z",
-			"points": 600,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 15
-		},
-		{
-			"entity": "Enviaste puntos",
-			"date": "2023-07-10T10:30:00Z",
-			"expiryDate": "2023-08-10T10:30:00Z",
-			"points": 1700,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 16
-		},
-		{
-			"entity": "OXXO Gas",
-			"date": "2023-07-15T13:00:00Z",
-			"expiryDate": "2023-08-15T13:00:00Z",
-			"points": -400,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 17
-		},
-		{
-			"entity": "Recuperación de tus puntos",
-			"date": "2023-07-20T16:45:00Z",
-			"expiryDate": "2023-08-20T16:45:00Z",
-			"points": -300,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 18
-		},
-		{
-			"entity": "Volaris",
-			"date": "2023-07-25T19:30:00Z",
-			"expiryDate": "2023-08-25T19:30:00Z",
-			"points": 1800,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 19
-		},
-		{
-			"entity": "Enviaste puntos",
-			"date": "2023-07-30T22:00:00Z",
-			"expiryDate": "2023-08-30T22:00:00Z",
-			"points": 1900,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 20
-		},
-		{
-			"entity": "Doña tota",
-			"date": "2023-06-05T08:45:00Z",
-			"expiryDate": "2023-07-05T08:45:00Z",
-			"points": 2000,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 21
-		},
-		{
-			"entity": "OXXO Gas",
-			"date": "2023-06-10T11:15:00Z",
-			"expiryDate": "2023-07-10T11:15:00Z",
-			"points": 100,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 22
-		},
-		{
-			"entity": "Volaris",
-			"date": "2023-06-15T14:00:00Z",
-			"expiryDate": "2023-07-15T14:00:00Z",
-			"points": 200,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 23
-		},
-		{
-			"entity": "Recuperación de tus puntos",
-			"date": "2023-06-20T17:30:00Z",
-			"expiryDate": "2023-07-20T17:30:00Z",
-			"points": -500,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 24
-		},
-		{
-			"entity": "Doña tota",
-			"date": "2023-06-20T17:30:00Z",
-			"expiryDate": "2023-07-20T17:30:00Z",
-			"points": 400,
-			"operation": "earned",
-			"transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-			"giftCode": "42738499092812000",
-			"id": 25
-		}
-	]
+  "history": [
+    {
+      "entity": "OXXO",
+      "date": "2023-08-09T08:00:00Z",
+      "expiryDate": "2023-09-09T08:00:00Z",
+      "points": 1200,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 1
+    },
+    {
+      "entity": "Enviaste puntos",
+      "date": "2023-08-09T10:30:00Z",
+      "expiryDate": "2023-09-09T10:30:00Z",
+      "points": -1900,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 2
+    },
+    {
+      "entity": "Recuperación de tus puntos",
+      "date": "2023-08-09T14:15:00Z",
+      "expiryDate": "2023-09-09T14:15:00Z",
+      "points": -1800,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 3
+    },
+    {
+      "entity": "OXXO Gas",
+      "date": "2023-08-09T16:45:00Z",
+      "expiryDate": "2023-09-09T16:45:00Z",
+      "points": 1600,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 4
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-09T20:00:00Z",
+      "expiryDate": "2023-09-09T20:00:00Z",
+      "points": -1600,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 5
+    },
+    {
+      "entity": "Doña tota",
+      "date": "2023-08-08T09:30:00Z",
+      "expiryDate": "2023-09-08T09:30:00Z",
+      "points": 1500,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 6
+    },
+    {
+      "entity": "Enviaste puntos",
+      "date": "2023-08-08T12:00:00Z",
+      "expiryDate": "2023-09-08T12:00:00Z",
+      "points": 1300,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 7
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-08T15:45:00Z",
+      "expiryDate": "2023-09-08T15:45:00Z",
+      "points": 1100,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 8
+    },
+    {
+      "entity": "OXXO",
+      "date": "2023-08-08T18:30:00Z",
+      "expiryDate": "2023-09-08T18:30:00Z",
+      "points": -1200,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 9
+    },
+    {
+      "entity": "Doña tota",
+      "date": "2023-08-08T21:00:00Z",
+      "expiryDate": "2023-09-08T21:00:00Z",
+      "points": -1100,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 10
+    },
+    {
+      "entity": "Recuperación de tus puntos",
+      "date": "2023-08-02T11:00:00Z",
+      "expiryDate": "2023-09-02T11:00:00Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 11
+    },
+    {
+      "entity": "OXXO Gas",
+      "date": "2023-08-03T14:30:00Z",
+      "expiryDate": "2023-09-03T14:30:00Z",
+      "points": -900,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 12
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-04T17:15:00Z",
+      "expiryDate": "2023-09-04T17:15:00Z",
+      "points": -800,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 13
+    },
+    {
+      "entity": "OXXO",
+      "date": "2023-08-05T20:45:00Z",
+      "expiryDate": "2023-09-05T20:45:00Z",
+      "points": -700,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 14
+    },
+    {
+      "entity": "Doña tota",
+      "date": "2023-08-06T23:00:00Z",
+      "expiryDate": "2023-09-06T23:00:00Z",
+      "points": 600,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 15
+    },
+    {
+      "entity": "Enviaste puntos",
+      "date": "2023-07-10T10:30:00Z",
+      "expiryDate": "2023-08-10T10:30:00Z",
+      "points": 1700,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 16
+    },
+    {
+      "entity": "OXXO Gas",
+      "date": "2023-07-15T13:00:00Z",
+      "expiryDate": "2023-08-15T13:00:00Z",
+      "points": -400,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 17
+    },
+    {
+      "entity": "Recuperación de tus puntos",
+      "date": "2023-07-20T16:45:00Z",
+      "expiryDate": "2023-08-20T16:45:00Z",
+      "points": -300,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 18
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-07-25T19:30:00Z",
+      "expiryDate": "2023-08-25T19:30:00Z",
+      "points": 1800,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 19
+    },
+    {
+      "entity": "Enviaste puntos",
+      "date": "2023-07-30T22:00:00Z",
+      "expiryDate": "2023-08-30T22:00:00Z",
+      "points": 1900,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 20
+    },
+    {
+      "entity": "Doña tota",
+      "date": "2023-06-05T08:45:00Z",
+      "expiryDate": "2023-07-05T08:45:00Z",
+      "points": 2000,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 21
+    },
+    {
+      "entity": "OXXO Gas",
+      "date": "2023-06-10T11:15:00Z",
+      "expiryDate": "2023-07-10T11:15:00Z",
+      "points": 100,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 22
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-06-15T14:00:00Z",
+      "expiryDate": "2023-07-15T14:00:00Z",
+      "points": 200,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 23
+    },
+    {
+      "entity": "Recuperación de tus puntos",
+      "date": "2023-06-20T17:30:00Z",
+      "expiryDate": "2023-07-20T17:30:00Z",
+      "points": -500,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 24
+    },
+    {
+      "entity": "Doña tota",
+      "date": "2023-06-20T17:30:00Z",
+      "expiryDate": "2023-07-20T17:30:00Z",
+      "points": 400,
+      "operation": "earned",
+      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+      "giftCode": "42738499092812000",
+      "id": 25
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T04:15:05.398Z",
+      "expiryDate": "2023-09-12T04:15:05.398Z",
+      "points": 98,
+      "operation": "earned",
+      "transactionNo": "189e81bb7a5-f14fb",
+      "giftCode": "42738499092812000",
+      "id": 26
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T04:15:05.398Z",
+      "expiryDate": "2023-09-12T04:15:05.398Z",
+      "points": 98,
+      "operation": "earned",
+      "transactionNo": "189e81eb9e7-679c4",
+      "giftCode": "537544627081119300",
+      "id": 27
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T05:20:43.271Z",
+      "expiryDate": "2023-09-12T05:20:43.271Z",
+      "points": 98,
+      "operation": "earned",
+      "transactionNo": "189e8308d08-ee5f3",
+      "giftCode": "623106316037116900",
+      "id": 28
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T05:31:44.600Z",
+      "expiryDate": "2023-09-12T05:31:44.600Z",
+      "points": 5000,
+      "operation": "earned",
+      "transactionNo": "189e83aa458-df9b3",
+      "giftCode": "148279510567954080",
+      "id": 29
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T05:31:55.961Z",
+      "expiryDate": "2023-09-12T05:31:55.961Z",
+      "points": 323,
+      "operation": "earned",
+      "transactionNo": "189e83ad0b9-a2f8e",
+      "giftCode": "805488896642251300",
+      "id": 30
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T05:36:16.734Z",
+      "expiryDate": "2023-09-12T05:36:16.734Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189e83ecb5e-12daa",
+      "giftCode": "986937812894925000",
+      "id": 31
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T06:00:16.061Z",
+      "expiryDate": "2023-09-12T06:00:16.061Z",
+      "points": -500,
+      "operation": "earned",
+      "transactionNo": "189e854c1be-24d66",
+      "giftCode": "571696877762285200",
+      "id": 32
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T06:07:27.017Z",
+      "expiryDate": "2023-09-12T06:07:27.017Z",
+      "points": -599,
+      "operation": "earned",
+      "transactionNo": "189e85b5529-c65c7",
+      "giftCode": "322841988063381700",
+      "id": 33
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T13:58:35.439Z",
+      "expiryDate": "2023-09-12T13:58:35.440Z",
+      "points": -5000,
+      "operation": "earned",
+      "transactionNo": "189ea0aacb0-7d3fe",
+      "giftCode": "702702364194270700",
+      "id": 34
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T14:05:25.998Z",
+      "expiryDate": "2023-09-12T14:05:25.998Z",
+      "points": -20,
+      "operation": "earned",
+      "transactionNo": "189ea10f070-3df94",
+      "giftCode": "258731584454207680",
+      "id": 35
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T14:07:57.830Z",
+      "expiryDate": "2023-09-12T14:07:57.830Z",
+      "points": -20,
+      "operation": "earned",
+      "transactionNo": "189ea134188-c57bf",
+      "giftCode": "39788049300262390",
+      "id": 36
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T14:43:55.265Z",
+      "expiryDate": "2023-09-12T14:43:55.266Z",
+      "points": -500,
+      "operation": "earned",
+      "transactionNo": "189ea342d03-d3ff7",
+      "giftCode": "543844957330647400",
+      "id": 37
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T14:54:21.886Z",
+      "expiryDate": "2023-09-12T14:54:21.886Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea3dbcbf-7d2a6",
+      "giftCode": "509846613976116000",
+      "id": 38
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T14:55:14.671Z",
+      "expiryDate": "2023-09-12T14:55:14.671Z",
+      "points": -500,
+      "operation": "earned",
+      "transactionNo": "189ea3e8af0-592cc",
+      "giftCode": "366163399180827260",
+      "id": 39
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T15:01:10.851Z",
+      "expiryDate": "2023-09-12T15:01:10.851Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea43fa43-98cb9",
+      "giftCode": "686867168061399200",
+      "id": 40
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T15:03:15.752Z",
+      "expiryDate": "2023-09-12T15:03:15.752Z",
+      "points": -7000,
+      "operation": "earned",
+      "transactionNo": "189ea45e228-5619",
+      "giftCode": "802017202864968000",
+      "id": 41
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T15:09:19.979Z",
+      "expiryDate": "2023-09-12T15:09:19.979Z",
+      "points": -15000,
+      "operation": "earned",
+      "transactionNo": "189ea4b70ec-d9f45",
+      "giftCode": "951630701967439600",
+      "id": 42
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T15:09:39.517Z",
+      "expiryDate": "2023-09-12T15:09:39.517Z",
+      "points": -5000,
+      "operation": "earned",
+      "transactionNo": "189ea4bbd3e-18a10",
+      "giftCode": "848468192059975400",
+      "id": 43
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T15:12:37.439Z",
+      "expiryDate": "2023-09-12T15:12:37.439Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea4e7440-1bb26",
+      "giftCode": "885048440172786700",
+      "id": 44
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-12T15:12:53.750Z",
+      "expiryDate": "2023-09-12T15:12:53.750Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea4eb3f6-85a00",
+      "giftCode": "710279047739544200",
+      "id": 45
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T15:13:46.031Z",
+      "expiryDate": "2023-09-12T15:13:46.031Z",
+      "points": -13000,
+      "operation": "earned",
+      "transactionNo": "189ea4f8030-1d7c",
+      "giftCode": "765448033765447200",
+      "id": 46
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T15:14:11.213Z",
+      "expiryDate": "2023-09-12T15:14:11.213Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea4fe28d-928f8",
+      "giftCode": "482599026361575550",
+      "id": 47
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-12T15:14:24.948Z",
+      "expiryDate": "2023-09-12T15:14:24.948Z",
+      "points": -10000,
+      "operation": "earned",
+      "transactionNo": "189ea501835-2a242",
+      "giftCode": "757987709994817200",
+      "id": 48
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-12T15:14:35.721Z",
+      "expiryDate": "2023-09-12T15:14:35.722Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189ea50424a-d5559",
+      "giftCode": "529850113245060600",
+      "id": 49
+    }
+  ]
 }

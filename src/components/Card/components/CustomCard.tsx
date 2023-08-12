@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
 interface CustomCardProps {
   title: string;
   value: string;
+  selected: boolean;
+  onPress: () => void;
 }
 
-const CustomCard: React.FC<CustomCardProps> = ({ title, value }) => {
+const CustomCard: React.FC<CustomCardProps> = ({ title, value, selected = false, onPress }) => {
   const [isSelected, setIsSelected] = useState(false);
+
+  useEffect(() => {
+    console.log('selected --> ', selected);
+    
+    setIsSelected(selected);
+  }, [selected])
 
   const handlePress = () => {
     setIsSelected(!isSelected);
+    onPress();
   };
 
   return (

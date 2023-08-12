@@ -56,7 +56,7 @@ const ModalHelp = () => {
                   <Text style={styles.cardTText}>Paga tu tarifa base con tu crédito electrónico  Volaris. Los impuestos, productos y servicios adicionales deben pagarse con una  tarjeta de crédito o débito adicional.</Text>
                   <View style={styles.form}>
                     <TextInput style={styles.textInput} value={textInputValue} onChangeText={setTextInputValue} />
-                    <TouchableOpacity style={styles.btnActivar}>
+                    <TouchableOpacity style={styles.btnActivar} onPress={() => setModalVisible(!modalVisible)}>
                         <View style={styles.btnContent}>
                             <Text style={styles.btnText}>Activar</Text>
                         </View>
