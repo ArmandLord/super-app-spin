@@ -21,7 +21,7 @@ const BalanceScreen = () => {
     const [amountBtn, setAmountBtn] = useState('');
 
     const formattedPoints = points.toLocaleString();
-    const pointsValue = getPointsValue(points);
+    const pointsValue = (points/10).toLocaleString();
     const numericInputRef = useRef(null);
 
     const handleInputChange = (text: string) => {
