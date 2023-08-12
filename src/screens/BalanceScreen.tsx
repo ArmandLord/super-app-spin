@@ -7,6 +7,8 @@ import CustomCard from '../components/Card/components/CustomCard';
 import { useNavigation } from '@react-navigation/native';
 import PointCounter from '../components/Card/components/PointCounter';
 import { useAppContext } from '../context/AppContext';
+import useFetch from '../hooks/useFetch';
+import { generateRandomNumber, generateUniqueID } from '../utils';
 
 const BalanceScreen = () => {
   const AlertIcon = require('../assets/Alert.png');
@@ -16,6 +18,8 @@ const BalanceScreen = () => {
   const {points} = useAppContext();
   const [amount, setAmount] = useState('');
   const [amountBtn, setAmountBtn] = useState('');
+  const [loading, setLoading] = useState(false);
+  const {addData} = useFetch();
 
   const formattedPoints = points.toLocaleString();
   const pointsValue = (points/10).toLocaleString();
@@ -33,6 +37,36 @@ const BalanceScreen = () => {
       setAmountBtn('');
     }
   }, [amount]);
+
+  const handleSubmit = () => {
+    setLoading(true);
+
+    const todayISO = new Date().toISOString();
+    const nextMonth = new Date();
+    nextMonth.setMonth(nextMonth.getMonth() + 1);
+    let nextMonthISO = nextMonth.toISOString();
+
+    let points: number = 0;
+    if (amount != '') {
+      points = parseInt(amount);
+    } else {
+      points = parseInt(amountBtn);
+    }
+
+    addData({
+      entity: 'Volaris',
+      date: todayISO,
+      expiryDate: nextMonthISO,
+      points: -points,
+      operation: 'earned',
+      transactionNo: generateUniqueID(),
+      giftCode: generateRandomNumber(),
+    });
+    setTimeout(() => {
+      navigate('TicketScreen');
+      setLoading(false);
+    }, 1000);
+  }
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -121,7 +155,8 @@ const BalanceScreen = () => {
         <Button
           text="Continuar"
           variant="primary"
-          onPress={() => navigate('TicketScreen')}
+          loading={loading}
+          onPress={() => handleSubmit()}
         />
       </View>
     </SafeAreaView>

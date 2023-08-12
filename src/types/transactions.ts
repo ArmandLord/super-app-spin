@@ -6,7 +6,7 @@ export type TItem = {
     operation?: string,
     transactionNo?: string,
     giftCode?: string,
-    id: number,
+    id?: number,
 };
 export type TItems = TItem[];
 export type GroupTIems = {
