@@ -66,7 +66,7 @@ const BalanceScreen = (props: TypeProps) => {
 
     decreasePoints(points);
 
-    addData({
+    const data = {
       entity: entity,
       date: todayISO,
       expiryDate: nextMonthISO,
@@ -74,9 +74,11 @@ const BalanceScreen = (props: TypeProps) => {
       operation: 'earned',
       transactionNo: generateUniqueID(),
       giftCode: generateRandomNumber(),
-    });
+    };
+
+    addData(data);
     setTimeout(() => {
-      navigate('TicketScreen');
+      navigate('TicketScreen', data);
       setLoading(false);
     }, 1000);
   }
@@ -170,6 +172,7 @@ const BalanceScreen = (props: TypeProps) => {
           variant="primary"
           loading={loading}
           onPress={() => handleSubmit()}
+          // disabled={parseInt(amount) > 1000}
         />
       </View>
     </SafeAreaView>

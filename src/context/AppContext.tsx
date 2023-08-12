@@ -9,7 +9,7 @@ export type AppState = {
 }
 
 const initialState: AppState = {
-  points: 10000,
+  points: 0,
   decreasePoints: () => {},
   increasePoints: () => {},
   setPoints: () => {},
