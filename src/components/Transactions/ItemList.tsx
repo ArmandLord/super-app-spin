@@ -14,6 +14,8 @@ const ItemList = ({entity, date, points, id}: TItem) => {
   const imgPuntos = require('../../assets/Movimientos/puntos.png');
   const imgSpin = require('../../assets/Movimientos/spin.png');
   const imgVolaris = require('../../assets/Movimientos/volaris.png');
+  const imgSmart = require('../../assets/smart.png');
+  const imgVix = require('../../assets/vix.png');
 
   const daysNames = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
 
@@ -38,6 +40,10 @@ const {navigate} = useNavigation<NavigationProp<NavListBase>>();
         return imgDoniatota;
       case 'Volaris':
         return imgVolaris;
+      case 'Smart Fit':
+        return imgSmart;
+      case 'VIX':
+        return imgVix;
       default:
         return null;
     }

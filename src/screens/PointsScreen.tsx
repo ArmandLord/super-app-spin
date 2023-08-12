@@ -42,7 +42,9 @@ const PointsScreen = () => {
               title={brand.name}
               subtitle={brand.role}
               image={brand.image}
-              onPress={() => navigate('BalanceScreen')}
+              onPress={() => navigate('BalanceScreen', {
+                brand: brand.name
+              })}
             />
           ))}
         </View>

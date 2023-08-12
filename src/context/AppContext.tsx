@@ -9,14 +9,22 @@ export type AppState = {
 }
 
 const initialState: AppState = {
-  points: 90,
+  points: 10001,
   exchangePoints: () => {},
 }
 
 export type Action = 
-| {type: 'EXCHANGE_POINTS', payload: number};
+| {type: 'DECREASE_POINTS', payload: number}
+| {type: 'INCREASE_POINTS', payload: number};
 
 const AppReducer = (state: AppState, action: Action): AppState => {
+  switch (action.type) {
+    case 'DECREASE_POINTS':
+      return {
+        ...state,
+        points: state.points - action.payload
+      };
+  }
   return state;
 }
 
@@ -26,7 +34,7 @@ export const AppProvider = ({children}: {children: React.ReactNode}) => {
   const [{points}, dispatch] = useReducer(AppReducer, initialState);
 
   const exchangePoints = (points: number) => {
-    dispatch({type: 'EXCHANGE_POINTS', payload: points});
+    dispatch({type: 'DECREASE_POINTS', payload: points});
   }
 
   const theme = {

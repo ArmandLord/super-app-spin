@@ -10,12 +10,23 @@ import { useAppContext } from '../context/AppContext';
 import useFetch from '../hooks/useFetch';
 import { generateRandomNumber, generateUniqueID } from '../utils';
 
-const BalanceScreen = () => {
+type TypeProps = {
+  brand: string,
+  route: {
+    params: {
+      brand: string
+    }
+  },
+}
+
+const BalanceScreen = (props: TypeProps) => {
   const AlertIcon = require('../assets/Alert.png');
   const InfoIcon = require('../assets/info.png');
+  const entity = props.route.params.brand;
+  
   
   const { navigate } = useNavigation();
-  const {points} = useAppContext();
+  const {points, exchangePoints} = useAppContext();
   const [amount, setAmount] = useState('');
   const [amountBtn, setAmountBtn] = useState('');
   const [loading, setLoading] = useState(false);
@@ -53,8 +64,10 @@ const BalanceScreen = () => {
       points = parseInt(amountBtn);
     }
 
+    exchangePoints(points);
+
     addData({
-      entity: 'Volaris',
+      entity: entity,
       date: todayISO,
       expiryDate: nextMonthISO,
       points: -points,
