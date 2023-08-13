@@ -17,6 +17,7 @@ const AppNavigator = () => {
 
   const {setPoints} = useAppContext();
   useEffect(() => {
+    // AsyncStorage.removeItem('points');
     AsyncStorage.getItem('points').then(points => {
       console.log('points --> ', typeof points);
       
@@ -29,7 +30,7 @@ const AppNavigator = () => {
       } else if (points === null) {
         setPoints(15000);
       }
-    })
+    });
   }, []);
   return (
     <NavigationContainer>

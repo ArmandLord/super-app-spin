@@ -489,6 +489,46 @@
       "transactionNo": "189ea50424a-d5559",
       "giftCode": "529850113245060600",
       "id": 49
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-13T17:38:06.006Z",
+      "expiryDate": "2023-09-13T17:38:06.006Z",
+      "points": -500,
+      "operation": "earned",
+      "transactionNo": "189effa0037-24f47",
+      "giftCode": "800180768253727600",
+      "id": 50
+    },
+    {
+      "entity": "Smart Fit",
+      "date": "2023-08-13T17:39:00.135Z",
+      "expiryDate": "2023-09-13T17:39:00.135Z",
+      "points": -10000,
+      "operation": "earned",
+      "transactionNo": "189effad3a8-5926f",
+      "giftCode": "12110648694090280",
+      "id": 51
+    },
+    {
+      "entity": "VIX",
+      "date": "2023-08-13T17:39:25.067Z",
+      "expiryDate": "2023-09-13T17:39:25.067Z",
+      "points": -1000,
+      "operation": "earned",
+      "transactionNo": "189effb350c-afa69",
+      "giftCode": "841446626012008300",
+      "id": 52
+    },
+    {
+      "entity": "Volaris",
+      "date": "2023-08-13T17:39:40.922Z",
+      "expiryDate": "2023-09-13T17:39:40.922Z",
+      "points": -3500,
+      "operation": "earned",
+      "transactionNo": "189effb72fb-237cc",
+      "giftCode": "74747610204113940",
+      "id": 53
     }
   ]
 }

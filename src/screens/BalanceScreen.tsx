@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Image, SafeAreaView, ScrollView, StyleSheet, Alert } from 'react-native';
 import Disclaimer from '../components/Disclaimer/Disclaimer';
 import TextInput from '../components/atoms/TextInput';
 import Button from '../components/Button/Button';
@@ -57,20 +57,28 @@ const BalanceScreen = (props: TypeProps) => {
     nextMonth.setMonth(nextMonth.getMonth() + 1);
     let nextMonthISO = nextMonth.toISOString();
 
-    let points: number = 0;
+    let decreacePoints: number = 0;
     if (amount != '') {
-      points = parseInt(amount);
+      decreacePoints = parseInt(amount) * 10;
     } else {
-      points = parseInt(amountBtn);
+      decreacePoints = parseInt(amountBtn);
     }
 
-    decreasePoints(points);
+    if (decreacePoints > points) {
+      Alert.alert('Upps!', 'La operación no pudo ser realizada.', [
+        {text: 'OK'},
+      ]);
+      setLoading(false);
+      return;
+    }
+
+    decreasePoints(decreacePoints);
 
     const data = {
       entity: entity,
       date: todayISO,
       expiryDate: nextMonthISO,
-      points: -points,
+      points: -decreacePoints,
       operation: 'earned',
       transactionNo: generateUniqueID(),
       giftCode: generateRandomNumber(),
@@ -172,7 +180,6 @@ const BalanceScreen = (props: TypeProps) => {
           variant="primary"
           loading={loading}
           onPress={() => handleSubmit()}
-          // disabled={parseInt(amount) > 1000}
         />
       </View>
     </SafeAreaView>
