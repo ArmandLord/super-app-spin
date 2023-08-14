@@ -47,7 +47,6 @@ const MenuNavigation = () => {
                 options={{
                     headerTitleAlign: 'left',
                     headerTitleStyle: { fontWeight: '500', fontSize: 18, lineHeight: 24 },
-                    headerLeft: null
                 }} />
             <Stack.Screen name="Movimientos" component={MovementsScreen}
                 options={{

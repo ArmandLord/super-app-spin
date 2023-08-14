@@ -6,10 +6,7 @@ import { MovementsProvider, useMovementsContext } from './src/context/SuperAppCo
 import GeneralNavigation from './src/navigation/GeneralNavigation';
 
 const App: React.FC = () => {
-  const { state } = useMovementsContext()
-  useEffect(() => {
-    console.log('changed')
-  }, [state.isLoged])
+  
   return (
     <ThemeProvider>
       <MovementsProvider>

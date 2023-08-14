@@ -1,22 +1,9 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import React, { useEffect, useState } from 'react';
-import { HomeScreen } from '../screens/Home/HomeScreen';
-import LoyaltyScreen from '../screens/LoyaltyScreen/LoyaltyScreen';
-import MovementsScreen from '../screens/Movements/MovementsScreen';
-import useTheme from '../../femsaComponents/hooks/useTheme';
+import React from 'react';
 import { Movement } from '../models/Movement';
-import ExchangePoints from '../screens/ExchangePoints/ExchangePointsScreen';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Alert, BackHandler, Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { useMovementsContext } from '../context/SuperAppContext';
-import BalanceScreen from '../screens/Balance/BalanceScreen';
-import DetailssScreen from '../screens/Movements/detailsmovements/MovementsDetailsScreens';
 
 import SplashScreen from '../screens/splash/splashScreen';
-import TicketScreen from '../screens/Ticket/TicketScreen';
-import Login from '../screens/Login/loginScreen';
+import LoginScreen from '../screens/login/loginScreen';
 
 
 export type RootStackParamList = {
@@ -41,7 +28,7 @@ const OnboardingNavigation = () => {
   return <Stack.Navigator initialRouteName='splash' >
     <Stack.Screen name="splash" component={SplashScreen}
       options={{ headerShown: false }} />
-    <Stack.Screen name="login" component={Login} 
+    <Stack.Screen name="login" component={LoginScreen} 
           options={{ headerShown: false }} />
         
   </Stack.Navigator>
