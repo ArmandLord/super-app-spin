@@ -139,6 +139,7 @@ const BalanceScreen = (props: TypeProps) => {
                 onChangeText={handleInputChange}
                 placeholder="Monto en pesos"
                 placeholderTextColor="#69698B"
+                label={''} 
               />
             </View>
           ) : (
@@ -150,6 +151,7 @@ const BalanceScreen = (props: TypeProps) => {
               placeholder="Monto en pesos"
               placeholderTextColor="#69698B"
               editable={points >= 200}
+              label={''} 
             />
           )}
           {points > 10000 && (

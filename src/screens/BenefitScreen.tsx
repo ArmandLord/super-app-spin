@@ -3,12 +3,6 @@ import { View, Image, StyleSheet, ScrollView, SafeAreaView } from 'react-native'
 import Text from '../components/Text/Text';
 import ContentStackedCard from '../components/Card/components/ContentStackedCard';
 import Banner from '../components/molecules/Banner';
-import historytask from '../assets/svg/history-task.png';
-import spinpremia from '../assets/svg/premia.png';
-import prop from '../assets/svg/prop.png';
-import medal from '../assets/svg/medal.png';
-import star from '../assets/svg/star.png';
-import premiastar from '../assets/svg/premia-star.png';
 import PointCounter from '../components/Card/components/PointCounter';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import ContentBenefit from '../components/Card/components/ContentBenefit';
@@ -16,6 +10,12 @@ import { useAppContext } from '../context/AppContext';
 import {NavListBase} from '../navigation/NavListBase';
 
 const BenefitScreen = () => {
+  const historytask = require('../assets/svg/history-task.png');
+  const spinpremia = require('../assets/svg/premia.png');
+  const prop = require('../assets/svg/prop.png');
+  const medal = require('../assets/svg/medal.png');
+  const star = require('../assets/svg/star.png');
+  const premiastar = require('../assets/svg/premia-star.png');
   const {navigate} = useNavigation<NavigationProp<NavListBase>>();
   const {points} = useAppContext();
 
@@ -25,25 +25,37 @@ const BenefitScreen = () => {
   const banners = [
     {
       id: 1,
+      title: 'Banner 1',
       banner: {
+        type: '',
+        url: '',
         image: require('../assets/svg/banner1.png'),
       },
     },
     {
-      id: 2,
+      id: 1,
+      title: 'Banner 2',
       banner: {
+        type: '',
+        url: '',
         image: require('../assets/svg/banner1.png'),
       },
     },
     {
-      id: 3,
+      id: 1,
+      title: 'Banner 3',
       banner: {
+        type: '',
+        url: '',
         image: require('../assets/svg/banner1.png'),
       },
     },
     {
-      id: 4,
+      id: 1,
+      title: 'Banner 4',
       banner: {
+        type: '',
+        url: '',
         image: require('../assets/svg/banner1.png'),
       },
     },

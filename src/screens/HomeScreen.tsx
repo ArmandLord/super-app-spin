@@ -1,9 +1,9 @@
 import { View, Image, StyleSheet } from 'react-native';
 import Text from '../components/Text/Text';
 import React from 'react';
-import homeIcon from '../assets/mobile.png';
 
 const HomeScreen = () => {
+  const homeIcon = require('../assets/mobile.png');
   return (
     <View style={styles.container}>
       <Image source={homeIcon} style={styles.icon} />
