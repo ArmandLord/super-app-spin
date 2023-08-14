@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
-import PointsIcon from '../../../assets/svg/icon.png';
-
 interface PointCounterProps {
   value: string;
 }
 
 const PointCounter: React.FC<PointCounterProps> = ({ value }) => {
+  const PointsIcon = require('../../../assets/svg/icon.png')
   return (
     <View style={styles.container}>
       <Image source={PointsIcon} style={styles.icon} />

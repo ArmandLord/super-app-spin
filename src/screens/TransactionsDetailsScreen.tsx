@@ -22,7 +22,7 @@ const defaultTransaction = {
   id: 0,
 }
 
-const TransactionsDetailsScreen = (props) => {
+const TransactionsDetailsScreen = (props: any) => {
 
   const {data, fetchData} = useFetch();
   const [transaction, setTransaction] = useState<TItem>(defaultTransaction);
@@ -101,7 +101,8 @@ const TransactionsDetailsScreen = (props) => {
 
       <Hr/>
 
-      <TransactionView transactionNo={transaction.transactionNo}/>
+      <TransactionView transactionNo={transaction.transactionNo || ''} />
+
     </View>
   );
 }
