@@ -1,38 +1,321 @@
 {
   "history": [
     {
-      "entity": "Oxxo Gas",
-      "date": "Sun Aug 06 2023",
-      "points": 100,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 1
+      "id": 1,
+      "data": [
+        {
+          "title": "Hoy",
+          "data": [
+            {
+              "entity": "Oxxo",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        },
+        {
+          "title": "Ayer",
+          "data": [
+            {
+              "entity": "Oxxo",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        }
+      ]
     },
     {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 2
+      "id": 2,
+      "data": [
+        {
+          "title": "Semana anterior",
+          "data": [
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            },
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        }
+      ]
     },
     {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "id": 3
+      "id": 3,
+      "data": [
+        {
+          "title": "Mes anterior",
+          "data": [
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "earned": [
+    {
+      "id": 1,
+      "data": [
+        {
+          "title": "Hoy",
+          "data": [
+            {
+              "entity": "Recuperación de Puntos",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            }
+          ]
+        },
+        {
+          "title": "Ayer",
+          "data": [
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 2
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        }
+      ]
     },
     {
-      "entity": "Volaris",
-      "date": "Sun Aug 01 2023",
-      "expiryDate": "Fri Sep 01 2023",
-      "points": 1000,
-      "operation": "earned",
-      "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
-      "giftCode": "42738499092812000",
-      "id": 4
+      "id": 2,
+      "data": [
+        {
+          "title": "Semana anterior",
+          "data": [
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "earned",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "data": []
+    }
+  ],
+  "used": [
+    {
+      "id": 1,
+      "data": [
+        {
+          "title": "Hoy",
+          "data": [
+            {
+              "entity": "Oxxo",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            },
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "expiryDate": "Vie 01 Sep 2023",
+              "points": 1000,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "giftCode": "42738499092812000",
+              "id": 4
+            }
+          ]
+        },
+        {
+          "title": "Ayer",
+          "data": [
+            {
+              "entity": "Volaris",
+              "date": "Dom 01 Ago 2023",
+              "points": 1000,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "data": [
+        {
+          "title": "Semana anterior",
+          "data": [
+            {
+              "entity": "Oxxo Gas",
+              "date": "Dom 06 Ago 2023",
+              "points": 100,
+              "operation": "used",
+              "transactionNo": "5dced89c-2b6e-4a1c-a715-c19b0a51",
+              "id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "data": []
     }
   ]
 }

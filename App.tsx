@@ -1,16 +1,21 @@
+import { NavigationContainer } from '@react-navigation/native';
+import React, { useEffect } from 'react';
 import 'react-native-gesture-handler';
-import React from 'react';
-import {SafeAreaView} from 'react-native';
-import ThemeProvider from './src/theme/ThemeProvider';
-import {Button} from './src';
+import ThemeProvider from './femsaComponents/theme/ThemeProvider';
+import { MovementsProvider, useMovementsContext } from './src/context/SuperAppContext';
+import GeneralNavigation from './src/navigation/GeneralNavigation';
 
-const App = () => {
+const App: React.FC = () => {
+  
   return (
     <ThemeProvider>
-      <SafeAreaView>
-        <Button text="Hola ironhackers" onPress={() => console.log('spin')} />
-      </SafeAreaView>
-    </ThemeProvider>
+      <MovementsProvider>
+        <NavigationContainer >
+          <GeneralNavigation />
+        </NavigationContainer>
+      </MovementsProvider>
+    </ThemeProvider >
+
   );
 };
 
